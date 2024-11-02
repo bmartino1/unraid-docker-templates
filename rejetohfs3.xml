@@ -4,12 +4,14 @@
   <Repository>rejetto/hfs:latest</Repository>
   <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
   <Network>bond0</Network>
+  <ReadMe>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/Guides/Quick%20Start%20Guide%20For%20Rejeto%20HFS.txt</ReadMe>
   <Project>https://github.com/rejetto/hfs/discussions</Project>
   <Overview>Rejeto HFS Http File Server&#xD;
 &#xD;
 Rejeto HFS Http File Server&#xD;
 &#xD;
 YOU MUST ASSIGN A STATIC IP TO THE DOCKER FOR HFS3 TO WORK.&#xD;
+Please Read: https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/Guides/Quick%20Start%20Guide%20For%20Rejeto%20HFS.txt&#xD;
 &#xD;
 Access via web your files directly from your disk&#xD;
 You be the server! Share files fresh from your disk, with unlimited space and bandwidth.&#xD;
@@ -34,13 +36,13 @@ Read (https://github.com/rejetto/hfs/blob/main/config.md#how-to-modify-configura
 You can mount as many volumes as you wish in docker to persist the file storage, but keep in mind that if you want to persist HFS configurations as well you **must** mount a volume that points to the `cwd` of HFS (which you can override with `HFS_CWD` env).&#xD;
 The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
 &#xD;
-## HTTPS make certs:&#xD;
+## HTTPS make certs Recommend to use admin interface...&#xD;
 openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.key -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
 </Overview>
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs3.png</Icon>
   <ExtraParams>--hostname HFS3</ExtraParams>
   <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/rejettohfs3/config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config</Config>
   <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/rejettohfs3/certificate" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
