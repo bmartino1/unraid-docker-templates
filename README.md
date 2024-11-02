@@ -15,7 +15,7 @@ The docker containers referenced in this repo point to Docker Containers maintai
 
 # RejettoHFS3
 
-![RejettoHFS3]((https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs3.png)
+![RejettoHFS3](https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs3.png)
 
 HFS ~ HTTP File Server by Rejetto
 
