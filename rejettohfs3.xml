@@ -40,7 +40,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certificate/pri
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs3.png</Icon>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png</Icon>
   <ExtraParams>--hostname HFS3</ExtraParams>
   <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/rejettohfs3/config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config</Config>
   <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/rejettohfs3/certificate" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
