@@ -4,10 +4,10 @@ All major changes to this project will be documented here.
 
 ## 2024.03.11
 - **rejetohfs3**
-- set network to Unraid default br0
-- removed duplicate line in overview
-- fixed exampled cert path to templates path shared.
-- Updateed quick Guide for spelling mistakes
+  - set network to Unraid default br0
+  - removed duplicate line at top in overview
+  - fixed example cert path and comand set it to templates path shared.
+  - Updated Quick Guide for presentation and spelling mistakes.
 
 ## 2024.02.11
 - **rejetohfs3**
