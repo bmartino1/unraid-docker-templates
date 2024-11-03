@@ -3,12 +3,10 @@
   <Name>RejettoHFS3</Name>
   <Repository>rejetto/hfs:latest</Repository>
   <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
-  <Network>bond0</Network>
+  <Network>br0</Network>
   <ReadMe>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/Guides/Quick%20Start%20Guide%20For%20Rejeto%20HFS.txt</ReadMe>
   <Project>https://github.com/rejetto/hfs/discussions</Project>
   <Overview>Rejeto HFS Http File Server&#xD;
-&#xD;
-Rejeto HFS Http File Server&#xD;
 &#xD;
 YOU MUST ASSIGN A STATIC IP TO THE DOCKER FOR HFS3 TO WORK.&#xD;
 Please Read: https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/Guides/Quick%20Start%20Guide%20For%20Rejeto%20HFS.txt&#xD;
@@ -37,7 +35,7 @@ You can mount as many volumes as you wish in docker to persist the file storage,
 The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
 &#xD;
 ## HTTPS make certs Recommend to use admin interface...&#xD;
-openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.key -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
+openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certificate/privkey.key -out /mnt/user/appdata/hfs/certificate/cert.pem -days 365 -nodes&#xD;
 </Overview>
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
