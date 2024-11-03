@@ -11,8 +11,8 @@ Templates for adding containers to unRAID via a more GUI-friendly way and allowi
 ---
 
 # RejettoHFS3
-
-![RejettoHFS3](https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png))
+![RejettoHFS3]
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png" width="64" height="64">
 
 **HFS ~ HTTP File Server by Rejetto**
 
