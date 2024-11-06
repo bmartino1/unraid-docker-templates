@@ -8,6 +8,7 @@ All major changes to this project will be documented here.
 - **rejetohfs3**
   - set VFS Home File in template
   - see discussion: https://github.com/rejetto/hfs/discussions/792
+  - Updated Quick Guide for extra data and fix presentation and spelling mistakes.
 
 ## 2024.03.11
 - **rejetohfs3**
