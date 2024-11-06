@@ -1,4 +1,4 @@
-For use with the CA Template...
+For use with Unraids CA Template.
 
 Welcome to Rejetto HFS 3 as a Docker image on Unraid!
 
@@ -36,8 +36,9 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certificate/pri
 
 Alternatively, it is recommended to use the HFS admin interface to create a self-signed certificate. The admin interface in the container will create files (later seen in the config folder): /home/hfs/.hfs/self.key and /home/hfs/.hfs/self.cer. Once the admin creates a self-signed certificate, you may see a "Network Error." Please stop and then start the Docker to use HTTPS and the newly assigned certificate.
 
-6. Setup HFS VFS Folder
+6. Setup HFS VFS Folder (Now added to docker container Tempalte Level) 
 
-Finally, set up the HFS VFS Source Disk to start sharing files. In the admin interface, click "Add Files." In the Docker template, you added a path you wanted to share; by default, it is /mnt/user. In the container, it will be read as /app/myDisk.
+Finally, set up the HFS VFS Source Disk to start sharing files. In the admin interface, click "Add Files." In the Docker template, you added a path you wanted to share; by default, it is /mnt/user. In the container, it will be read as /app/myDisk. This has now been fixed per github discusion. https://github.com/rejetto/hfs/discussions/792
+You can add more paths and add them to your VFS.
 
 With a custom IP, fixed permissions, a self-signed HTTPS certificate, and a folder added for HTTP/HTTPS file sharing, you are now ready to use the HFS VFS system.
