@@ -26,15 +26,18 @@ Then start the Docker again. You should now be able to access the admin interfac
 
 5. Setup HTTPS Certificate
 
-Next, create an HTTPS certificate. You can create a custom self-signed certificate. Currently, it is recommended to use the option within the HFS admin interface to create and use a self-signed certificate. The template is set up by default to use the admin interface's self-signed certificate.
+Next, create an HTTPS certificate. You can create a custom self-signed certificate. Currently, it is recommended to use the option within the HFS admin interface to create and use a self-signed certificate. The template is set up by default to use the admin interface's self-signed certificate...
 
 Please note: HFS VFS hardcodes the private key, which needs to be in .key format; the certificate can be in .pem format. Click the "Advanced" toggle at the top and then the "Show more settings..." option at the bottom to review. A path has been created at /mnt/user/appdata/rejettohfs3/certificate for your own certificate; please update the container path by hitting edit and using the default options to point to that location, updating names if necessary.
 
-In the Unraid Terminal bash, run:
+To make your own or use your own provided... In the Unraid Terminal bash, run:
 
 openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certificate/privkey.key -out /mnt/user/appdata/hfs/certificate/cert.pem -days 365 -nodes
 
-Alternatively, it is recommended to use the HFS admin interface to create a self-signed certificate. The admin interface in the container will create files (later seen in the config folder): /home/hfs/.hfs/self.key and /home/hfs/.hfs/self.cer. Once the admin creates a self-signed certificate, you may see a "Network Error." Please stop and then start the Docker to use HTTPS and the newly assigned certificate.
+Alternatively, it is recommended to use the HFS admin interface to create a self-signed certificate. The admin interface in the container will create files (later seen in the config folder path): /home/hfs/.hfs/self.key and /home/hfs/.hfs/self.cer. Once the admin creates a self-signed certificate, you may see a "Network Error." Please stop and then start the Docker to use HTTPS and the newly assigned certificate. 
+
+A github discusion at https://github.com/rejetto/hfs/discussions/801 as while this is still recommend you MUST STOP the START the docker.
+^-This is why the docker image/Unraid CA template is still in BETA... Hope to be fixed in a future docker image update...
 
 6. Setup HFS VFS Folder (Now added to docker container Tempalte Level) 
 
