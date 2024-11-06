@@ -7,7 +7,8 @@ Templates for adding containers to unRAID via a more GUI-friendly way and allowi
 # Unraid Templates
 
 - [RejettoHFS3](#RejettoHFS3)
-
+- [ClamAV-clamdscan](#ClamAV-clamdscan)
+  
 ---
 
 # RejettoHFS3
@@ -40,5 +41,27 @@ Access your files directly from your disk via web. You become the server! Share 
 
 ---
 
-# WIP Next Template Docker for CA
-WIP!
+# ClamAV-clamdscan
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/clamav.png" width="64" height="64">
+
+**ClamAV using Clamd**
+
+Scan and Access your files directly from your disk. Use Clamdscan over clamscan to enable muti core suport.
+**This turneed what was once a 48 hour scan of 6 TB and more to a 6 hour scan...**
+
+**Application Name:** ClamAV
+**Application Site:** [https://www.clamav.net/](https://www.clamav.net/)
+
+**Application Repository:** [https://github.com/Cisco-Talos/clamav](https://github.com/Cisco-Talos/clamav)
+**Images Repository:** [https://github.com/bmartino1/clamav-alpine](https://github.com/bmartino1/clamav-alpine)
+**Docker Repository:** [https://hub.docker.com/r/bmmbmm01/clamav-alpine](https://hub.docker.com/r/bmmbmm01/clamav-alpine)
+**Additional Support Documentation:** [https://docs.clamav.net/](https://docs.clamav.net/)
+**Unraid Support Forum:** [https://forums.unraid.net/topic/80868-support-clamav/](https://forums.unraid.net/topic/80868-support-clamav/)
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# WIP for Next Template Docker for CA
+WIP! If antoher one comes up...
