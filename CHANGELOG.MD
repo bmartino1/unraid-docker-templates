@@ -3,7 +3,7 @@
 All major changes to this project will be documented here.
 
 ## 2024.6.11
-- **ClamAV-clamdscan
+- **ClamAV-clamdscan**
   - Add new template and data
 
 ## 2024.03.11
