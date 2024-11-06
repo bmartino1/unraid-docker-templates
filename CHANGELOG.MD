@@ -5,6 +5,9 @@ All major changes to this project will be documented here.
 ## 2024.6.11
 - **ClamAV-clamdscan**
   - Add new template and data
+- **rejetohfs3**
+  - set VFS Home File in template
+  - see discussion: https://github.com/rejetto/hfs/discussions/792
 
 ## 2024.03.11
 - **rejetohfs3**
