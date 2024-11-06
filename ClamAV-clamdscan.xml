@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ClamAV-clamdscan</Name>
+  <Repository>bmmbmm01/clamav-alpine</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/clamav-alpine</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/80868-support-clamav/</Support>
+  <Project>https://github.com/bmartino1/clamav-alpine</Project>
+  <Overview>This template is for scanning your unRAID server with clamav and clamdscan. To scan your server, check the environment variable to set the scanned folder and just start the container. When it is finished, the container will stop and you can view the docker logs and/or log folder to see the results....&#xD;
+&#xD;
+https://github.com/bmartino1/clamav-alpine&#xD;
+Please see clamdscan.sh in your ClamAV Signatures Path&#xD;
+</Overview>
+  <Category>Tools:Utilities Security: spotlight:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-clamav-alpine.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bmartino1/clamav-alpine/refs/heads/master/img/clamav.png</Icon>
+  <ExtraParams>--health-start-period=120s  --health-interval=60s --health-retries=3</ExtraParams>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://ko-fi.com/tquinnelly</DonateLink>
+  <Requires/>
+  <Config Name="Folder to Scan" Target="/scan" Default="/path/to/scan" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="ClamAV freshclam Signatures" Target="/var/lib/clamav" Default="/mnt/user/appdata/CAVclamdscan/db" Mode="rw" Description="Storage for freshclam updates" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/CAVclamdscan/db/</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as root." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as root." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="ClamAV Log Storage" Target="/var/log/clamav" Default="/mnt/user/appdata/CAVclamdscan/log" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/log/</Config>
+  <Config Name="ClamAV etc Configs" Target="/etc/clamav" Default="/mnt/user/appdata/CAVclamdscan/etc" Mode="rw" Description="freshclam.conf and clamd.conf location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/etc/</Config>
+</Container>
