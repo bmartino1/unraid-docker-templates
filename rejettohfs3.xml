@@ -56,4 +56,5 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certificate/pri
   <Config Name="HFS_ERROR_LOG" Target="HFS_ERROR_LOG" Default="/app/logs/error.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/error.log</Config>
   <Config Name="HFS_PRIVATE_KEY" Target="HFS_PRIVATE_KEY" Default="/app/certs/privkey.key" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.key</Config>
   <Config Name="HFS_LOG" Target="HFS_LOG" Default="/app/logs/access.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/access.log</Config>
+  <Config Name="HFS_VFS=" Target="HFS_VFS" Default="{" Mode="" Description="Home Folder Share" Type="Variable" Display="advanced-hide" Required="true" Mask="false">{"source": "/app/myDisk"}</Config>
 </Container>
