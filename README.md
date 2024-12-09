@@ -35,7 +35,7 @@ Access your files directly from your disk via the web. You become the server! Sh
 **Images Repository:** [https://github.com/damienzonly/hfs-docker](https://github.com/damienzonly/hfs-docker) and [https://github.com/bmartino1/hfs-docker](https://github.com/bmartino1/hfs-docker)  
 **Docker Repository:** [https://hub.docker.com/r/rejetto/hfs](https://hub.docker.com/r/rejetto/hfs)  
 **Additional Support:** [https://github.com/rejetto/hfs/discussions](https://github.com/rejetto/hfs/discussions)  
-**Unraid Support Forum:** WIP
+**Unraid Support Forum:** [https://forums.unraid.net/topic/180463-support-rejetto-hfs-3/](https://forums.unraid.net/topic/180463-support-rejetto-hfs-3/)
 
 **[`^back to top^`](#unraid-templates)**
 
