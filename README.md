@@ -63,5 +63,6 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 
 ---
 
+# Debatinn on making a avahi docker(mdns zeroconf) set to host due to a few unraid forum post...
 # WIP for Next Template Docker for CA
 Work in progress! If another one comes up...
