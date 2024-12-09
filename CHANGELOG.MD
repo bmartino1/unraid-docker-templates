@@ -2,9 +2,15 @@
 
 All major changes to this project will be documented here.
 
-## 2024.6.11
+## 2024.09.12
+- **ClamAV-clamdscan**
+  - set puid and pgid target for file access
+  - set privlaged flase due to template errors via CA
+
+## 2024.06.11
 - **ClamAV-clamdscan**
   - Add new template and data
+
 - **rejetohfs3**
   - set VFS Home File in template
   - see discussion: https://github.com/rejetto/hfs/discussions/792
