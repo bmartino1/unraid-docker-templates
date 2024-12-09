@@ -7,6 +7,9 @@ All major changes to this project will be documented here.
   - set puid and pgid target for file access
   - set privlaged flase due to template errors via CA
 
+- **rejetohfs3**
+  - Added feature request puid and pgid to template [Forum](https://forums.unraid.net/topic/180463-support-rejetto-hfs-3/#findComment-1495700)
+
 ## 2024.06.11
 - **ClamAV-clamdscan**
   - Add new template and data
