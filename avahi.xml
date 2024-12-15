@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Avahi</Name>
+  <Repository>flungo/avahi:latest</Repository>
+  <Registry>https://hub.docker.com/r/flungo/avahi/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/flungo-docker/avahi/issues</Support>
+  <Project>https://github.com/flungo-docker/avahi</Project>
+  <Overview>Avahi - Zero Config - Mdns Used to Reflect mDNS broadcasts between networks&#xD;
+&#xD;
+You can also connect to a VLAN on a physical interface by suffixing the parent with . and the VLAN ID (e.g. --opt parent=eno1.123 for VLAN 123 on the eno1 interface. The sub-interface does not need to exist before running the command to create the network as the driver will automatically create this.&#xD;
+&#xD;
+so use Advance Togle &amp;gt; Extra Parmenter and add --opt parent=eno1.123&#xD;
+Remember this interface is what's the console of the docker sees and "." Vlan Number...&#xD;
+&#xD;
+Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the image as small as possible. Highly configurable through environment variables to support most use cases which need an Avahi Daemon.&#xD;
+&#xD;
+Review avahi-daemon ManPages:&#xD;
+https://linux.die.net/man/5/avahi-daemon.conf&#xD;
+&#xD;
+View table on https://github.com/flungo-docker/avahi&#xD;
+ManPage Option | Docker Variable&#xD;
+host-name | SERVER_HOST_NAME&#xD;
+domain-name | SERVER_DOMAIN_NAME&#xD;
+browse-domains | SERVER_BROWSE_DOMAINS&#xD;
+use-ipv4 | SERVER_USE_IPV4&#xD;
+use-ipv6 | SERVER_USE_IPV6&#xD;
+allow-interfaces | SERVER_ALLOW_INTERFACES&#xD;
+deny-interfaces | SERVER_DENY_INTERFACES&#xD;
+check-response-ttl | SERVER_CHECK_RESPONSE_TTL&#xD;
+use-iff-running | SERVER_USE_IFF_RUNNING&#xD;
+enable-dbus | SERVER_ENABLE_DBUS&#xD;
+disallow-other-stacks | SERVER_DISALLOW_OTHER_STACKS&#xD;
+allow-point-to-point | SERVER_ALLOW_POINT_TO_POINT&#xD;
+cache-entries-max | SERVER_CACHE_ENTRIES_MAX&#xD;
+clients-max | SERVER_CLIENTS_MAX &#xD;
+objects-per-client-max | SERVER_OBJECTS_PER_CLIENT_MAX &#xD;
+entries-per-entry-group-max | SERVER_ENTRIES_PER_ENTRY_GROUP_MAX &#xD;
+ratelimit-interval-usec | SERVER_RATELIMIT_INTERVAL_USEC &#xD;
+ratelimit-burst | SERVER_RATELIMIT_BURST&#xD;
+&#xD;
+ManPage Option | Docker Variable&#xD;
+enable-wide-area | WIDE_AREA_ENABLE_WIDE_AREA &#xD;
+&#xD;
+ManPage Option | Docker Variable&#xD;
+disable-publishing | PUBLISH_DISABLE_PUBLISHING &#xD;
+disable-user-service-publishing | PUBLISH_DISABLE_USER_SERVICE_PUBLISHING &#xD;
+add-service-cookie | PUBLISH_ADD_SERVICE_COOKIE &#xD;
+publish-addresses | PUBLISH_PUBLISH_ADDRESSES &#xD;
+publish-hinfo | PUBLISH_PUBLISH_HINFO &#xD;
+publish-workstation | PUBLISH_PUBLISH_WORKSTATION &#xD;
+publish-domain | PUBLISH_PUBLISH_DOMAIN &#xD;
+publish-dns-servers | PUBLISH_PUBLISH_DNS_SERVERS &#xD;
+publish-resolv-conf-dns-servers | PUBLISH_PUBLISH_RESOLV_CONF_DNS_SERVERS &#xD;
+publish-aaaa-on-ipv4 | PUBLISH_PUBLISH_AAAA_ON_IPV4 &#xD;
+publish-a-on-ipv6 | PUBLISH_PUBLISH_A_ON_IPV6 &#xD;
+&#xD;
+ManPage Option | Docker Variable&#xD;
+enable-reflector | REFLECTOR_ENABLE_REFLECTOR &#xD;
+reflect-ipv | REFLECTOR_REFLECT_IPV &#xD;
+reflect-filters | REFLECTOR_REFLECT_FILTERS &#xD;
+&#xD;
+ManPage Option | Docker Variable&#xD;
+rlimit-as | RLIMITS_RLIMIT_AS &#xD;
+rlimit-core | RLIMITS_RLIMIT_CORE &#xD;
+rlimit-data | RLIMITS_RLIMIT_DATA &#xD;
+rlimit-fsize | RLIMITS_RLIMIT_FSIZE &#xD;
+rlimit-nofile | RLIMITS_RLIMIT_NOFILE &#xD;
+rlimit-stack | RLIMITS_RLIMIT_STACK &#xD;
+rlimit-nproc | RLIMITS_RLIMIT_NPROC &#xD;
+</Overview>
+  <Category>Tools: Other: Network:DNS Network:VPN Network:Other Status:Stable</Category>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png</Icon>
+  <Config Name="REFLECTOR_ENABLE_REFLECTOR" Target="REFLECTOR_ENABLE_REFLECTOR" Default="yes" Mode="" Description="Takes a boolean value yes of no. If set to yes avahi-daemon will reflect incoming mDNS requests to all local network interfaces, effectively allowing clients to browse mDNS/DNS-SD services on all networks connected to the gateway." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="SERVER_USE_IPV4" Target="SERVER_USE_IPV4" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to no avahi-daemon will not use IPv4 sockets." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="WIDE_AREA_ENABLE_WIDE_AREA" Target="WIDE_AREA_ENABLE_WIDE_AREA" Default="yes" Mode="" Description="Takes a boolean value yes or no. Enable wide-area DNS-SD, aka DNS-SD over unicast DNS. If this is enabled only domains ending in .local will be resolved on mDNS, all other domains are resolved via unicast DNS." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+</Container>
