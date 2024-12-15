@@ -75,7 +75,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the
 **Application Name:** Avahi  
 **Application Site:** [https://avahi.org/](https://avahi.org/)
 
-**Linux ManPages:** [https://linux.die.net/man/5/avahi-daemon.conf](https://linux.die.net/man/5/avahi-daemon.conf)
+**Linux ManPages:** [https://linux.die.net/man/5/avahi-daemon.conf](https://linux.die.net/man/5/avahi-daemon.conf)  
 **Images Repository:** [https://github.com/flungo-docker/avahi](https://github.com/flungo-docker/avahi)  
 **Docker Repository:** [https://hub.docker.com/r/flungo/avahi](https://hub.docker.com/r/flungo/avahi/tags)
 
