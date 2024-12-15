@@ -8,7 +8,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 
 - [RejettoHFS3](#rejettohfs3)
 - [ClamAV-clamdscan](#clamav-clamdscan)
-
+- [Avahi ZeroConf mDNS](#Avahi)
+ 
 ---
 
 # RejettoHFS3
@@ -62,7 +63,23 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 **[`^back to top^`](#unraid-templates)**
 
 ---
+# Avahi
 
-# Debatinn on making a avahi docker(mdns zeroconf) set to host due to a few unraid forum post...
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png" width="64" height="64">
+
+**Avahi ZeroConfig Mdns**
+
+Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the image as small as possible.
+
+**Application Name:** Avahi 
+**Application Site:** [https://avahi.org/](https://avahi.org/)
+
+**Images Repository:** [https://github.com/flungo-docker/avahi](https://github.com/flungo-docker/avahi)
+**Docker Repository:** [https://hub.docker.com/r/flungo/avahi](https://hub.docker.com/r/flungo/avahi/tags)
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
 # WIP for Next Template Docker for CA
 Work in progress! If another one comes up...
