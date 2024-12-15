@@ -63,6 +63,7 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 **[`^back to top^`](#unraid-templates)**
 
 ---
+
 # Avahi
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png" width="64" height="64">
@@ -71,10 +72,11 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 
 Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the image as small as possible.
 
-**Application Name:** Avahi 
+**Application Name:** Avahi  
 **Application Site:** [https://avahi.org/](https://avahi.org/)
 
-**Images Repository:** [https://github.com/flungo-docker/avahi](https://github.com/flungo-docker/avahi)
+**Linux ManPages:** [https://linux.die.net/man/5/avahi-daemon.conf](https://linux.die.net/man/5/avahi-daemon.conf)
+**Images Repository:** [https://github.com/flungo-docker/avahi](https://github.com/flungo-docker/avahi)  
 **Docker Repository:** [https://hub.docker.com/r/flungo/avahi](https://hub.docker.com/r/flungo/avahi/tags)
 
 **[`^back to top^`](#unraid-templates)**
