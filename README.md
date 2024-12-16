@@ -78,6 +78,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the
 **Linux ManPages:** [https://linux.die.net/man/5/avahi-daemon.conf](https://linux.die.net/man/5/avahi-daemon.conf)  
 **Images Repository:** [https://github.com/bmartino1/avahi](https://github.com/bmartino1/avahi)  
 **Docker Repository:** [https://hub.docker.com/r/bmmbmm01/avahi](https://hub.docker.com/r/bmmbmm01/avahi)
+**Unraid Support Forum:** WIP
 
 **[`^back to top^`](#unraid-templates)**
 
