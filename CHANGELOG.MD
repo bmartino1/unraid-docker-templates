@@ -4,6 +4,11 @@ All major changes to this project will be documented here.
 
 ## 2024.14.12
 - **Avahi**
+  - Changed to use debain over alpine to fix warning missing pacakges
+  - Updated overview and optins in template for mdns
+
+## 2024.14.12
+- **Avahi**
   - Added new template for mdns
 
 ## 2024.09.12
