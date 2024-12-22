@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2024.22.12
+- **Avahi**
+  - Fix issue with docker repo and image pull
+
 ## 2024.14.12
 - **Avahi**
   - Changed to use debain over alpine to fix warning missing pacakges
