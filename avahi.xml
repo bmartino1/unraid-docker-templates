@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Avahi</Name>
-  <Repository>avahi:latest</Repository>
+  <Repository>bmmbmm01/avahi:latest</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/avahi</Registry>
   <Network>host</Network>
   <MyIP/>
