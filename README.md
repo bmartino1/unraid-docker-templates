@@ -68,9 +68,12 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png" width="64" height="64">
 
-**Avahi ZeroConfig Mdns**
+**Avahi a ZeroConfig Mdns Server**
 
-Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the image as small as possible.
+Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the image as feautre rich.
+- **Simple Default** View the config via the log and make the config via docker settings.
+- **one log location** easily see error and mdns status in the docker log.
+- **Diagtool builtin** open console run mdns-scan to check configuration and see whats available via mdns.
 
 **Application Name:** Avahi  
 **Application Site:** [https://avahi.org/](https://avahi.org/)
