@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2024.23.12
+- **Avahi**
+  - add template option i'm runing for ipv6 and fixed some template descrptions
+
 ## 2024.22.12
 - **Avahi**
   - Fix issue with docker repo and image pull
