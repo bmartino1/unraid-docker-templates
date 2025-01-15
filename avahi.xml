@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/183175-support-bmartino1-avahi/</Support>
   <Project>https://github.com/bmartino1/avahi</Project>
   <Overview>
 Avahi - Mdns Used to Reflect mDNS broadcasts between networks and vlans&#xD;
