@@ -2,6 +2,11 @@
 
 All major changes to this project will be documented here.
 
+## 2025.09.04
+- **SFTP**
+  - Add new template and data
+  - add template was added Hello Wrold to a New Unraid CA Updated from a previous maintainer...
+
 ## 2024.23.12
 - **Avahi**
   - add template option i'm runing for ipv6 and fixed some template descrptions
