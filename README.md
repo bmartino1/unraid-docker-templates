@@ -99,7 +99,7 @@ Docker image for SFTP funning openssh-server and harend against attacks with fai
 - **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp  
 
 **Application Name:** SFTP (Openssh)  
-**Application Site:** [https://avahi.org/](https://www.openssh.com/)  
+**Application Site:** [https://www.openssh.com/](https://www.openssh.com/)  
 **Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)  
 
 **Application Name:** Fail2Ban (fail2ban and jails)  
