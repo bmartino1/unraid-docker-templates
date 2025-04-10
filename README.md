@@ -9,6 +9,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [RejettoHFS3](#rejettohfs3)
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
+- [SFTP-Fail2ban](#SFTP)
  
 ---
 
@@ -69,11 +70,10 @@ Scan and access your files directly from your disk. Use Clamdscan over Clamscan 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png" width="64" height="64">
 
 **Avahi a ZeroConfig Mdns Server**
-
 Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the image as feautre rich.
 - **Simple Default** View the config via the log and make the config via docker settings.
 - **one log location** easily see error and mdns status in the docker log.
-- **Diagtool builtin** open console run mdns-scan to check configuration and see whats available via mdns.
+- **Diag tools builtin** open console run mdns-scan to check configuration and see whats available via mdns.
 
 **Application Name:** Avahi  
 **Application Site:** [https://avahi.org/](https://avahi.org/)
@@ -87,5 +87,31 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the
 
 ---
 
-# WIP for Next Template Docker for CA
-Work in progress! If another one comes up...
+---
+
+# SFTP
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/SFTP.png" width="64" height="64">
+
+**SFTP and Fail2ban Server**
+
+Docker image for SFTP funning openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.
+- **Simple by Default** Once Click install and sftp is running... View the config folder
+- **Easy Log Location** easily see error and mdns status in the docker log.
+- **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp
+
+**Application Name:** SFTP (Openssh)
+**Application Site:** [https://avahi.org/](https://www.openssh.com/)
+**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)
+
+**Application Name:** Fail2Ban (fail2ban and jails)
+**Application Site:** [https://github.com/fail2ban/fail2ban](https://github.com/fail2ban/fail2ban)
+**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html](https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html)  
+
+**Images Repository:** [https://github.com/bmartino1/docker-sftp](https://github.com/bmartino1/docker-sftp)  
+**Docker Repository:** [https://hub.docker.com/r/bmmbmm01/sftp](https://hub.docker.com/r/bmmbmm01/sftp)  
+**Unraid Support Forum:** WIP- [https://forums.unraid.net/topic/189050-support-sftp](https://forums.unraid.net/topic/189050-support-sftp)
+
+**[`^back to top^`](#unraid-templates)**
+
+---
