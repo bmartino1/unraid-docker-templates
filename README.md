@@ -87,25 +87,23 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the
 
 ---
 
----
-
 # SFTP
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/SFTP.png" width="64" height="64">
 
 **SFTP and Fail2ban Server**
 
-Docker image for SFTP funning openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.
-- **Simple by Default** Once Click install and sftp is running... View the config folder
-- **Easy Log Location** easily see error and mdns status in the docker log.
-- **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp
+Docker image for SFTP funning openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.  
+- **Simple by Default** Once Click install and sftp is running... View the config folder  
+- **Easy Log Location** easily see error and mdns status in the docker log.  
+- **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp  
 
-**Application Name:** SFTP (Openssh)
-**Application Site:** [https://avahi.org/](https://www.openssh.com/)
-**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)
+**Application Name:** SFTP (Openssh)  
+**Application Site:** [https://avahi.org/](https://www.openssh.com/)  
+**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)  
 
-**Application Name:** Fail2Ban (fail2ban and jails)
-**Application Site:** [https://github.com/fail2ban/fail2ban](https://github.com/fail2ban/fail2ban)
+**Application Name:** Fail2Ban (fail2ban and jails)  
+**Application Site:** [https://github.com/fail2ban/fail2ban](https://github.com/fail2ban/fail2ban)  
 **Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html](https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html)  
 
 **Images Repository:** [https://github.com/bmartino1/docker-sftp](https://github.com/bmartino1/docker-sftp)  
