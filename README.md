@@ -93,9 +93,9 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the
 
 **SFTP and Fail2ban Server**
 
-Docker image for SFTP funning openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.  
-- **Simple by Default** Once Click install and sftp is running... View the config folder  
-- **Easy Log Location** easily see error and mdns status in the docker log.  
+Docker image for SFTP running openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.  
+- **Simple by Default** Once Click install and sftp is running... View the config folder for advance configuration changes...  
+- **Easy Log Location** easily see error and check status in the docker log.  
 - **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp  
 
 **Application Name:** SFTP (Openssh)  
