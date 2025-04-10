@@ -108,7 +108,7 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 
 **Images Repository:** [https://github.com/bmartino1/docker-sftp](https://github.com/bmartino1/docker-sftp)  
 **Docker Repository:** [https://hub.docker.com/r/bmmbmm01/sftp](https://hub.docker.com/r/bmmbmm01/sftp)  
-**Unraid Support Forum:** WIP- [https://forums.unraid.net/topic/189050-support-sftp](https://forums.unraid.net/topic/189050-support-sftp)
+**Unraid Support Forum:** [https://forums.unraid.net/topic/189050-support-sftp-fail2ban](https://forums.unraid.net/topic/189050-support-sftp-fail2ban)  
 
 **[`^back to top^`](#unraid-templates)**
 
