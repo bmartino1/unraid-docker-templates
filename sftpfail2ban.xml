@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/189050-support-sftp-fail2ban</Support>
   <Project>https://github.com/bmartino1/docker-sftp</Project>
   <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#xD;
 &#xD;
