@@ -20,6 +20,7 @@
   <Config Name="AdminData" Target="/home/admin/sftp" Default="/mnt/user/" Mode="rw" Description="Default admin Users Host Folder/File Access" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/sftp" Mode="rw" Description="Optional Volume. Needed to change the admin account" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sftp</Config>
   <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Chicago</Config>
+  <Config Name="AUTO_UPDATE" Target="AUTO_UPDATE" Default="true" Mode="" Description="true &#9;Runs /stage/updateapps.sh if present&#13;&#10;custom&#9;Runs /config/updateapps.sh if present&#13;&#10;false or empty skips updates" Type="Variable" Display="always" Required="true" Mask="false">custom</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="user root&#13;&#10;" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="user root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
 </Container>
