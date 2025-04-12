@@ -2,6 +2,11 @@
 
 All major changes to this project will be documented here.
 
+## 2025.12.04
+- **SFTP**
+  - Updated Tempalte added varible for auto update
+
+
 ## 2025.10.04
 - **SFTP**
   - Updated Tempalted added support [Forum](https://forums.unraid.net/topic/189050-support-sftp-fail2ban)
