@@ -10,6 +10,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
+- [MongoDB](#MongoDB-RocketChat)
  
 ---
 
@@ -109,6 +110,25 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 **Images Repository:** [https://github.com/bmartino1/docker-sftp](https://github.com/bmartino1/docker-sftp)  
 **Docker Repository:** [https://hub.docker.com/r/bmmbmm01/sftp](https://hub.docker.com/r/bmmbmm01/sftp)  
 **Unraid Support Forum:** [https://forums.unraid.net/topic/189050-support-sftp-fail2ban](https://forums.unraid.net/topic/189050-support-sftp-fail2ban)  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# MongoDB-RocketChat
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchatmongo.png" width="64" height="64">
+
+**MongoDB by bitnami for RocketChat**
+
+Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
+
+**Application Name:** Mongo
+**Application Site:** [https://www.mongodb.com/](https://www.mongodb.com/)  
+
+**Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
+**Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)
+**Unraid Support Forum:** [WIP  
 
 **[`^back to top^`](#unraid-templates)**
 
