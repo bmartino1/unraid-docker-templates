@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.lime-technology.com/topic/61337-support-rocketchat/</Support>
   <Project/>
-  <Overview>Rocket.Chat is a Web Chat Server, developed in JavaScript, using the Meteor fullstack framework.&#xD;
+  <Overview>From Rocket Chat Maintainer Compose file: https://raw.githubusercontent.com/RocketChat/Docker.Official.Image/master/compose.yml&#xD;Rocket.Chat is a Web Chat Server, developed in JavaScript, using the Meteor fullstack framework.&#xD;
 &#xD;
 It is a great solution for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms.</Overview>
   <Category>Network:Messenger</Category>
