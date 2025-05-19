@@ -123,7 +123,7 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 
 Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
 
-**Application Name:** Mongo 
+**Application Name:** Mongo  
 **Application Site:** [https://www.mongodb.com/](https://www.mongodb.com/)  
 
 **Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
