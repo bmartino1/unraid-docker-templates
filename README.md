@@ -127,8 +127,8 @@ Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintai
 **Application Site:** [https://www.mongodb.com/](https://www.mongodb.com/)  
 
 **Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
-**Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)
-**Unraid Support Forum:** [WIP  
+**Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)  
+**Unraid Support Forum:** WIP  
 
 **[`^back to top^`](#unraid-templates)**
 
