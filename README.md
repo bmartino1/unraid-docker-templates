@@ -11,7 +11,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
 - [MongoDB](#MongoDB-RocketChat)
- 
+- [RocketChat](#RocketChat)
+
 ---
 
 # RejettoHFS3
@@ -128,6 +129,25 @@ Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintai
 
 **Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
 **Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)  
+**Unraid Support Forum:** WIP  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# RocketChat
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchat.png" width="64" height="64">
+
+**RocketChat**
+
+Docker image for RocketChat for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
+
+**Application Name:** Rocketchat   
+**Application Site:** https://www.rocket.chat/pricing 
+
+**Images Repository:** https://github.com/RocketChat/Docker.Official.Image  
+**Docker Repository:** https://hub.docker.com/r/rocketchat/rocket.chat/   
 **Unraid Support Forum:** WIP  
 
 **[`^back to top^`](#unraid-templates)**
