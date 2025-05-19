@@ -2,6 +2,12 @@
 
 All major changes to this project will be documented here.
 
+## 2025.19.05
+- **RocketChat**
+  - Add new template and data
+- **MongoDB-RocketChat**
+  - Minor fixes to adational requirments to complete the unraid stack
+
 ## 2025.18.05
 - **MongoDB-RocketChat**
   - Add new template and data
