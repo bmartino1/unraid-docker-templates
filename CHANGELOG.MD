@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2025.18.05
+- **MongoDB-RocketChat**
+  - Add new template and data
+
 ## 2025.12.04
 - **SFTP**
   - Updated Tempalte added varible for auto update
