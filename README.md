@@ -12,6 +12,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [SFTP-Fail2ban](#SFTP)
 - [MongoDB](#MongoDB-RocketChat)
 - [RocketChat](#RocketChat)
+- [Postgress](#Postgress_Immich)
 
 ---
 
@@ -148,6 +149,28 @@ Docker image for RocketChat for easier use to run RocketChat per RocketChat Main
 
 **Images Repository:** https://github.com/RocketChat/Docker.Official.Image  
 **Docker Repository:** https://hub.docker.com/r/rocketchat/rocket.chat/   
+**Unraid Support Forum:** WIP  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+---
+
+# Postgress_Immich
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png" width="64" height="64">
+
+**Postgress_Immich**
+
+Docker image for immich running postgress v14 using the new Vector Chord Plugin. 
+Immich is taking over the orginal tensorchord/pgvecto-rs:pg16-v0.3.0 migrating off the deprecated pgvecto.rs
+
+**Application Name:** Postgress
+**Application Site:** https://www.postgresql.org/support/  
+
+**Images Repository:** https://github.com/immich-app/base-images/pkgs/container/postgres  
+**Docker Repository:** https://github.com/immich-app/immich/releases/tag/v1.133.0  
 **Unraid Support Forum:** WIP  
 
 **[`^back to top^`](#unraid-templates)**
