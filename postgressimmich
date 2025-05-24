@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Immich_PostgreSQL</Name>
+  <Repository>tensorchord/pgvecto-rs:pg16-v0.3.0</Repository>
+  <Registry>https://github.com/immich-app/base-images/pkgs/container/postgres</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.postgresql.org/</Project>
+  <Overview>This container (based on PostgreSQL 14)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#xD;
+See the orginal Project: https://github.com/tensorchord/pgvecto.rs&#xD;
+&#xD;
+New Immich Database Release Release:&#xD;
+https://github.com/immich-app/immich/discussions/18429&#xD;
+&#xD;
+Repo:&#xD;
+https://github.com/immich-app/base-images/pkgs/container/postgres&#xD;
+&#xD;
+Configuration Parameters&#xD;
+&#xD;
+    POSTGRES_PASSWORD - Superuser password.&#xD;
+        Default postgres&#xD;
+        Note -- If you change this value, remember to update it in the Immich container configuration as well.&#xD;
+&#xD;
+    POSTGRES_USER - Username for the superuser.&#xD;
+        Default postgres&#xD;
+        Note -- Alterations to this setting should also be mirrored in the Immich container.&#xD;
+&#xD;
+    POSTGRES_DB - Default database.&#xD;
+        Default: postgres&#xD;
+        Note -- Any change here should be replicated in the Immich container configuration.&#xD;
+&#xD;
+Storage&#xD;
+&#xD;
+    Data and Configuration Path: /mnt/user/appdata/postgresql_immich&#xD;
+        This is the directory where Postgres stores its application data and configuration files.&#xD;
+</Overview>
+  <Category>Productivity: Network:Management Network:Other</Category>
+  <WebUI/>
+  <TemplateURL\>
+  <Icon>https://github.com/SpaceinvaderOne/Docker-Templates-Unraid/blob/master/spaceinvaderone/docker_icons/postgresql-immich-logo.png?raw=true</Icon>
+  <ExtraParams>--hostname postgres --dns=8.8.8.8</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1748053363</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>The Immich container and a Redis container</Requires>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)&#13;&#10;Set once at first database creation." Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">postgres</Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">immich</Config>
+  <Config Name="Database Storage Path (Appdata)" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/postgresql_immich" Mode="rw" Description="PostgreSQL data storage location" Type="Path" Display="always" Required="true" Mask="null">/mnt/vm-zfs/Dockers/appdata/PostgreSQL_Immich</Config>
+  <Config Name="PostgreSQL access port" Target="5433" Default="5432" Mode="tcp" Description="PostgreSQL TCP connection port mapped to 5433&#13;&#10;Docker Bridge Nat" Type="Port" Display="always-hide" Required="true" Mask="null">5433</Config>
+  <TailscaleStateDir/>
+</Container>
