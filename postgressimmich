@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://www.postgresql.org/</Project>
-  <Overview>This container (based on PostgreSQL 14)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#xD;
+  <Overview>This container (based on PostgreSQL 16)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#xD;
 See the orginal Project: https://github.com/tensorchord/pgvecto.rs&#xD;
 &#xD;
 New Immich Database Release Release:&#xD;
