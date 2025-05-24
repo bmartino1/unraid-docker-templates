@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Immich_PostgreSQL</Name>
-  <Repository>tensorchord/pgvecto-rs:pg16-v0.3.0</Repository>
+  <Repository>ghcr.io/immich-app/postgres:16-vectorchord0.3.0-pgvectors0.3.0</Repository>
   <Registry>https://github.com/immich-app/base-images/pkgs/container/postgres</Registry>
   <Network>host</Network>
   <MyIP/>
@@ -51,7 +51,7 @@ Storage&#xD;
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)&#13;&#10;Set once at first database creation." Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">postgres</Config>
   <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">immich</Config>
-  <Config Name="Database Storage Path (Appdata)" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/postgresql_immich" Mode="rw" Description="PostgreSQL data storage location" Type="Path" Display="always" Required="true" Mask="null">/mnt/vm-zfs/Dockers/appdata/PostgreSQL_Immich</Config>
+  <Config Name="Database Storage Path (Appdata)" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/postgresql_immich" Mode="rw" Description="PostgreSQL data storage location" Type="Path" Display="always" Required="true" Mask="null">/mnt/user/appdata/postgresql_immich</Config>
   <Config Name="PostgreSQL access port" Target="5433" Default="5432" Mode="tcp" Description="PostgreSQL TCP connection port mapped to 5433&#13;&#10;Docker Bridge Nat" Type="Port" Display="always-hide" Required="true" Mask="null">5433</Config>
   <TailscaleStateDir/>
 </Container>
