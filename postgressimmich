@@ -47,7 +47,7 @@ Storage&#xD;
   <DateInstalled>1748053363</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires>The Immich container and a Redis container</Requires>
+  <Requires>ALWAYS MAKE A BACKUP!!! SEE https://immich.app/docs/administration/postgres-standalone/#migrating-to-vectorchord The Immich container and a Redis container</Requires>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)&#13;&#10;Set once at first database creation." Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">postgres</Config>
   <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">immich</Config>
