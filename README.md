@@ -178,7 +178,7 @@ Immich is taking over the orginal tensorchord/pgvecto-rs:pg16-v0.3.0 migrating o
 
 # Redis_Immich
 
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/redis.png" width="64" height="64">
+<img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
 
 **Redis_Immich**
 
