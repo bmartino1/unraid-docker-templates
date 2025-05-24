@@ -13,6 +13,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [MongoDB](#MongoDB-RocketChat)
 - [RocketChat](#RocketChat)
 - [Postgress](#Postgress_Immich)
+- [Redis](#Redis_Immich)
 
 ---
 
@@ -155,8 +156,6 @@ Docker image for RocketChat for easier use to run RocketChat per RocketChat Main
 
 ---
 
----
-
 # Postgress_Immich
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png" width="64" height="64">
@@ -171,6 +170,25 @@ Immich is taking over the orginal tensorchord/pgvecto-rs:pg16-v0.3.0 migrating o
 
 **Images Repository:** https://github.com/immich-app/base-images/pkgs/container/postgres  
 **Docker Repository:** https://github.com/immich-app/immich/releases/tag/v1.133.0  
+**Unraid Support Forum:** WIP  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# Redis_Immich
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/redis.png" width="64" height="64">
+
+**Redis_Immich**
+
+Docker image for immich running bitnami redis. Some adational Docker Varables for a easier 1 CLick Install
+
+**Application Name:** Redis  
+**Application Site:** https://redis.io/   
+
+**Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
+**Docker Repository:** https://hub.docker.com/r/bitnami/redis  
 **Unraid Support Forum:** WIP  
 
 **[`^back to top^`](#unraid-templates)**
