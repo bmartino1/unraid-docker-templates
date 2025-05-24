@@ -40,7 +40,7 @@ Storage&#xD;
   <Category>Productivity: Network:Management Network:Other</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://github.com/SpaceinvaderOne/Docker-Templates-Unraid/blob/master/spaceinvaderone/docker_icons/postgresql-immich-logo.png?raw=true</Icon>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png</Icon>
   <ExtraParams>--hostname postgres --dns=8.8.8.8</ExtraParams>
   <PostArgs/>
   <CPUset/>
