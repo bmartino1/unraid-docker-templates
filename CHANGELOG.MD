@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2025.24.05
+- **Redis**
+  - Add new template and data
+
 ## 2025.23.05
 - **Postgress**
   - Add new template and data
