@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup</Support>
   <Project>https://www.postgresql.org/</Project>
   <Overview>This container (based on PostgreSQL 16)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#xD;
 See the orginal Project: https://github.com/tensorchord/pgvecto.rs&#xD;
