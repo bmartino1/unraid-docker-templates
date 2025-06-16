@@ -202,7 +202,7 @@ Docker image for immich running bitnami redis. Some adational Docker Varables fo
 
 **Redis_Immich**
 
-Docker image for immich running bitnami redis. Some adational Docker Varables for a easier 1 CLick Install
+Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter add anotehr docker for electrum and lightning nodes. Help full for slef host bitcon wallet, runing a node on Unriad.
 
 **Application Name:** Bitcoin   
 **Application Site:** https://bitcoin.org/en/ 
