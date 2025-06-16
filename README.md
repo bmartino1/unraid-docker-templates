@@ -14,7 +14,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [RocketChat](#RocketChat)
 - [Postgress](#Postgress_Immich)
 - [Redis](#Redis_Immich)
-- [Redis](#BitcoinCoreGUI)
+- [Bitcoin](#BitcoinCoreGUI)
 
 ---
 
