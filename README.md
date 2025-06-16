@@ -200,9 +200,9 @@ Docker image for immich running bitnami redis. Some adational Docker Varables fo
 
 <img src="https://bitcoin.org/img/icons/opengraph.png" width="64" height="64">
 
-**BitcoinCoreGUI**
+**BitcoinCore**
 
-Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter add anotehr docker for electrum and lightning nodes. Help full for slef host bitcon wallet, runing a node on Unriad.
+Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter will add another docker for electrum and lightning nodes. Help-full for self hosting a bitcoin wallet, running a node for sinlg mining against on Unriad.
 
 **Application Name:** Bitcoin   
 **Application Site:** https://bitcoin.org/en/ 
