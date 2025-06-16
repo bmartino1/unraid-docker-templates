@@ -14,6 +14,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [RocketChat](#RocketChat)
 - [Postgress](#Postgress_Immich)
 - [Redis](#Redis_Immich)
+- [Redis](#BitcoinCoreGUI)
 
 ---
 
@@ -170,7 +171,7 @@ Immich is taking over the orginal tensorchord/pgvecto-rs:pg16-v0.3.0 migrating o
 
 **Images Repository:** https://github.com/immich-app/base-images/pkgs/container/postgres  
 **Docker Repository:** https://github.com/immich-app/immich/releases/tag/v1.133.0  
-**Unraid Support Forum:** WIP  
+**Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
 
 **[`^back to top^`](#unraid-templates)**
 
@@ -189,8 +190,28 @@ Docker image for immich running bitnami redis. Some adational Docker Varables fo
 
 **Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
 **Docker Repository:** https://hub.docker.com/r/bitnami/redis  
+**Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# BitcoinCoreGUI
+
+<img src="https://bitcoin.org/img/icons/opengraph.png" width="64" height="64">
+
+**Redis_Immich**
+
+Docker image for immich running bitnami redis. Some adational Docker Varables for a easier 1 CLick Install
+
+**Application Name:** Bitcoin   
+**Application Site:** https://bitcoin.org/en/ 
+
+**Images Repository:** https://github.com/bmartino1/Docker-BitcoinGUI 
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-core-gui  
 **Unraid Support Forum:** WIP  
 
 **[`^back to top^`](#unraid-templates)**
 
 ---
+
