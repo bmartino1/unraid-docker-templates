@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BitcoinCoreGUI</Name>
+  <Repository>bmmbmm01/bitcoin-core-gui</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/bitcoin-core-gui</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/bmartino1/Docker-BitcoinGUI</Project>
+  <Overview>Docker - Bitcoin Core GUI Client:&#xD;
+Run the Bitcoin Core GUI wallet in a Docker container, accessible via a web browser and VNC. Built over the jlesage/docker-baseimage-gui image (Debian 12).&#xD;
+https://github.com/jlesage/docker-baseimage-gui&#xD;
+bitcoin/bitcoin: https://github.com/willcl-ark/bitcoin-core-docker&#xD;
+https://hub.docker.com/r/bitcoin/bitcoin&#xD;
+&#xD;
+Volume (Persistence):&#xD;
+The Bitcoin Core data directory is set to /config/.bitcoin by default. A volume is created for /config, but you might want to mount the /config/.bitcoin directory on another volume or bind mount.&#xD;
+&#xD;
+You can even mount subdirectories of the Bitcoin data directory. These are the most important:&#xD;
+&#xD;
+/config/.bitcoin/blocks for the blockchain&#xD;
+/config/.bitcoin/wallet.dat for your wallet&#xD;
+/config/.bitcoin/bitcoin.conf for the client configuration&#xD;
+/config/xdg/config/Bitcoin/Bitcoin-Qt.conf for the frontend (bitcoin-qt) configuration&#xD;
+&#xD;
+The /config directory is used by the base image for persisting settings of the image tools and the application running. We set it as the HOME directory, so this results in bitcoin-qt setting the data directory to /config/.bitcoin by default.</Overview>
+  <Category>Crypto: Tools: Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL/>
+  <Icon>https://bitcoin.org/img/icons/opengraph.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Min of 750 GB(and growing!) of space this holds the bitcoin blockchain data. Recomened to be on a 1 TB NVME Drive</Requires>
+  <Config Name="Bitcoin Data" Target="/config" Default="/mnt/user/appdata/bitcoingui/config" Mode="rw" Description="Data saved on DISK&#13;&#10;Warning Large Data Path atleast 800 GB and growing. Recomend to be saved on a 1 TB NVME" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitcoingui/config</Config>
+  <Config Name="VNC_LISTENING_PORT" Target="5900" Default="5900" Mode="tcp" Description="Port to access the application's GUI via the VNC protocol. Mapping to the host is optional if access through the VNC protocol is not wanted. For a container not using the default bridge network, the port can be changed with the VNC_LISTENING_PORT environment variable." Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="WEB_LISTENING_PORT" Target="5800" Default="5800" Mode="tcp" Description="Port to access the application's GUI via the web interface. Mapping to the host is optional if access through the web interface is not wanted. For a container not using the default bridge network, the port can be changed with the WEB_LISTENING_PORT environment variable." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <TailscaleStateDir/>
+</Container>
