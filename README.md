@@ -207,9 +207,9 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 **Application Name:** Bitcoin   
 **Application Site:** https://bitcoin.org/en/ 
 
-**Images Repository:** https://github.com/bmartino1/Docker-BitcoinGUI 
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-core-gui  
-**Unraid Support Forum:** WIP  
+**Images Repository:** https://github.com/bmartino1/Docker-BitcoinGUI    
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-core-gui     
+**Unraid Support Forum:** WIP    
 
 **[`^back to top^`](#unraid-templates)**
 
