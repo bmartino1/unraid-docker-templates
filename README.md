@@ -219,7 +219,7 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 <img src="https://bitcoin.org/img/icons/opengraph.png" width="64" height="64">
 
-**BitcoinCore**
+**BitcoinKnots**
 
 Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter will add another docker for electrum and lightning nodes. Help-full for self hosting a bitcoin wallet, running a node for single mineing against on Unriad.
 
