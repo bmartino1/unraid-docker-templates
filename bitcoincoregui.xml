@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+<Support>https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/</Support>
   <Project>https://github.com/bmartino1/Docker-BitcoinGUI</Project>
   <Overview>YOU MUST MAKE THE BITCOIN DIRECTORY BEFORE HAND!&#xD;
 mkdir -p /mnt/user/appdata/bitcoinknots/.bitcoin&#xD;
