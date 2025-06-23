@@ -2,6 +2,13 @@
 
 All major changes to this project will be documented here.
 
+## 2025.23.06
+- **BitcoinCore**
+  - Add new template and data WIP
+- **BitcoinKnots**
+  - Add new template and data WIP
+
+
 ## 2025.04.06
 - **Postgress**
   - template fix port 5432 in template
