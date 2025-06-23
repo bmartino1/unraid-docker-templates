@@ -132,7 +132,7 @@ Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintai
 
 **Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
 **Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)  
-**Unraid Support Forum:** WIP  
+**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
 
@@ -151,7 +151,7 @@ Docker image for RocketChat for easier use to run RocketChat per RocketChat Main
 
 **Images Repository:** https://github.com/RocketChat/Docker.Official.Image  
 **Docker Repository:** https://hub.docker.com/r/rocketchat/rocket.chat/   
-**Unraid Support Forum:** WIP  
+**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
 
