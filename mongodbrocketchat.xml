@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/61337-support-rocketchat</Support>
   <Project>https://www.mongodb.com/</Project>
   <Overview>RocketChat MongoDB setup for Rocket chat.&#xD;
     You may need to fix file permission for data on unraid!&#xD;
