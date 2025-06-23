@@ -209,7 +209,7 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 **Images Repository:** https://github.com/bmartino1/Docker-BitcoinCoreGUI       
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-core-gui     
-**Unraid Support Forum:** WIP    
+**Unraid Support Forum:** https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/      
 
 **[`^back to top^`](#unraid-templates)**
 
@@ -228,7 +228,7 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 **Images Repository:** https://github.com/bmartino1/Docker-BitcoinKnotsGUI
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-knots-gui     
-**Unraid Support Forum:** WIP    
+**Unraid Support Forum:** https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/       
 
 **[`^back to top^`](#unraid-templates)**
 
