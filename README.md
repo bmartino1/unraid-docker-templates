@@ -14,8 +14,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [RocketChat](#RocketChat)
 - [Postgress](#Postgress_Immich)
 - [Redis](#Redis_Immich)
-- [Bitcoin](#BitcoinCoreGUI)
-
+- [Bitcoin Core](#BitcoinCoreGUI)
+- [Bitcoin Knots](#BitcoinKnotsGUI)
 ---
 
 # RejettoHFS3
@@ -215,3 +215,21 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 ---
 
+# BitcoinKnotsGUI
+
+<img src="https://bitcoin.org/img/icons/opengraph.png" width="64" height="64">
+
+**BitcoinCore**
+
+Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter will add another docker for electrum and lightning nodes. Help-full for self hosting a bitcoin wallet, running a node for single mineing against on Unriad.
+
+**Application Name:** Bitcoin   
+**Application Site:** https://bitcoinknots.org/   
+
+**Images Repository:** https://github.com/bmartino1/Docker-BitcoinKnotsGUI
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/bitcoin-knots-gui     
+**Unraid Support Forum:** WIP    
+
+**[`^back to top^`](#unraid-templates)**
+
+---
