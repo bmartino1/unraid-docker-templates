@@ -4,10 +4,9 @@ All major changes to this project will be documented here.
 
 ## 2025.23.06
 - **BitcoinCore**
-  - Add new template and data WIP
+  - Add new template and data
 - **BitcoinKnots**
-  - Add new template and data WIP
-
+  - Add new template and data
 
 ## 2025.04.06
 - **Postgress**
