@@ -9,7 +9,13 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/bmartino1/Docker-BitcoinGUI</Project>
-  <Overview>Docker - Bitcoin Core GUI Client:&#xD;
+  <Overview>YOU MUST MAKE THE BITCOIN DIRECTORY BEFORE HAND!&#xD;
+mkdir -p /mnt/user/appdata/bitcoinknots/.bitcoin&#xD;
+chmod 777 -R /mnt/user/appdata/bitcoinknots/&#xD;
+chown nobody:users -R /mnt/user/appdata/bitcoinknots/&#xD;
+&#xD;
+&#xD;
+Docker - Bitcoin Core GUI Client:&#xD;
 Run the Bitcoin Core GUI wallet in a Docker container, accessible via a web browser and VNC. Built over the jlesage/docker-baseimage-gui image (Debian 12).&#xD;
 https://github.com/jlesage/docker-baseimage-gui&#xD;
 bitcoin/bitcoin: https://github.com/willcl-ark/bitcoin-core-docker&#xD;
@@ -35,8 +41,15 @@ The /config directory is used by the base image for persisting settings of the i
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires>Min of 750 GB(and growing!) of space this holds the bitcoin blockchain data. Recomened to be on a 1 TB NVME Drive</Requires>
-  <Config Name="Bitcoin Data" Target="/config" Default="/mnt/user/appdata/bitcoingui/config" Mode="rw" Description="Data saved on DISK&#13;&#10;Warning Large Data Path atleast 800 GB and growing. Recomend to be saved on a 1 TB NVME" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitcoingui/config</Config>
+  <Requires>You must make the .bitcoin directory and set it corectly in the template at Bitcoin Data:&#xD;
+Default /mnt/user/appdata/bitcoincore/.bitcoin&#xD;
+&#xD;
+mkdir -p /mnt/user/appdata/bitcoincore/.bitcoin&#xD;
+chmod 777 -R /mnt/user/appdata/bitcoincore/&#xD;
+chown nobody:users -R /mnt/user/appdata/bitcoincore/&#xD;
+&#xD;
+Min of 750 GB(and growing!) of space this holds the bitcoin blockchain data. Recomened to be on a 1 TB NVME Drive</Requires>
+  <Config Name="Bitcoin Data" Target="/config" Default="/mnt/user/appdata/bitcoincore/config" Mode="rw" Description="Data saved on DISK&#13;&#10;Warning Large Data Path atleast 800 GB and growing. Recomend to be saved on a 1 TB NVME" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitcoincore/config</Config>
   <Config Name="VNC_LISTENING_PORT" Target="5900" Default="5900" Mode="tcp" Description="Port to access the application's GUI via the VNC protocol. Mapping to the host is optional if access through the VNC protocol is not wanted. For a container not using the default bridge network, the port can be changed with the VNC_LISTENING_PORT environment variable." Type="Port" Display="always" Required="false" Mask="false">5900</Config>
   <Config Name="WEB_LISTENING_PORT" Target="5800" Default="5800" Mode="tcp" Description="Port to access the application's GUI via the web interface. Mapping to the host is optional if access through the web interface is not wanted. For a container not using the default bridge network, the port can be changed with the WEB_LISTENING_PORT environment variable." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
   <TailscaleStateDir/>
