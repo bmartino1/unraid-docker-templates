@@ -16,6 +16,9 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Redis](#Redis_Immich)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
+- [CKPool](#CKPoolSelfhostedPool)
+
+
 ---
 
 # RejettoHFS3
@@ -234,7 +237,7 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 ---
 
-# CKPool_Bitcoin_Self-hosted Solo_Mining
+# CKPoolSelfhostedPool
 
 <img src="https://raw.githubusercontent.com/animai/unraid-templates/master/public-pool/img/public-pool.png" width="64" height="64">
 
