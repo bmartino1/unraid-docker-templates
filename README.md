@@ -233,3 +233,21 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 **[`^back to top^`](#unraid-templates)**
 
 ---
+
+# CKPool_Bitcoin_Self-hosted Solo_Mining
+
+<img src="https://raw.githubusercontent.com/animai/unraid-templates/master/public-pool/img/public-pool.png" width="64" height="64">
+
+**CKPoolSelfhostedPool**
+
+Docker image for running a Solo Pool asociated aginst a Bitcoin node for single mineing against on Unriad.
+
+**Application Name:** CKPool
+
+**Images Repository:** https://github.com/golden-guy/docker-ckpool   
+**Docker Repository:** https://hub.docker.com/r/pinkyswear/ckpool-solo   
+**Unraid Support Forum:** WIP ??? - https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/       
+
+**[`^back to top^`](#unraid-templates)**
+
+---
