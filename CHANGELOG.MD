@@ -7,6 +7,9 @@ All major changes to this project will be documented here.
   - Add new template and data
 - **BitcoinKnots**
   - Add new template and data
+- **CKPool**
+  - Add new template and data
+  - WIP
 
 ## 2025.04.06
 - **Postgress**
