@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>CKPoolSelfHostedPool</Name>
+  <Name>CKPool</Name>
   <Repository>golden_guy/docker-ckpool</Repository>
   <Registry>https://hub.docker.com/r/pinkyswear/ckpool-solo</Registry>
   <Network>bridge</Network>
@@ -9,17 +9,17 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/golden-guy/docker-ckpool</Project>
-  <Overview>Run your own SOLO MINING POOL with a web UI.&#xD;
+  <Overview>Run your own SOLO MINING POOL&#xD;
 &#xD;
-See:&#xD;
+Please Review:&#xD;
 - https://github.com/golden-guy/ckpool-solo&#xD;
 - https://hub.docker.com/r/pinkyswear/ckpool-solo&#xD;
 &#xD;
 This Unraid template supports custom IPs, ports, and Bitcoin node integration over RPC.&#xD;
 &#xD;
-&#x26A0;&#xFE0F; You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.&#xD;
+*You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.&#xD;
 &#xD;
-Sample `bitcoin.conf` options used in node:&#xD;
+Sample `bitcoin.conf` options used in node to run ckpool&#xD;
 server=1&#xD;
 rpcuser=bitcoinrpc&#xD;
 rpcpassword=yourstrongpassword&#xD;
@@ -29,7 +29,7 @@ rpcallowip=172.0.0.0/8&#xD;
 txindex=1&#xD;
 prune=0&#xD;
 &#xD;
-*CoinBase Account as Pool Wallet...&#xD;
+Requires a BTC Address Preferably *CoinBase recieve Account as Pool Wallet...&#xD;
 &#xD;
 Helps to keep File Hireacrchy: Example file structure and access to the other Docker!&#xD;
 &#x251C;&#x2500;&#x2500; .bitcoin&#xD;
@@ -44,7 +44,7 @@ Helps to keep File Hireacrchy: Example file structure and access to the other Do
 &#x251C;&#x2500;&#x2500; conf&#xD;
 &#x2502;   &#x2514;&#x2500;&#x2500; ckpool.conf&#xD;
 &#xD;
-</Overview>
+This Docker conects via RPC to the Bitcon Node...</Overview>
   <Category>Crypto: Other: Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
@@ -52,24 +52,13 @@ Helps to keep File Hireacrchy: Example file structure and access to the other Do
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1750733334</DateInstalled>
+  <DateInstalled>1750801595</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires>Depends on a full BitcoinNode!!!&#xD;
-&#xD;
-*CoinBase Account as Pool Wallet.&#xD;
-&#xD;
-&#x26A0;&#xFE0F; You MUST run a full Bitcoin node with `txindex=1` and `prune=0`...&#xD;
-&#xD;
-Sample `bitcoin.conf` options used in node:&#xD;
-server=1&#xD;
-rpcuser=bitcoinrpc&#xD;
-rpcpassword=yourstrongpassword&#xD;
-rpcbind=0.0.0.0&#xD;
-rpcport=8332&#xD;
-rpcallowip=172.0.0.0/8&#xD;
-txindex=1&#xD;
-prune=0</Requires>
+  <Requires>!!! Depends on another docker running a FULL Bitcoin Node!!!&#xD;
+You MUST run a full Bitcoin node with txindex=1 and prune=0&#xD;
+May Also Require a CoinBase Account as Pool Wallet&#xD;
+A Wallet for BTC send/recieve address...</Requires>
   <Config Name="Port 3333" Target="3333" Default="3333" Mode="tcp" Description="Docker NAT 3333" Type="Port" Display="always" Required="false" Mask="false">3333</Config>
   <Config Name="RPCUSER" Target="RPCUSER" Default="bitcoinrpc" Mode="" Description="rpc user in bitcoin.conf" Type="Variable" Display="always" Required="true" Mask="false">bitcoinrpc</Config>
   <Config Name="RPCPASSWORD" Target="RPCPASSWORD" Default="yourstrongpassword" Mode="" Description="RPCPassword to Connect in bitcoin.conf" Type="Variable" Display="always" Required="true" Mask="false">yourstrongpassword</Config>
