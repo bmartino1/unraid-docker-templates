@@ -2,6 +2,14 @@
 
 All major changes to this project will be documented here.
 
+## 2025.24.06
+- **BitcoinCore**
+  - Add template edit add stop time
+- **BitcoinKnots**
+  - Add template edit add stop time
+- **CKPool**
+  - Updated Tempalte ?not getting added to CA? unicode or other error
+
 ## 2025.23.06
 - **BitcoinCore**
   - Add new template and data
@@ -9,7 +17,6 @@ All major changes to this project will be documented here.
   - Add new template and data
 - **CKPool**
   - Add new template and data
-  - WIP
 
 ## 2025.04.06
 - **Postgress**
