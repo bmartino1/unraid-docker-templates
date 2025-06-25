@@ -10,6 +10,7 @@
   <Support/>
   <Project>https://github.com/golden-guy/docker-ckpool</Project>
   <Overview>Run your own SOLO MINING POOL&#xD;
+Requires a BTC Address &#x2013; Preferably a *Coinbase receive Account* as Pool Wallet.&#xD;
 &#xD;
 Please Review:&#xD;
 - https://github.com/golden-guy/ckpool-solo&#xD;
@@ -19,7 +20,7 @@ This Unraid template supports custom IPs, ports, and Bitcoin node integration ov
 &#xD;
 *You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.&#xD;
 &#xD;
-Sample `bitcoin.conf` options used in node to run ckpool&#xD;
+Sample `bitcoin.conf` options used in node to run ckpool:&#xD;
 server=1&#xD;
 rpcuser=bitcoinrpc&#xD;
 rpcpassword=yourstrongpassword&#xD;
@@ -29,22 +30,22 @@ rpcallowip=172.0.0.0/8&#xD;
 txindex=1&#xD;
 prune=0&#xD;
 &#xD;
-Requires a BTC Address Preferably *CoinBase recieve Account as Pool Wallet...&#xD;
+#Bitcoin Node:&#xD;
+.bitcoin&#xD;
+-banlist.json&#xD;
+-bitcoin.conf&#xD;
+-bitcoind.pid&#xD;
+-debug.log&#xD;
+-fee_estimates.dat&#xD;
+-mempool.dat&#xD;
+-peers.dat&#xD;
+-settings.json&#xD;
 &#xD;
-Helps to keep File Hireacrchy: Example file structure and access to the other Docker!&#xD;
-&#x251C;&#x2500;&#x2500; .bitcoin&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; banlist.json&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; bitcoin.conf&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; bitcoind.pid&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; debug.log&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; fee_estimates.dat&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; mempool.dat&#xD;
-&#x2502;   &#x251C;&#x2500;&#x2500; peers.dat&#xD;
-&#x2502;   &#x2514;&#x2500;&#x2500; settings.json&#xD;
-&#x251C;&#x2500;&#x2500; conf&#xD;
-&#x2502;   &#x2514;&#x2500;&#x2500; ckpool.conf&#xD;
+#This Docker:&#xD;
+conf&#xD;
+-ckpool.conf&#xD;
 &#xD;
-This Docker conects via RPC to the Bitcon Node...</Overview>
+This Docker connects via RPC to the Bitcoin Node.</Overview>
   <Category>Crypto: Other: Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
@@ -52,7 +53,7 @@ This Docker conects via RPC to the Bitcon Node...</Overview>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1750801595</DateInstalled>
+  <DateInstalled>1750878267</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>!!! Depends on another docker running a FULL Bitcoin Node!!!&#xD;
