@@ -36,7 +36,7 @@ The /config directory is used by the base image for persisting settings of the i
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <TemplateURL/>
   <Icon>https://bitcoin.org/img/icons/opengraph.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--stop-timeout=300</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
