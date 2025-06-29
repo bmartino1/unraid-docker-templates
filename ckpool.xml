@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <Container version="2">
   <Name>CKPool</Name>
   <Repository>golden_guy/docker-ckpool</Repository>
@@ -9,43 +8,44 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/golden-guy/docker-ckpool</Project>
-  <Overview>Run your own SOLO MINING POOL&#xD;
-Requires a BTC Address &#x2013; Preferably a *Coinbase receive Account* as Pool Wallet.&#xD;
-&#xD;
-Please Review:&#xD;
-- https://github.com/golden-guy/ckpool-solo&#xD;
-- https://hub.docker.com/r/pinkyswear/ckpool-solo&#xD;
-&#xD;
-This Unraid template supports custom IPs, ports, and Bitcoin node integration over RPC.&#xD;
-&#xD;
-*You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.&#xD;
-&#xD;
-Sample `bitcoin.conf` options used in node to run ckpool:&#xD;
-server=1&#xD;
-rpcuser=bitcoinrpc&#xD;
-rpcpassword=yourstrongpassword&#xD;
-rpcbind=0.0.0.0&#xD;
-rpcport=8332&#xD;
-rpcallowip=172.0.0.0/8&#xD;
-txindex=1&#xD;
-prune=0&#xD;
-&#xD;
-#Bitcoin Node:&#xD;
-.bitcoin&#xD;
--banlist.json&#xD;
--bitcoin.conf&#xD;
--bitcoind.pid&#xD;
--debug.log&#xD;
--fee_estimates.dat&#xD;
--mempool.dat&#xD;
--peers.dat&#xD;
--settings.json&#xD;
-&#xD;
-#This Docker:&#xD;
-conf&#xD;
--ckpool.conf&#xD;
-&#xD;
-This Docker connects via RPC to the Bitcoin Node.</Overview>
+  <Overview>Run your own SOLO MINING POOL
+Requires a BTC Address – Preferably a *Coinbase receive Account* as Pool Wallet.
+
+Please Review:
+- https://github.com/golden-guy/ckpool-solo
+- https://hub.docker.com/r/pinkyswear/ckpool-solo
+
+This Unraid template supports custom IPs, ports, and Bitcoin node integration over RPC.
+
+*You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.
+
+Sample `bitcoin.conf` options used in node to run ckpool:
+server=1
+rpcuser=bitcoinrpc
+rpcpassword=yourstrongpassword
+rpcbind=0.0.0.0
+rpcport=8332
+rpcallowip=172.0.0.0/8
+txindex=1
+prune=0
+
+#Bitcoin Node:
+.bitcoin
+-banlist.json
+-bitcoin.conf
+-bitcoind.pid
+-debug.log
+-fee_estimates.dat
+-mempool.dat
+-peers.dat
+-settings.json
+
+#This Docker:
+conf
+-ckpool.conf
+
+This Docker connects via RPC to the Bitcoin Node.
+</Overview>
   <Category>Crypto: Other: Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
@@ -56,10 +56,10 @@ This Docker connects via RPC to the Bitcoin Node.</Overview>
   <DateInstalled>1750878267</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires>!!! Depends on another docker running a FULL Bitcoin Node!!!&#xD;
-You MUST run a full Bitcoin node with txindex=1 and prune=0&#xD;
-May Also Require a CoinBase Account as Pool Wallet&#xD;
-A Wallet for BTC send/recieve address...</Requires>
+  <Requires>!!! Depends on another docker running a FULL Bitcoin Node!!!
+You MUST run a full Bitcoin node with txindex=1 and prune=0
+May Also Require a CoinBase Account as Pool Wallet
+A Wallet for BTC send/receive address...</Requires>
   <Config Name="Port 3333" Target="3333" Default="3333" Mode="tcp" Description="Docker NAT 3333" Type="Port" Display="always" Required="false" Mask="false">3333</Config>
   <Config Name="RPCUSER" Target="RPCUSER" Default="bitcoinrpc" Mode="" Description="rpc user in bitcoin.conf" Type="Variable" Display="always" Required="true" Mask="false">bitcoinrpc</Config>
   <Config Name="RPCPASSWORD" Target="RPCPASSWORD" Default="yourstrongpassword" Mode="" Description="RPCPassword to Connect in bitcoin.conf" Type="Variable" Display="always" Required="true" Mask="false">yourstrongpassword</Config>
@@ -67,6 +67,6 @@ A Wallet for BTC send/recieve address...</Requires>
   <Config Name="RPCPORT" Target="RPCPORT" Default="8332" Mode="" Description="RPCPORT to connect to RPC also in bitcoin.conf" Type="Variable" Display="always" Required="false" Mask="false">8332</Config>
   <Config Name="Port 8332" Target="8332" Default="8332" Mode="tcp" Description="Docker NAT" Type="Port" Display="always" Required="true" Mask="false">8332</Config>
   <Config Name="COINBASE" Target="COINBASE" Default="" Mode="" Description="your-bitcoin-address" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="Volume Config" Target="/ckpool/config" Default="/mnt/user/appdata/ckpool" Mode="rw" Description="/ckpool/config where teh config for the pool lives..." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ckpool</Config>
+  <Config Name="Volume Config" Target="/ckpool/config" Default="/mnt/user/appdata/ckpool" Mode="rw" Description="/ckpool/config where the config for the pool lives..." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ckpool</Config>
   <TailscaleStateDir/>
 </Container>
