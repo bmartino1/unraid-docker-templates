@@ -2,6 +2,12 @@
 
 All major changes to this project will be documented here.
 
+## 2025.28.06
+- **BitcoinCore**
+  - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
+- **BitcoinKnots**
+  - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
+
 ## 2025.24.06
 - **BitcoinCore**
   - Add template edit add stop time
