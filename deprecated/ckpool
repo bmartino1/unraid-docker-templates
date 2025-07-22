@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CKPool</Name>
+  <Repository>pinkyswear/ckpool-solo:latest</Repository>
+  <Registry>https://hub.docker.com/r/pinkyswear/ckpool-solo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Run your own SOLO MINING POOL&#xD;
+Requires a BTC Address &#x2013; Preferably a *Coinbase receive Account* as Pool Wallet.&#xD;
+&#xD;
+Please Review:&#xD;
+- https://github.com/golden-guy/ckpool-solo&#xD;
+- https://hub.docker.com/r/pinkyswear/ckpool-solo&#xD;
+&#xD;
+This Unraid template supports custom IPs, ports, and Bitcoin node integration over RPC.&#xD;
+&#xD;
+*You MUST run a full Bitcoin node with `txindex=1` and `prune=0`.&#xD;
+&#xD;
+Sample `bitcoin.conf` options used in node to run ckpool:&#xD;
+server=1&#xD;
+rpcuser=bitcoinrpc&#xD;
+rpcpassword=yourstrongpassword&#xD;
+rpcbind=0.0.0.0&#xD;
+rpcport=8332&#xD;
+rpcallowip=172.0.0.0/8&#xD;
+txindex=1&#xD;
+prune=0&#xD;
+&#xD;
+#Bitcoin Node:&#xD;
+.bitcoin&#xD;
+-banlist.json&#xD;
+-bitcoin.conf&#xD;
+-bitcoind.pid&#xD;
+-debug.log&#xD;
+-fee_estimates.dat&#xD;
+-mempool.dat&#xD;
+-peers.dat&#xD;
+-settings.json&#xD;
+&#xD;
+#This Docker:&#xD;
+conf&#xD;
+-ckpool.conf&#xD;
+&#xD;
+Example conf can be viewed here: https://hub.docker.com/r/pinkyswear/ckpool-solo&#xD;
+&#xD;
+This Docker connects via RPC to the Bitcoin Node.&#xD;
+&#xD;
+Special Thanks to these Projects:&#xD;
+https://bitbucket.org/ckolivas/ckpool-solo&#xD;
+https://github.com/golden-guy/ckpool-solo</Overview>
+  <Category>Crypto: Other: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/animai/unraid-templates/master/public-pool/img/public-pool.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1753148730</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>!!! Depends on another docker running a FULL Bitcoin Node!!!&#xD;
+You MUST run a full Bitcoin node with txindex=1 and prune=0&#xD;
+May Also Require a CoinBase Account for use with a Bitcoin Pool Wallet&#xD;
+A Wallet for BTC send/recieve address...&#xD;
+!!! You are required to make the ckpool.conf file for this docer to run !!!&#xD;
+https://hub.docker.com/r/pinkyswear/ckpool-solo</Requires>
+  <Config Name="Port 3333" Target="3333" Default="3333" Mode="tcp" Description="Docker NAT 3333" Type="Port" Display="always" Required="true" Mask="false">3333</Config>
+  <Config Name="RPCUSER" Target="RPCUSER" Default="bitcoinrpc" Mode="" Description="rpc user also needs to be in bitcoind bitcoin.conf" Type="Variable" Display="always" Required="false" Mask="false">bitcoinrpc</Config>
+  <Config Name="RPCPASSWORD" Target="RPCPASSWORD" Default="yourstrongpassword" Mode="" Description="RPCPassword to Connect also needs to be in bitcoind bitcoin.conf" Type="Variable" Display="always" Required="false" Mask="false">yourstrongpassword</Config>
+  <Config Name="RPCHOST" Target="RPCHOST" Default="bitcoin" Mode="" Description="RPCHOST=172.20.0.10 example hostname / IP of the bitcoind node" Type="Variable" Display="always" Required="true" Mask="false">bitcoind</Config>
+  <Config Name="RPCPORT" Target="RPCPORT" Default="8332" Mode="" Description="RPCPORT to connect to RPC also needs to be in bitcoind bitcoin.conf" Type="Variable" Display="always" Required="false" Mask="false">8332</Config>
+  <Config Name="COINBASE" Target="COINBASE" Default="" Mode="" Description="your-bitcoin-address" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Volume Config" Target="/srv/ckpool/conf" Default="/mnt/user/appdata/ckpool/config" Mode="rw" Description="where the config for the pool lives" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ckpool/config</Config>
+  <Config Name="Logs" Target="/srv/ckpool/logs" Default="/mnt/user/appdata/ckpool/logs" Mode="rw" Description="Where log files are stored" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ckpool/logs</Config>
+  <TailscaleStateDir/>
+</Container>
