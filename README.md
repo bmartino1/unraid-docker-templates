@@ -101,35 +101,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the
 
 **SFTP and Fail2ban Server**
 
-Note -- Due to open ssh future updates to v10 and ubnut updates needing glibc I recomend using sftp2 moving forward. as I'm waiting on the Phusion Image gorup to update this docker stack. so if you run custum or auto update true it will not work due to the need for glibs update. sftp2 is the exact same but runs on debain not ubuntu... I'm forced to wait for base updates due to fork in orginal project. https://github.com/phusion/baseimage-docker to continue using this docker please disable auto update variable!
-
-Docker image for SFTP running openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.  
-- **Simple by Default** Once Click install and sftp is running... View the config folder for advance configuration changes...  
-- **Easy Log Location** easily see error and check status in the docker log.  
-- **Orginal Fork: https://github.com/MarkusMcNugen/docker-sftp a Fork of https://hub.docker.com/r/atmoz/sftp  
-
-**Application Name:** SFTP (Openssh)  
-**Application Site:** [https://www.openssh.com/](https://www.openssh.com/)  
-**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)  
-
-**Application Name:** Fail2Ban (fail2ban and jails)  
-**Application Site:** [https://github.com/fail2ban/fail2ban](https://github.com/fail2ban/fail2ban)  
-**Linux ManPages:** [https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html](https://manpages.ubuntu.com/manpages/noble/man1/fail2ban.1.html)  
-
-**Images Repository:** [https://github.com/bmartino1/docker-sftp](https://github.com/bmartino1/docker-sftp)  
-**Docker Repository:** [https://hub.docker.com/r/bmmbmm01/sftp](https://hub.docker.com/r/bmmbmm01/sftp)  
-**Unraid Support Forum:** [https://forums.unraid.net/topic/189050-support-sftp-fail2ban](https://forums.unraid.net/topic/189050-support-sftp-fail2ban)  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-# SFTP2
-
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/SFTP.png" width="64" height="64">
-
-**SFTP and Fail2ban Server**
-
-Note -- entrypoint script still making debug folders for cross over. this teample adds addational docker varables. This is a overhal of SFTP borught into the Debain-slim docker due to ubuntu and openssh issues in sftp. alpine will not work due to other appilcation I want out of the docker personaly...
+Note -- Known as sftp2 a update to the docker fork to get outof the base iamge and make wanted and necessay fixes... Docker variables for debug_testing=true will make debug folders in the volume /config for cross over. this template adds addational docker varables and capabilities. This is a overhal of SFTP borught into the Debain-slim docker due to ubuntu and openssh issues in the orgianl rebuild of the sftp fail2ban docker. Would lieke to use alpine, but alpine will not work due to other appilcation I want out of the docker personaly...
 
 Docker image for SFTP running openssh-server and harend against attacks with fail2bann. Built on a Ubuntu Linux Docker image to make the image feautre rich.  
 - **Simple by Default** Once Click install and sftp is running... View the config folder for advance configuration changes...  
