@@ -2,6 +2,11 @@
 
 All major changes to this project will be documented here.
 
+## 2025.20.09
+- **Sftp2**
+  - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
+  - This is a new addtion of the same functinality of the other docer just to reenable the auto update capabilities.
+
 ## 2025.28.06
 - **BitcoinCore**
   - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
