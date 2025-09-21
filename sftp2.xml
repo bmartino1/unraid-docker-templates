@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sftp-fail2ban</Name>
+  <Repository>bmmbmm01/sftp:latest</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/sftp2</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/189050-support-sftp-fail2ban</Support>
+  <Project>https://github.com/bmartino1/sftp2</Project>
+  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#xD;
+&#xD;
+* Shared Path is an example. You must replace host path with path to a folder to share AND change user in the container path to the name of a user account configured in users.conf. See github page for more info.</Overview>
+  <Category>Network:FTP Network:Other</Category>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/SFTP.png</Icon>
+  <ExtraParams>--hostname sftp --cap-add=NET_ADMIN --cap-add=NET_RAW</ExtraParams>
+  <Config Name="SSH Port" Target="22" Default="22" Mode="tcp" Description="Docker Bridge Network set ssh sftp port" Type="Port" Display="always" Required="false" Mask="false">60022</Config>
+  <Config Name="AdminData" Target="/home/admin/sftp" Default="/mnt/user/" Mode="rw" Description="Default admin Users Host Folder/File Access" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/sftp" Mode="rw" Description="Optional Volume. Needed to change the admin account" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sftp</Config>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Chicago</Config>
+  <Config Name="AUTO_UPDATE" Target="AUTO_UPDATE" Default="true" Mode="" Description="true &#9;Runs /stage/updateapps.sh if present&#13;&#10;custom&#9;Runs /config/updateapps.sh if present&#13;&#10;false or empty skips updates" Type="Variable" Display="always" Required="true" Mask="false">suite</Config>
+  <Config Name="F2B_CONFIG_MODE" Target="F2B_CONFIG_MODE" Default="replace" Mode="" Description="# --- Fail2Ban config behavior ---&#13;&#10;      # symlink (default), overlay, noclober, replace" Type="Variable" Display="always" Required="false" Mask="false">symlink</Config>
+  <Config Name="DEFAULT_ADMIN" Target="DEFAULT_ADMIN" Default="true" Mode="" Description="first run set user.conf for admin" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="user root&#13;&#10;" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="user root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+</Container>
