@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/189050-support-sftp-fail2ban</Support>
   <Project>https://github.com/bmartino1/sftp2</Project>
-  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#xD;
+  <Overview>A updated replacement for the fork of sftp-fail2ban. Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#xD;
 &#xD;
 * Shared Path is an example. You must replace host path with path to a folder to share AND change user in the container path to the name of a user account configured in users.conf. See github page for more info.</Overview>
   <Category>Network:FTP Network:Other</Category>
