@@ -13,7 +13,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [MongoDB](#MongoDB-RocketChat)
 - [RocketChat](#RocketChat)
 - [Postgress](#Postgress_Immich)
-- [Redis](#Redis_Immich)
+- [Old Redis](#Redis_Immich)
+- [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
 - [CKPool](#CKPool)
@@ -191,9 +192,29 @@ Docker image for immich running bitnami redis. Some adational Docker Varables fo
 **Application Name:** Redis  
 **Application Site:** https://redis.io/   
 
+Broadcom chagned bitnami license use bitnamilegacy for transition. Use Valkey moving forward...
 **Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
 **Docker Repository:** https://hub.docker.com/r/bitnami/redis  
 **Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# Redis_Valkey
+
+<img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
+
+**Valkey_Immich**
+
+Docker image for immich running Valkey redis alternative. Some adational Docker Varables for a easier 1 CLick Install...
+
+**Application Name:** Redis  
+**Application Site:** https://valkey.io/   
+
+**Docker Repository:** https://hub.docker.com/r/valkey/valkey  
+**Unraid Valkey Support Forum:** https://forums.unraid.net/topic/186953-support-valkey/
+**Unraid Immich Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
 
 **[`^back to top^`](#unraid-templates)**
 
