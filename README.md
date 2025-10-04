@@ -209,11 +209,11 @@ Broadcom chagned bitnami license use bitnamilegacy for transition. Use Valkey mo
 
 Docker image for immich running Valkey redis alternative. Some adational Docker Varables for a easier 1 CLick Install...
 
-**Application Name:** Redis  
+**Application Name:** Valkey  
 **Application Site:** https://valkey.io/   
 
 **Docker Repository:** https://hub.docker.com/r/valkey/valkey  
-**Unraid Valkey Support Forum:** https://forums.unraid.net/topic/186953-support-valkey/
+**Unraid Valkey Support Forum:** https://forums.unraid.net/topic/186953-support-valkey/   
 **Unraid Immich Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
 
 **[`^back to top^`](#unraid-templates)**
