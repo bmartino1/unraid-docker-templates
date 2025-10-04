@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Immich_Valkey</Name>
+  <Repository>valkey/valkey:8.0.6-trixie</Repository>
+  <Registry>https://registry.hub.docker.com/r/valkey/valkey</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/186953-support-valkey/</Support>
+  <Project>https://valkey.io/</Project>
+  <Overview>Valkey is an open source (BSD) high-performance key/value datastore that supports a variety of workloads such as caching, message queues, and can act as a primary database.</Overview>
+  <Category>Productivity:Tools:Utilities Network:Management</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/SnuK87/unraid-templates/main/valkey.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/SnuK87/unraid-templates/refs/heads/main/icons/valkey-logo.png</Icon>
+
+  <!-- Healthcheck uses the same password -->
+  <ExtraParams>--health-cmd="valkey-cli -a &quot;$VALKEY_PASSWORD&quot; ping || exit 1" --health-interval=30s --health-timeout=10s --health-retries=3</ExtraParams>
+  <PostArgs>sh -c 'exec valkey-server --appendonly yes --protected-mode yes --requirepass "$VALKEY_PASSWORD"'</PostArgs>
+
+  <CPUset/>
+  <DateInstalled>1759614384</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+
+  <Config Name="Valkey Port" Target="6379" Default="" Mode="tcp" Description="Default port" Type="Port" Display="always" Required="false" Mask="false">6379</Config>
+
+  <!-- Keep value and default consistent -->
+  <Config Name="ConfigData" Target="/data" Default="/mnt/user/appdata/Immich/database/redis" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Immich/database/redis</Config>
+
+  <!-- Mask the password so it’s hidden in the UI -->
+  <Config Name="VALKEY_PASSWORD" Target="VALKEY_PASSWORD" Default="" Mode="" Description="Set a password for Valkey. To go passwordless, remove Extra Parameters & Post Arguments and delete this variable." Type="Variable" Display="always" Required="true" Mask="true">Change_ME</Config>
+  <TailscaleStateDir/>
+</Container>
