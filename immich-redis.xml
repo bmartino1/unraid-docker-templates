@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Immich_Redis</Name>
-  <Repository>bitnami/redis:latest</Repository>
+  <Repository>bitnamilegacy/redis:8.2.1-debian-12-r0</Repository>
   <Registry>https://hub.docker.com/r/bitnami/redis/</Registry>
   <Network>host</Network>
   <MyIP/>
