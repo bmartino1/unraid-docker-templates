@@ -192,7 +192,8 @@ Docker image for immich running bitnami redis. Some adational Docker Varables fo
 **Application Name:** Redis  
 **Application Site:** https://redis.io/   
 
-Broadcom chagned bitnami license use bitnamilegacy for transition. Use Valkey moving forward...
+Broadcom chagned bitnami license use bitnamilegacy for transition. Use Valkey moving forward...   
+
 **Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
 **Docker Repository:** https://hub.docker.com/r/bitnami/redis  
 **Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
