@@ -2,6 +2,12 @@
 
 All major changes to this project will be documented here.
 
+## 2025.04.10
+- **Valkey**
+  - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
+- **Redis**
+  - Change image template to binami legacy repo to still ahve a working temaple docker image install
+
 ## 2025.20.09
 - **Sftp2**
   - Add template edit add autoudpate stay on verion of applicaiton or autoupdate...
