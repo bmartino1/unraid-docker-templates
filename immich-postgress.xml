@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup</Support>
   <Project>https://www.postgresql.org/</Project>
-  <Overview>This container (based on PostgreSQL 16)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#13;
+  <Overview>This container (based on PostgreSQL 18)  is specifically configured for seamless integration with the Immich container, which fuffils the requirment for PostgreSQL for use with immich. As Immich is taking over a Project and maintain one themselves for there project stack.&#13;
 See the orginal Project: https://github.com/tensorchord/pgvecto.rs&#13;
 &#13;
 New Immich Database Release Release:&#13;
