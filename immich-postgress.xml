@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Immich_PostgreSQL</Name>
-  <Repository>ghcr.io/immich-app/postgres:16-vectorchord0.3.0-pgvectors0.3.0</Repository>
+  <Repository>ghcr.io/immich-app/postgres:18-vectorchord0.5.3-pgvector0.8.1</Repository>
   <Registry>https://github.com/immich-app/base-images/pkgs/container/postgres</Registry>
   <Network>host</Network>
   <MyIP/>
