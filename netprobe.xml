@@ -1,1 +1,51 @@
-
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetProbe</Name>
+  <Repository>https://hub.docker.com/r/bmmbmm01/netprobe</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/netprobe</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/195469-support-netprobe</Support>
+  <Project>https://github.com/bmartino1/NetProbe_Python</Project>
+  <Overview>Netprobe 2.0 &#x2013; Internet Quality Dashboard&#13;
+&#13;
+Netprobe 2.0 is a lightweight, container-friendly network probe and web UI for home / lab internet monitoring.&#13;
+&#13;
+It periodically:&#13;
+&#13;
+Pings your gateway, router and a list of &#x201C;anchor&#x201D; sites.&#13;
+Measures packet loss, latency and jitter.&#13;
+Measures DNS lookup latency per DNS server.&#13;
+Runs scheduled and manual Speedtest.net tests.&#13;
+Stores everything in SQLite and renders a dark-mode dashboard with Chart.js.&#13;
+The goal is a simple &#x201C;drop in and forget it&#x201D; quality monitor that you can run on Unraid, Proxmox, Docker, etc.&#13;
+&#13;
+Adational Varbales can be found here: https://github.com/bmartino1/NetProbe_Python</Overview>
+  <Category>Tools: Network:Web Network:DNS Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1764560777</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="DockerNatPort" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="WEB_PORT" Target="WEB_PORT" Default="8080" Mode="" Description="This sets the python webserver port... If edited update docker nat ports and WebUI URL" Type="Variable" Display="advanced-hide" Required="true" Mask="false">8080</Config>
+  <Config Name="Database path" Target="/data/" Default="/mnt/user/appdata/netprobe_database" Mode="rw" Description="container /data location for sq lite file that holds long term data.&#13;&#10;Container path can be changed if DB_PATH varable is assigned. DB_PATH defaults to /data/netprobe.sqlite" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netprobe_database</Config>
+  <Config Name="PROBE_INTERVAL" Target="PROBE_INTERVAL" Default="30" Mode="" Description="Seconds between script probe runs. (coutdown in web page) this runs teh pings, dns lookups and other to colect data..." Type="Variable" Display="always" Required="true" Mask="false">30</Config>
+  <Config Name="PING_COUNT" Target="PING_COUNT" Default="20" Mode="" Description="ICMP packets per target per probe." Type="Variable" Display="always-hide" Required="true" Mask="false">4</Config>
+  <Config Name="APP_TIMEZONE" Target="APP_TIMEZONE" Default="UTC" Mode="" Description="Time Zone eg America/Chicago" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SITES" Target="SITES" Default="fast.com,google.com,youtube.com" Mode="" Description="Comma-separated ping targets." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="ROUTER_IP" Target="ROUTER_IP" Default="192.168.1.1" Mode="" Description="Optional LAN router IP...Your Router/Gateway IP address to help with pings Can leave blank...(to leave blank delete this variable)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DNS_TEST_SITE" Target="DNS_TEST_SITE" Default="google.com" Mode="" Description="Domain for DNS latency tests." Type="Variable" Display="always" Required="true" Mask="false">google.com</Config>
+  <Config Name="DNS_NAMESERVER_4" Target="DNS_NAMESERVER_4" Default="My_DNS_Server" Mode="" Description="Web UI Display Name" Type="Variable" Display="always" Required="false" Mask="false">My_DNS_Server</Config>
+  <Config Name="DNS_NAMESERVER_4_IP" Target="DNS_NAMESERVER_4_IP" Default="192.168.1.1" Mode="" Description="DNS IPs to probe. Do you run a custom dns server set this to that ip" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.1</Config>
+  <Config Name="SPEEDTEST_ENABLED" Target="SPEEDTEST_ENABLED" Default="True" Mode="" Description="Enable periodic speedtests. at SPEEDTEST_INTERVAL in seconds" Type="Variable" Display="always" Required="true" Mask="false">True</Config>
+  <Config Name="SPEEDTEST_INTERVAL" Target="SPEEDTEST_INTERVAL" Default="14400" Mode="" Description="14400 seconds = 4 Hours. Seconds between automatic speedtests." Type="Variable" Display="always" Required="true" Mask="false">14400</Config>
+  <TailscaleStateDir/>
+</Container>
