@@ -17,7 +17,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
-- [CKPool](#CKPool)
+- [Netprobe](#Netprobe)
+[//]: # (- [CKPool](#CKPool) )
 
 
 ---
@@ -259,6 +260,26 @@ Docker image for Bitcoin-qt run and monitor via webpage access over vnc. latter 
 
 ---
 
+# Netprobe
+
+<img src="https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true" width="64" height="64">
+
+**Netprobe**
+
+Docker image for a single docker that netporbe does in 1 python docker...
+
+**Application Name:** Netprobe    
+**Application Site:** https://github.com/plaintextpackets/netprobe_lite   
+
+**Images Repository:** https://github.com/bmartino1/NetProbe_Python   
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/netprobe     
+**Unraid Support Forum:** https://forums.unraid.net/topic/195469-support-netprobe       
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+[//]: # (
 # CKPool
 
 <img src="https://raw.githubusercontent.com/animai/unraid-templates/master/public-pool/img/public-pool.png" width="64" height="64">
@@ -276,3 +297,6 @@ Docker image for running a Solo Pool asociated aginst a Bitcoin node via RPC for
 **[`^back to top^`](#unraid-templates)**
 
 ---
+)
+
+--- 
