@@ -30,7 +30,7 @@ Adational Varbales can be found here: https://github.com/bmartino1/NetProbe_Pyth
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1764561229</DateInstalled>
+  <DateInstalled>1764561947</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
@@ -46,6 +46,20 @@ Adational Varbales can be found here: https://github.com/bmartino1/NetProbe_Pyth
   <Config Name="DNS_NAMESERVER_4_IP" Target="DNS_NAMESERVER_4_IP" Default="192.168.1.1" Mode="" Description="DNS IPs to probe. Do you run a custom dns server set this to that ip" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.1</Config>
   <Config Name="SPEEDTEST_ENABLED" Target="SPEEDTEST_ENABLED" Default="True" Mode="" Description="Enable periodic speedtests. at SPEEDTEST_INTERVAL in seconds" Type="Variable" Display="always" Required="true" Mask="false">True</Config>
   <Config Name="SPEEDTEST_INTERVAL" Target="SPEEDTEST_INTERVAL" Default="14400" Mode="" Description="14400 seconds = 4 Hours. Seconds between automatic speedtests." Type="Variable" Display="always" Required="true" Mask="false">14400</Config>
+  <Config Name="DNS_NAMESERVER_1" Target="DNS_NAMESERVER_1" Default="Google_DNS" Mode="" Description="Google_DNS" Type="Variable" Display="always-hide" Required="false" Mask="false">Google_DNS</Config>
+  <Config Name="DNS_NAMESERVER_1_IP" Target="DNS_NAMESERVER_1_IP" Default="8.8.8.8" Mode="" Description="Google_DNS 8.8.8.8" Type="Variable" Display="always-hide" Required="false" Mask="false">8.8.8.8</Config>
+  <Config Name="DNS_NAMESERVER_2" Target="DNS_NAMESERVER_2" Default="Quad9_DNS" Mode="" Description="Quad9_DNS" Type="Variable" Display="always-hide" Required="false" Mask="false">Quad9_DNS</Config>
+  <Config Name="DNS_NAMESERVER_2_IP" Target="DNS_NAMESERVER_2_IP" Default="9.9.9.9" Mode="" Description="Quad9_DNS 9.9.9.9" Type="Variable" Display="always-hide" Required="false" Mask="false">9.9.9.9</Config>
+  <Config Name="DNS_NAMESERVER_3" Target="DNS_NAMESERVER_3" Default="CloudFlare_DNS" Mode="" Description="CloudFlare_DNS" Type="Variable" Display="always-hide" Required="false" Mask="false">CloudFlare_DNS</Config>
+  <Config Name="DNS_NAMESERVER_3_IP" Target="DNS_NAMESERVER_3_IP" Default="1.1.1.1" Mode="" Description="CloudFlare_DNS 1.1.1.1" Type="Variable" Display="always-hide" Required="false" Mask="false">1.1.1.1</Config>
+  <Config Name="WEIGHT_LOSS" Target="WEIGHT_LOSS" Default="-0.6" Mode="" Description="Weight of packet loss in score (0&#x2013;1, sum = 1)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">-0.6</Config>
+  <Config Name="WEIGHT_LATENCY" Target="WEIGHT_LATENCY" Default="0.15" Mode="" Description="Weight of latency." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.15</Config>
+  <Config Name="WEIGHT_JITTER" Target="WEIGHT_JITTER" Default="0.2" Mode="" Description="Weight of jitter." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.2</Config>
+  <Config Name="WEIGHT_DNS_LATENCY" Target="WEIGHT_DNS_LATENCY" Default="0.05" Mode="" Description="Weight of DNS latency." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.05</Config>
+  <Config Name="THRESHOLD_LOSS" Target="THRESHOLD_LOSS" Default="5" Mode="" Description="Loss % considered &#x201C;max bad&#x201D; for scoring." Type="Variable" Display="advanced-hide" Required="false" Mask="false">5</Config>
+  <Config Name="THRESHOLD_LATENCY" Target="THRESHOLD_LATENCY" Default="100" Mode="" Description="Latency ms considered &#x201C;max bad&#x201D;." Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="THRESHOLD_JITTER" Target="THRESHOLD_JITTER" Default="30" Mode="" Description="Jitter ms considered &#x201C;max bad&#x201D;." Type="Variable" Display="advanced-hide" Required="false" Mask="false">30</Config>
+  <Config Name="THRESHOLD_DNS_LATENCY" Target="THRESHOLD_DNS_LATENCY" Default="100" Mode="" Description="DNS ms considered &#x201C;max bad&#x201D;." Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
   <Config Name="WEB_PORT" Target="WEB_PORT" Default="8080" Mode="" Description="This sets the python webserver port... If edited update docker nat ports and WebUI URL" Type="Variable" Display="advanced-hide" Required="true" Mask="false">8080</Config>
   <TailscaleStateDir/>
 </Container>
