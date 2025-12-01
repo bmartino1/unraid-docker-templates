@@ -17,8 +17,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
-- [Netprobe](#Netprobe)
-[//]: # (- [CKPool](#CKPool) )
+- [Netprobe](#Netprobe)   
+
 
 
 ---
@@ -279,24 +279,3 @@ Docker image for a single docker that netporbe does in 1 python docker...
 
 ---
 
-[//]: # (
-# CKPool
-
-<img src="https://raw.githubusercontent.com/animai/unraid-templates/master/public-pool/img/public-pool.png" width="64" height="64">
-
-**CKPool**
-
-Docker image for running a Solo Pool asociated aginst a Bitcoin node via RPC for SOLO/single mineing on Unriad.
-
-**Application Name:** CKPool
-
-**Images Repository:** https://github.com/golden-guy/docker-ckpool   
-**Docker Repository:** https://hub.docker.com/r/pinkyswear/ckpool-solo   
-**Unraid Support Forum:** WIP ??? - https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/       
-
-**[`^back to top^`](#unraid-templates)**
-
----
-)
-
---- 
