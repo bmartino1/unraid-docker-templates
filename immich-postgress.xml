@@ -43,19 +43,21 @@ Storage&#13;
   <ExtraParams>--hostname postgres --dns=8.8.8.8</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1762714139</DateInstalled>
+  <DateInstalled>1764804114</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>Postgress v18 and up!!!&#13;
-https://hub.docker.com/_/postgres#pgdata &#13;
-https://github.com/docker-library/postgres/pull/1259&#13;
-Container Data Paths Change!&#13;
-&#13;
-ALWAYS MAKE A BACKUP!!! SEE https://immich.app/docs/administration/postgres-standalone/#migrating-to-vectorchord The Immich container and a Redis container</Requires>
+brhttps://hub.docker.com/_/postgres#pgdata &#13;
+brhttps://github.com/docker-library/postgres/pull/1259&#13;
+brContainer Data Paths Change!&#13;
+br&#13;
+brALWAYS MAKE A BACKUP!!! SEE https://immich.app/docs/administration/postgres-standalone/#migrating-to-vectorchord The Immich container and a Redis container</Requires>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)&#13;&#10;Set once at first database creation." Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">postgres</Config>
   <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">immich</Config>
-  <Config Name="Database Storage Path (Appdata)" Target="/var/lib/postgresql/" Default="/mnt/user/appdata/postgresql_immich" Mode="rw" Description="PostgreSQL data storage location&#13;&#10;https://hub.docker.com/_/postgres#pgdata &#13;&#10;https://github.com/docker-library/postgres/pull/1259&#13;&#10;" Type="Path" Display="always" Required="true" Mask="null">/mnt/user/appdata/postgresql_immich</Config>
+  <Config Name="Database Storage Path (Appdata)" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/postgresql_immich" Mode="rw" Description="PostgreSQL data storage location&#13;&#10;https://hub.docker.com/_/postgres#pgdata &#13;&#10;https://github.com/docker-library/postgres/pull/1259" Type="Path" Display="always" Required="true" Mask="null">/mnt/user/appdata/postgresql_immich</Config>
   <Config Name="PostgreSQL access port" Target="5432" Default="5432" Mode="tcp" Description="PostgreSQL TCP connection port mapped to 5432&#13;&#10;Docker Bridge Nat" Type="Port" Display="always-hide" Required="true" Mask="null">5432</Config>
+  <Config Name="pgdata" Target="PGDATA" Default="/var/lib/postgresql/data" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/var/lib/postgresql/data</Config>
+  <Config Name="TailScale Fallback State Directory" Target="CA_TS_FALLBACK_DIR" Default="/var/lib/postgresql/" Mode="{3}" Description="Fallback container directory for tailscale state information - Added By Community Applications" Type="Variable" Display="advanced" Required="{7}" Mask="{8}">/var/lib/postgresql/</Config>
   <TailscaleStateDir/>
 </Container>
