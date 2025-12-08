@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2025.08.12
+- **Sftp2**
+  - Add more data to tamplate for new users 1 click set and done..
+
 ## 2025.11.30
 - **Netprobe**
   - Add new template Netprobe
