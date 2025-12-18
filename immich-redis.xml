@@ -2,14 +2,14 @@
 <Container version="2">
   <Name>Immich_Redis</Name>
   <Repository>bitnamilegacy/redis:8.2.1-debian-12-r0</Repository>
-  <Registry>https://hub.docker.com/r/bitnami/redis/</Registry>
+  <Registry>https://hub.docker.com/r/bitnamilegacy</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
   <Project>https://redis.io/</Project>
-  <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.</Overview>
+  <Overview>In this Bitnami Legacy repository, you can find a backup of all existing container images, which will receive no further updates or support and should only be used for temporary migration purposes. Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL/>
