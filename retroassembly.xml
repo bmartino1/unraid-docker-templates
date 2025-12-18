@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/arianrhodsandlot/retroassembly</Project>
-  <Overview/>
+  <Overview>This template is for playing retro clasic games through your web browsers on unraid.</Overview>
   <Category>GameServers: Tools: Other: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
