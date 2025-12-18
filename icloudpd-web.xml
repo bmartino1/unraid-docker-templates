@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/boredazfcuk/icloudpd/</Support>
   <Project>https://github.com/AirswitchAsa/icloudpd-web</Project>
-  <Overview>A website to use teh icloudpd... can be used to sync the photo streams of all the iDevices in house back to unraid... because it's the only way of backing up multiple devices to a single location. &#13;
+  <Overview>A website to use the icloudpd... can be used to sync the photo streams of all the iDevices in house back to unraid... because it's the only way of backing up multiple devices to a single location. &#13;
 &#13;
     It uses the system keyring to securely store credentials, has HEIC to JPG conversion capability, and can send Telegram, Prowl, Pushover, WebHook, DingTalk, Discord, openhab, IYUU and WeCom notifications.&#13;
     &#13;
