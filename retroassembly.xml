@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name/>
+  <Repository>arianrhodsandlot/retroassembly</Repository>
+  <Registry>https://hub.docker.com/r/arianrhodsandlot/retroassembly</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/arianrhodsandlot/retroassembly</Project>
+  <Overview/>
+  <Category>GameServers: Tools: Other: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/arianrhodsandlot/retroassembly/raw/main/public/assets/logo/logo-512x512.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1766081084</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="volumes:" Target="/app/data" Default="/mnt/user/appdata/retroassembly" Mode="rw" Description="The actual path where you want to store your game data, ROMs, and save states" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/retroassembly</Config>
+  <Config Name="Docker_NAT_Port8000" Target="8000" Default="8000" Mode="tcp" Description="container docker nat port 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <TailscaleStateDir/>
+</Container>
