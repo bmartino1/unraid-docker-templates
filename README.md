@@ -18,7 +18,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
 - [Netprobe](#Netprobe)   
-
+- [DockerRequests](#DockerRequests)
 
 
 ---
@@ -279,3 +279,10 @@ Docker image for a single docker that netporbe does in 1 python docker...
 
 ---
 
+# DockerRequests
+
+https://forums.unraid.net/topic/32276-docker-requests
+To add to CA only...
+
+retroassembly
+icloudpd-web
