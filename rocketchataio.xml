@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Rocket.ChatAIO</Name>
+  <Repository>bmmbmm01/rocketchat-aio:latest</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/rocketchat-aio</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61337-support-rocketchat/</Support>
+  <Project>https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO</Project>
+  <ReadMe/>
+  <Overview>A rebuild AIO that includes the mongdb within the docker.&#13;
+&#13;
+Rocket.Chat is a Web Chat Server, developed in JavaScript, using the Meteor fullstack framework.&#13;
+&#13;
+It is a great solution for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms.</Overview>
+  <Category>Network:Messenger</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/rocketchat.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png</Icon>
+  <ExtraParams>--hostname rocketchataio --restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1767672431</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>YOU MUST FIRST RUN SET THE CORECT IP for the ROOT_URL the connection IP to access your Rocket.chat Web interface!!! &#13;
+&#13;
+Otherwise you will need to delete the mongdb folder and start again!</Requires>
+  <Config Name="Upload Directory Path" Target="/app/uploads" Default="/mnt/user/appdata/rocketchat" Mode="rw" Description="If configured alows storage for upladed items in chat." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rocket.chat/uploads/</Config>
+  <Config Name="Rocket.Chat URL" Target="ROOT_URL" Default="http://localhost:3000" Mode="" Description="Fix Me! set to unraid ip address (if in bridge mode) otherwise uses cutom br0 and use the same ip adddress there here!" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.x:3000</Config>
+  <Config Name="Web Frontend" Target="3000" Default="3000" Mode="tcp" Description="docker bridge nat" Type="Port" Display="always-hide" Required="true" Mask="false">3000</Config>
+  <Config Name="Database" Target="/var/lib/mongodb" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rocket.chat/mongdb/</Config>
+  <TailscaleStateDir/>
+</Container>
