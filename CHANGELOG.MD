@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2026.05.01
+- **Rocket.chat**
+  - Added AIO Docker to fix mongdb stuff for a rocket.chat deployment...
+
 ## 2025.18.12
 - **Docker Requests**
   - Add Docker Request Tempalates data to tamplate for new users 1 click set and done.. Only to add to CA
