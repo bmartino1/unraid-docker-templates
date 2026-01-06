@@ -10,8 +10,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
-- [MongoDB](#MongoDB-RocketChat)
-- [RocketChat](#RocketChat)
+- [RocketChatAIO](#RocketChatAIO)
 - [Postgress](#Postgress_Immich)
 - [Old Redis](#Redis_Immich)
 - [Valkey Redis Immich](#Redis_Valkey)
@@ -124,38 +123,20 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 **[`^back to top^`](#unraid-templates)**
 ---
 
-# MongoDB-RocketChat
-
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchatmongo.png" width="64" height="64">
-
-**MongoDB by bitnami for RocketChat**
-
-Docker image for MongoDB for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
-
-**Application Name:** Mongo  
-**Application Site:** [https://www.mongodb.com/](https://www.mongodb.com/)  
-
-**Images Repository:** [https://github.com/bitnami/charts/tree/main/bitnami/mongodb](https://github.com/bitnami/charts/tree/main/bitnami/mongodb)  
-**Docker Repository:** [https://hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)  
-**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
-
-**[`^back to top^`](#unraid-templates)**
-
----
 
 # RocketChat
 
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchat.png" width="64" height="64">
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchatmongo.png" width="64" height="64">
 
 **RocketChat**
 
-Docker image for RocketChat for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
+Docker image for RocketChat AIO mongdb and rocket.chat application for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
 
 **Application Name:** Rocketchat   
 **Application Site:** https://www.rocket.chat/pricing 
 
-**Images Repository:** https://github.com/RocketChat/Docker.Official.Image  
-**Docker Repository:** https://hub.docker.com/r/rocketchat/rocket.chat/   
+**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO 
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio    
 **Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
