@@ -126,7 +126,7 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 
 # RocketChatAIO
 
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchatmongo.png" width="64" height="64">
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
 
 **RocketChatAIO**
 
