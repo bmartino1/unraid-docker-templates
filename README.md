@@ -124,19 +124,19 @@ Docker image for SFTP running openssh-server and harend against attacks with fai
 ---
 
 
-# RocketChat
+# RocketChatAIO
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchatmongo.png" width="64" height="64">
 
-**RocketChat**
+**RocketChatAIO**
 
 Docker image for RocketChat AIO mongdb and rocket.chat application for easier use to run RocketChat per RocketChat Maintainer: https://docs.rocket.chat/docs/deploy-with-docker-docker-compose 
 
 **Application Name:** Rocketchat   
 **Application Site:** https://www.rocket.chat/pricing 
 
-**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO 
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio    
+**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO    
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio       
 **Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
