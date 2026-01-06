@@ -265,5 +265,5 @@ Docker image for a single docker that netporbe does in 1 python docker...
 https://forums.unraid.net/topic/32276-docker-requests
 To add to CA only...
 
-retroassembly
-icloudpd-web
+retroassembly: https://retroassembly.com/ https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker   
+icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web   
