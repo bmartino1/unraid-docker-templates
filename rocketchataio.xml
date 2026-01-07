@@ -32,6 +32,6 @@ Otherwise, you will need to delete the MongoDB folder and start again!</Requires
   <Config Name="Rocket.Chat URL" Target="ROOT_URL" Default="http://localhost:3000" Mode="" Description="Fix me! Set to the Unraid IP address (if in bridge mode); otherwise, use a custom br0 and use the same IP address there." Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.x:3000</Config>
   <Config Name="Web Frontend" Target="3000" Default="3000" Mode="tcp" Description="Docker bridge NAT" Type="Port" Display="always-hide" Required="true" Mask="false">3000</Config>
   <Config Name="Database" Target="/var/lib/mongodb" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rocket.chat/mongodb/</Config>
-  <Config Name="MAIL_URL" Target="MAIL_URL" Default="smtp://user:pass@smtp.example.com:587/?tls=true" Mode="" Description="Email setup is required! Use your own SMTP server to send emails to new users. Gmail example: smtps://your@gmail.com:APP_PASSWORD@smtp.gmail.com:465 " Type="Variable" Display="always" Required="true" Mask="false">smtp://user:pass@smtp.example.com:587/?tls=true</Config>
+  <Config Name="MAIL_URL" Target="MAIL_URL" Default="smtp://127.0.0.1:25" Mode="" Description="email setup is required! https://docs.meteor.com/api/email.html" Type="Variable" Display="always" Required="true" Mask="false">smtp://user:password@smtp.example.com:587/?tls=true</Config>
   <TailscaleStateDir/>
 </Container>
