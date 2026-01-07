@@ -16,6 +16,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
+- [CKPool](#CKPool)
 - [Netprobe](#Netprobe)   
 - [DockerRequests](#DockerRequests)
 
@@ -253,6 +254,37 @@ Helpful for self-hosting a Bitcoin wallet and running a node for solo mining on 
 **[`^back to top^`](#unraid-templates)**
 
 ---
+
+# CKPool
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/ckpool.png" width="64" height="64">
+
+**CKPool Solo Mining Pool**
+
+Docker image for running a **Bitcoin solo mining pool** using CKPool.  
+This allows miners to connect directly to your own pool instance while submitting work to your Bitcoin node.
+
+This template is based on the `pinkyswear/ckpool-solo` Docker image and supports configuration for Bitcoin Core RPC connectivity and custom pool settings.
+
+Please review the following projects for configuration examples and background information:
+- https://github.com/golden-guy/ckpool-solo
+- https://hub.docker.com/r/pinkyswear/ckpool-solo
+
+**Application Name:** CKPool  
+**Application Site:** https://bitcointalk.org/index.php?topic=164896.0  
+
+**Images Repository:** https://github.com/golden-guy/ckpool-solo  
+**Docker Repository:** https://hub.docker.com/r/pinkyswear/ckpool-solo  
+
+**Notes:**
+- Requires access to a Bitcoin Core node via RPC.
+- A valid Bitcoin address is required for block rewards.
+- Intended for **solo mining**, not pooled payouts.
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
 
 # Netprobe
 
