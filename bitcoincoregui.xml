@@ -7,9 +7,9 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-<Support>https://forums.unraid.net/topic/191428-suppot-bitcoin-gui/</Support>
+  <Support>https://forums.unraid.net/topic/191428-support-bitcoin-gui/</Support>
   <Project>https://github.com/bmartino1/Docker-BitcoinGUI</Project>
-  <Overview>YOU MUST MAKE THE BITCOIN DIRECTORY BEFORE HAND!&#xD;
+  <Overview>YOU MUST CREATE THE BITCOIN DIRECTORY BEFOREHAND!&#xD;
 mkdir -p /mnt/user/appdata/bitcoinknots/.bitcoin&#xD;
 chmod 777 -R /mnt/user/appdata/bitcoinknots/&#xD;
 chown nobody:users -R /mnt/user/appdata/bitcoinknots/&#xD;
@@ -41,17 +41,17 @@ The /config directory is used by the base image for persisting settings of the i
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires>You must make the .bitcoin directory and set it corectly in the template at Bitcoin Data:&#xD;
-Default /mnt/user/appdata/bitcoincore/.bitcoin&#xD;
+  <Requires>You must create the .bitcoin directory and set it correctly in the template at Bitcoin Data:&#xD;
+Default: /mnt/user/appdata/bitcoincore/.bitcoin&#xD;
 &#xD;
 mkdir -p /mnt/user/appdata/bitcoincore/.bitcoin&#xD;
 chmod 777 -R /mnt/user/appdata/bitcoincore/&#xD;
 chown nobody:users -R /mnt/user/appdata/bitcoincore/&#xD;
 &#xD;
-Min of 750 GB(and growing!) of space this holds the bitcoin blockchain data. Recomened to be on a 1 TB NVME Drive</Requires>
-  <Config Name="Bitcoin Data" Target="/config" Default="/mnt/user/appdata/bitcoincore/config" Mode="rw" Description="Data saved on DISK&#13;&#10;Warning Large Data Path atleast 800 GB and growing. Recomend to be saved on a 1 TB NVME" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitcoincore/config</Config>
+Minimum of 750 GB (and growing!) of space. This holds the Bitcoin blockchain data. Recommended to be on a 1 TB NVMe drive.</Requires>
+  <Config Name="Bitcoin Data" Target="/config" Default="/mnt/user/appdata/bitcoincore/config" Mode="rw" Description="Data saved on disk&#13;&#10;Warning: Large data path, at least 800 GB and growing. Recommended to be saved on a 1 TB NVMe." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitcoincore/config</Config>
   <Config Name="VNC_LISTENING_PORT" Target="5900" Default="5900" Mode="tcp" Description="Port to access the application's GUI via the VNC protocol. Mapping to the host is optional if access through the VNC protocol is not wanted. For a container not using the default bridge network, the port can be changed with the VNC_LISTENING_PORT environment variable." Type="Port" Display="always" Required="false" Mask="false">5900</Config>
   <Config Name="WEB_LISTENING_PORT" Target="5800" Default="5800" Mode="tcp" Description="Port to access the application's GUI via the web interface. Mapping to the host is optional if access through the web interface is not wanted. For a container not using the default bridge network, the port can be changed with the WEB_LISTENING_PORT environment variable." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
-  <Config Name="AUTOUPDATE" Target="AUTOUPDATE" Default="true" Mode="" Description="(True/False) AUTOUPDATE - first run need to build downlaod  lattest in /config volume then its users choice to stay on teh one they downlaod or are each docker reboot to have the scirpt auto check and downlad lattest version." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="AUTOUPDATE" Target="AUTOUPDATE" Default="true" Mode="" Description="(True/False) AUTOUPDATE - first run needs to download the latest build into the /config volume. Then it is the user's choice to stay on the downloaded version or have the script automatically check and download the latest version on each Docker reboot." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <TailscaleStateDir/>
 </Container>
