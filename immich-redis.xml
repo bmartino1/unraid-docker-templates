@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
   <Project>https://redis.io/</Project>
-  <Overview>In this Bitnami Legacy repository, you can find a backup of all existing container images, which will receive no further updates or support and should only be used for temporary migration purposes. Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.</Overview>
+  <Overview>In this Bitnami Legacy repository, you can find a backup of all existing container images, which will receive no further updates or support and should only be used for temporary migration purposes. Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL/>
@@ -21,11 +21,11 @@
   <DonateText/>
   <DonateLink/>
   <Requires>chown -R 1001:1001 /mnt/user/appdata/redis/ &#xD;
-brhttps://forums.unraid.net/topic/89502-support-a75g-repo/page/20/#comment-1167188</Requires>
-  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="Redis Port Docker Bridge Nat" Type="Port" Display="always" Required="true" Mask="false">6379</Config>
-  <Config Name="Appdata" Target="/bitnami/redis" Default="" Mode="rw" Description="Appdata folder for database persistence. Remove if unneeded" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis</Config>
+https://forums.unraid.net/topic/89502-support-a75g-repo/page/20/#comment-1167188</Requires>
+  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="Redis port Docker bridge NAT" Type="Port" Display="always" Required="true" Mask="false">6379</Config>
+  <Config Name="Appdata" Target="/bitnami/redis" Default="" Mode="rw" Description="Appdata folder for database persistence. Remove if unneeded." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis</Config>
   <Config Name="ALLOW_EMPTY_PASSWORD" Target="ALLOW_EMPTY_PASSWORD" Default="yes|no" Mode="" Description="ALLOW_EMPTY_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">no</Config>
-  <Config Name="Password" Target="REDIS_PASSWORD" Default="" Mode="" Description="If you want password put ALLOW_EMPTY_PASSWORD to no, then put the password here." Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
+  <Config Name="Password" Target="REDIS_PASSWORD" Default="" Mode="" Description="If you want a password, set ALLOW_EMPTY_PASSWORD to no, then put the password here." Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
   <Config Name="Redis Extra Flags" Target="REDIS_EXTRA_FLAGS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">--auto-aof-rewrite-percentage 100 --auto-aof-rewrite-min-size 64mb</Config>
   <Config Name="REDIS_DBINDEX" Target="REDIS_DBINDEX" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="REDIS_HOSTNAME" Target="REDIS_HOSTNAME" Default="redis" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">redis</Config>
