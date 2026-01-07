@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/arianrhodsandlot/retroassembly</Project>
-  <Overview>This template is for playing retro clasic games through your web browsers on unraid.</Overview>
+  <Overview>This template is for playing retro classic games through your web browser on Unraid.</Overview>
   <Category>GameServers: Tools: Other: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
@@ -21,7 +21,7 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="volumes:" Target="/app/data" Default="/mnt/user/appdata/retroassembly" Mode="rw" Description="The actual path where you want to store your game data, ROMs, and save states" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/retroassembly</Config>
-  <Config Name="Docker_NAT_Port8000" Target="8000" Default="8000" Mode="tcp" Description="container docker nat port 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="volumes:" Target="/app/data" Default="/mnt/user/appdata/retroassembly" Mode="rw" Description="The actual path where you want to store your game data, ROMs, and save states." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/retroassembly</Config>
+  <Config Name="Docker_NAT_Port8000" Target="8000" Default="8000" Mode="tcp" Description="Container Docker NAT port 8000." Type="Port" Display="always" Required="false" Mask="false">8000</Config>
   <TailscaleStateDir/>
 </Container>
