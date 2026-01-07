@@ -9,9 +9,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/189050-support-sftp-fail2ban</Support>
   <Project>https://github.com/bmartino1/docker-sftp</Project>
-  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on Debain Slim Image.&#13;
+  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on Debian Slim Image.&#13;
 &#13;
-*Shared Path is an example. You must replace host path with path to a folder to share AND change user in the container path to the name of a user account configured in users.conf. See github page for more info https://github.com/bmartino1/sftp2.</Overview>
+*Shared Path is an example. You must replace the host path with the path to a folder to share AND change the user in the container path to the name of a user account configured in users.conf. See the GitHub page for more info: https://github.com/bmartino1/sftp2.</Overview>
   <Category>Network:FTP Network:Other</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/main/sftp2.xml</TemplateURL>
@@ -23,19 +23,19 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="SSH Port" Target="22" Default="22" Mode="tcp" Description="Docker Bridge Network set ssh sftp port" Type="Port" Display="always" Required="false" Mask="false">22</Config>
-  <Config Name="AdminData" Target="/home/admin/sftp" Default="/mnt/user/" Mode="rw" Description="Default admin Users Host Folder/File Access" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
-  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/sftp-fail2ban" Mode="rw" Description="Docker Data - This is Needed to change the user.conf for mutiple user account" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sftp-fail2ban</Config>
+  <Config Name="SSH Port" Target="22" Default="22" Mode="tcp" Description="Docker bridge network set SSH/SFTP port" Type="Port" Display="always" Required="false" Mask="false">22</Config>
+  <Config Name="AdminData" Target="/home/admin/sftp" Default="/mnt/user/" Mode="rw" Description="Default admin user's host folder/file access" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/sftp-fail2ban" Mode="rw" Description="Docker data - this is needed to change the user.conf for multiple user accounts" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sftp-fail2ban</Config>
   <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Chicago</Config>
   <Config Name="AUTO_UPDATE" Target="AUTO_UPDATE" Default="true" Mode="" Description="true &#9;Runs /stage/updateapps.sh if present&#13;&#10;custom&#9;Runs /config/updateapps.sh if present&#13;&#10;false or empty skips updates" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="LOG_STREAMS" Target="LOG_STREAMS" Default="auth,fail2ban,whois" Mode="" Description="auth,fail2ban,whois &#13;&#10;(comma-separated list for docker stdout)&#13;&#10;Tal Log Streams. " Type="Variable" Display="always" Required="true" Mask="false">auth,fail2ban </Config>
-  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="" Mode="" Description="CHANGE ME SET THE ADMIN PASSWORD!" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="user root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="user root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="LOG_STREAMS" Target="LOG_STREAMS" Default="auth,fail2ban,whois" Mode="" Description="auth,fail2ban,whois &#13;&#10;(comma-separated list for Docker stdout)&#13;&#10;Tail log streams." Type="Variable" Display="always" Required="true" Mask="false">auth,fail2ban </Config>
+  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="" Mode="" Description="CHANGE ME! Set the admin password!" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="User root" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
   <Config Name="ADMIN_USER" Target="ADMIN_USER" Default="admin" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">admin</Config>
-  <Config Name="DEBUG_TESTING" Target="DEBUG_TESTING" Default="false" Mode="" Description="Preflight checks (makes sure fail2ban and sshd will work) (writes to /config/debug when true), false by default" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
-  <Config Name="TAIL_LOGS" Target="TAIL_LOGS" Default="true" Mode="" Description="T/F enable docker log shwing tail logs this doen't stop them writing in the log folder." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
-  <Config Name="CLEAR_LOGS" Target="CLEAR_LOGS" Default="false" Mode="" Description="At container restart Turnacte logs in log folder. This will move old logs inthe log folder no logs are removed..." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
-  <Config Name="F2B_CONFIG_MODE" Target="F2B_CONFIG_MODE" Default="noclobber" Mode="" Description="How to handle /config fail2ban files&#13;&#10;# ===== Fail2Ban config wiring =====&#13;&#10;      # How /etc/fail2ban is populated from /config/fail2ban:&#13;&#10;      # - symlink   (source of truth = /config)&#13;&#10;      # - overlay   (defaults + then /config over)&#13;&#10;      # - noclobber (defaults + non-clobber copy from /config)&#13;&#10;      # - replace   (use /config only)" Type="Variable" Display="advanced" Required="true" Mask="false">symlink</Config>
+  <Config Name="DEBUG_TESTING" Target="DEBUG_TESTING" Default="false" Mode="" Description="Preflight checks (makes sure Fail2ban and sshd will work) (writes to /config/debug when true), false by default" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="TAIL_LOGS" Target="TAIL_LOGS" Default="true" Mode="" Description="T/F enable Docker log showing tail logs. This doesn't stop them from writing to the log folder." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="CLEAR_LOGS" Target="CLEAR_LOGS" Default="false" Mode="" Description="At container restart, truncate logs in the log folder. This will move old logs within the log folder; no logs are removed." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="F2B_CONFIG_MODE" Target="F2B_CONFIG_MODE" Default="noclobber" Mode="" Description="How to handle /config Fail2ban files&#13;&#10;# ===== Fail2Ban config wiring =====&#13;&#10;      # How /etc/fail2ban is populated from /config/fail2ban:&#13;&#10;      # - symlink   (source of truth = /config)&#13;&#10;      # - overlay   (defaults + then /config over)&#13;&#10;      # - noclobber (defaults + non-clobber copy from /config)&#13;&#10;      # - replace   (use /config only)" Type="Variable" Display="advanced" Required="true" Mask="false">symlink</Config>
   <TailscaleStateDir/>
 </Container>
