@@ -10,24 +10,24 @@
   <Support>https://forums.unraid.net/topic/183175-support-bmartino1-avahi/</Support>
   <Project>https://github.com/bmartino1/avahi</Project>
   <Overview>
-Avahi - Mdns Used to Reflect mDNS broadcasts between networks and vlans&#xD;
+Avahi - mDNS used to reflect mDNS broadcasts between networks and VLANs&#xD;
 &#xD;
-This may require you to add a userscript or go file edit to stop unriads avahi service in favor of this one for easier edits...&#xD;
+This may require you to add a user script or edit a Go file to stop Unraid’s Avahi service in favor of this one for easier edits...&#xD;
 /etc/rc.d/rc.avahidaemon stop&#xD;
 &#xD;
-You Must Provide the docker option to build the avahi config. Defaults is applied otherwise... &#xD;
+You must provide the Docker option to build the Avahi config. Defaults are applied otherwise...&#xD;
 &#xD;
-You can also connect to a VLAN on a physical interface by suffixing the parent with . and the VLAN ID (e.g. --opt parent=eno1.123 for VLAN 123 on the eno1 interface. The sub-interface does not need to exist before running the command to create the network as the driver will automatically create this. This can Also assit with mdns over a VPN interface...&#xD;
+You can also connect to a VLAN on a physical interface by suffixing the parent with a dot and the VLAN ID (e.g. --opt parent=eno1.123 for VLAN 123 on the eno1 interface). The sub-interface does not need to exist before running the command to create the network, as the driver will automatically create it. This can also assist with mDNS over a VPN interface...&#xD;
 &#xD;
-Example add Vlan Extra option:&#xD;
-Use the Advance Togle &amp;gt; in the Extra Parmenter filed add --opt parent=eno1.123&#xD;
-Remember this interface is what's the console of the docker sees and "." Vlan Number...&#xD;
+Example: add VLAN extra option:&#xD;
+Use the Advanced toggle &gt; in the Extra Parameter field and add --opt parent=eno1.123&#xD;
+Remember this interface is what the Docker container sees, and the dot followed by the VLAN number identifies it...&#xD;
 &#xD;
 https://github.com/bmartino1/avahi&#xD;
-Docker image for the Avahi mDNS/DNS-SD daemon. Built on debian Linux to make the image as small as possible. Highly configurable through environment variables to support most use cases which need an Avahi Daemon. &#xD;
-run mdns-scan in the console to help detect and force a avahi browse and discovery.&#xD;
+Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the image as small as possible. Highly configurable through environment variables to support most use cases which need an Avahi daemon.&#xD;
+Run mdns-scan in the console to help detect and force an Avahi browse and discovery.&#xD;
 &#xD;
-Review avahi-daemon ManPages for option:&#xD;
+Review Avahi daemon man pages for options:&#xD;
 https://linux.die.net/man/5/avahi-daemon.conf&#xD;
 &#xD;
 ManPage Option | Docker Variable&#xD;
@@ -82,9 +82,9 @@ rlimit-nproc | RLIMITS_RLIMIT_NPROC &#xD;
   </Overview>
   <Category>Tools: Other: Network:DNS Network:VPN Network:Other Status:Stable</Category>
   <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/avahi.png</Icon>
-  <Config Name="REFLECTOR_ENABLE_REFLECTOR" Target="REFLECTOR_ENABLE_REFLECTOR" Default="yes" Mode="" Description="Takes a boolean value yes of no. If set to yes avahi-daemon will reflect incoming mDNS requests to all local network interfaces, effectively allowing clients to browse mDNS/DNS-SD services on all networks connected to the gateway." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
-  <Config Name="SERVER_USE_IPV4" Target="SERVER_USE_IPV4" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to no avahi-daemon will not use IPv4 sockets." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
-  <Config Name="WIDE_AREA_ENABLE_WIDE_AREA" Target="WIDE_AREA_ENABLE_WIDE_AREA" Default="yes" Mode="" Description="Takes a boolean value yes or no. Enable wide-area DNS-SD, aka DNS-SD over unicast DNS. If this is enabled only domains ending in .local will be resolved on mDNS, all other domains are resolved via unicast DNS." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
-  <Config Name="SERVER_USE_IPV6" Target="SERVER_USE_IPV6" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to no avahi-daemon will not use IPv6 sockets." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
-  <Config Name="SERVER_ALLOW_INTERFACES" Target="SERVER_ALLOW_INTERFACES" Default="eth0" Mode="" Description="set to unriads interfaces:&#13;&#10;eth0, br0, bond0 depending on your network setup&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">eth0</Config>
-  </Container>
+  <Config Name="REFLECTOR_ENABLE_REFLECTOR" Target="REFLECTOR_ENABLE_REFLECTOR" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to yes, avahi-daemon will reflect incoming mDNS requests to all local network interfaces, effectively allowing clients to browse mDNS/DNS-SD services on all networks connected to the gateway." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="SERVER_USE_IPV4" Target="SERVER_USE_IPV4" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to no, avahi-daemon will not use IPv4 sockets." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="WIDE_AREA_ENABLE_WIDE_AREA" Target="WIDE_AREA_ENABLE_WIDE_AREA" Default="yes" Mode="" Description="Takes a boolean value yes or no. Enable wide-area DNS-SD, aka DNS-SD over unicast DNS. If this is enabled, only domains ending in .local will be resolved via mDNS; all other domains are resolved via unicast DNS." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="SERVER_USE_IPV6" Target="SERVER_USE_IPV6" Default="yes" Mode="" Description="Takes a boolean value yes or no. If set to no, avahi-daemon will not use IPv6 sockets." Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="SERVER_ALLOW_INTERFACES" Target="SERVER_ALLOW_INTERFACES" Default="eth0" Mode="" Description="Set to Unraid interfaces:&#13;&#10;eth0, br0, bond0 depending on your network setup&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">eth0</Config>
+</Container>
