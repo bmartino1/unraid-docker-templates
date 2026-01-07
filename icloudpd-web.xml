@@ -9,14 +9,14 @@
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/boredazfcuk/icloudpd/</Support>
   <Project>https://github.com/AirswitchAsa/icloudpd-web</Project>
-  <Overview>A website to use the icloudpd... can be used to sync the photo streams of all the iDevices in house back to unraid... because it's the only way of backing up multiple devices to a single location. &#13;
+  <Overview>A website to use icloudpd. It can be used to sync the photo streams of all iDevices in the house back to Unraid, because it is the only way of backing up multiple devices to a single location. &#13;
 &#13;
-    It uses the system keyring to securely store credentials, has HEIC to JPG conversion capability, and can send Telegram, Prowl, Pushover, WebHook, DingTalk, Discord, openhab, IYUU and WeCom notifications.&#13;
+    It uses the system keyring to securely store credentials, has HEIC to JPG conversion capability, and can send Telegram, Prowl, Pushover, WebHook, DingTalk, Discord, OpenHAB, IYUU, and WeCom notifications.&#13;
     &#13;
-    It is recommended to use the keyring to securely store credentials. Please connect to the container and run `sync-icloud.sh --Initialise` command manually to start the process of saving your password to the keyring and Apple sends a confirmation code via text or 2FA code to your device which needs to be entered into the console.&#13;
-    You can also run this command from the unraid console to start the authentication process. `docker exec -it icloudpd sync-icloud.sh --Initialise`&#13;
+    It is recommended to use the keyring to securely store credentials. Please connect to the container and run the `sync-icloud.sh --Initialise` command manually to start the process of saving your password to the keyring. Apple will send a confirmation code via text or a 2FA code to your device, which needs to be entered into the console.&#13;
+    You can also run this command from the Unraid console to start the authentication process: `docker exec -it icloudpd sync-icloud.sh --Initialise`&#13;
     &#13;
-    Create a `.mounted` file inside `iCloud` folder in the photos directory for the container to start syncing photos. This file MUST be created manually and sync will not start without it.</Overview>
+    Create a `.mounted` file inside the `iCloud` folder in the photos directory for the container to start syncing photos. This file MUST be created manually, and syncing will not start without it.</Overview>
   <Category>Backup: Cloud: Downloaders: Network:Web Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Womabre/unraid-docker-templates/master/icloudpd.xml</TemplateURL>
@@ -25,36 +25,36 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1766083186</DateInstalled>
-  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateText>If you like my work, please consider donating.</DonateText>
   <DonateLink>https://paypal.me/wmbreedveld</DonateLink>
   <Requires/>
   <Config Name="Apple ID" Target="apple_id" Default="your@appleid.com" Mode="" Description="Apple ID used to access iCloud." Type="Variable" Display="always" Required="true" Mask="false">your@appleid.com</Config>
   <Config Name="Time Zone" Target="TZ" Default="UTC" Mode="" Description="Sets container timezone. Example: Europe/Amsterdam" Type="Variable" Display="always" Required="true" Mask="false">UTC</Config>
   <Config Name="Download Path" Target="/app/downloads" Default="/mnt/user/iCloud" Mode="rw,slave" Description="Where downloaded photos and videos will be stored." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/iCloud</Config>
-  <Config Name="Docker_NAT_Port" Target="5000" Default="5000" Mode="tcp" Description="Docekr NAt for container web port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
-  <Config Name="TOML_FILE" Target="/vm/policies.toml" Default="/path/to/policies.toml" Mode="rw" Description="MUST BE A FILE! REMOVE VARABLE OTHERWISE!&#13;&#10;    volumes:&#13;&#10;      # Mount configuration files if needed&#13;&#10;      # - ./policies.toml:/path/to/policies.toml" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/volume/policies.toml</Config>
-  <Config Name="SECRET_HASH_FILE" Target="/vm/secret_hash" Default="/path/to/secret_hash" Mode="rw" Description="MUST BE A FILE! REMOVE VARABLE OTHERWISE!&#13;&#10;    volumes:&#13;&#10;      # Mount configuration files if needed&#13;&#10;      # - ./secret_hash:/path/to/secret_hash" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/volume/secret_hash</Config>
-  <Config Name="MAX_SESSIONS" Target="MAX_SESSIONS" Default="10" Mode="" Description="Maximum number of websocket sessions to allow. (default: 10)" Type="Variable" Display="always" Required="false" Mask="false">5</Config>
+  <Config Name="Docker_NAT_Port" Target="5000" Default="5000" Mode="tcp" Description="Docker NAT for container web port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="TOML_FILE" Target="/vm/policies.toml" Default="/path/to/policies.toml" Mode="rw" Description="MUST BE A FILE! REMOVE VARIABLE OTHERWISE!&#13;&#10;    volumes:&#13;&#10;      # Mount configuration files if needed&#13;&#10;      # - ./policies.toml:/path/to/policies.toml" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/volume/policies.toml</Config>
+  <Config Name="SECRET_HASH_FILE" Target="/vm/secret_hash" Default="/path/to/secret_hash" Mode="rw" Description="MUST BE A FILE! REMOVE VARIABLE OTHERWISE!&#13;&#10;    volumes:&#13;&#10;      # Mount configuration files if needed&#13;&#10;      # - ./secret_hash:/path/to/secret_hash" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/volume/secret_hash</Config>
+  <Config Name="MAX_SESSIONS" Target="MAX_SESSIONS" Default="10" Mode="" Description="Maximum number of websocket sessions to allow (default: 10)." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
   <Config Name="GUEST_TIMEOUT_SECONDS" Target="GUEST_TIMEOUT_SECONDS" Default="60" Mode="" Description="Timeout for guest users in seconds." Type="Variable" Display="always" Required="false" Mask="false">90</Config>
-  <Config Name="LOG_LOCATION" Target="/vm/logs" Default="" Mode="rw" Description="Path to store the logs (both server and client)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/logs</Config>
-  <Config Name="HOST" Target="HOST" Default="0.0.0.0" Mode="" Description="Host to bind to (default: 0.0.0.0)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.0.0.0</Config>
-  <Config Name="PORT" Target="PORT" Default="5000" Mode="" Description="Port to bind to container web port too(default: 5000)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">5000</Config>
-  <Config Name="TOML_PATH" Target="TOML_PATH" Default="" Mode="" Description="Path to the TOML file containing policies definition. In most cases you can leave it empty." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/policies.toml</Config>
-  <Config Name="SECRET_HASH_PATH" Target="SECRET_HASH_PATH" Default="" Mode="" Description="Path to the secret hash file. In most cases you can leave it empty." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/secret_hash</Config>
-  <Config Name="NO_PASSWORD" Target="NO_PASSWORD" Default="false" Mode="" Description="Set to " Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
-  <Config Name="ALWAYS_GUEST" Target="ALWAYS_GUEST" Default="false" Mode="" Description="Set to " Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
-  <Config Name="DISABLE_GUEST" Target="DISABLE_GUEST" Default="true" Mode="" Description="Set to " Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
-  <Config Name="ALLOWED_ORIGINS" Target="ALLOWED_ORIGINS" Default="*" Mode="" Description="Comma-separated list of allowed CORS origins. Use * to allow all origins, otherwise use the address that you will use to access the web interface." Type="Variable" Display="advanced-hide" Required="false" Mask="false">*</Config>
-  <Config Name="LOG_LOCATION_Path" Target="LOG_LOCATION" Default="/vm/logs" Mode="" Description="Path to store the logs (both server and client)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/logs</Config>
-  <Config Name="Download Interval" Target="download_interval" Default="86400" Mode="" Description="Seconds between downloads. Valid: 21600, 43200, 86400, etc." Type="Variable" Display="advanced" Required="false" Mask="false">86400</Config>
-  <Config Name="Download Delay" Target="download_delay" Default="0" Mode="" Description="Delay first download in minutes (0-60)." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="LOG_LOCATION" Target="/vm/logs" Default="" Mode="rw" Description="Path to store the logs (both server and client)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloudpd-web/logs</Config>
+  <Config Name="HOST" Target="HOST" Default="0.0.0.0" Mode="" Description="Host to bind to (default: 0.0.0.0)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="PORT" Target="PORT" Default="5000" Mode="" Description="Port to bind to container web port (default: 5000)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">5000</Config>
+  <Config Name="TOML_PATH" Target="TOML_PATH" Default="" Mode="" Description="Path to the TOML file containing policy definitions. In most cases, you can leave it empty." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/policies.toml</Config>
+  <Config Name="SECRET_HASH_PATH" Target="SECRET_HASH_PATH" Default="" Mode="" Description="Path to the secret hash file. In most cases, you can leave it empty." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/secret_hash</Config>
+  <Config Name="NO_PASSWORD" Target="NO_PASSWORD" Default="false" Mode="" Description="Set to disable password authentication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
+  <Config Name="ALWAYS_GUEST" Target="ALWAYS_GUEST" Default="false" Mode="" Description="Set to always allow guest access." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="DISABLE_GUEST" Target="DISABLE_GUEST" Default="true" Mode="" Description="Set to disable guest access." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
+  <Config Name="ALLOWED_ORIGINS" Target="ALLOWED_ORIGINS" Default="*" Mode="" Description="Comma-separated list of allowed CORS origins. Use * to allow all origins, otherwise use the address you will use to access the web interface." Type="Variable" Display="advanced-hide" Required="false" Mask="false">*</Config>
+  <Config Name="LOG_LOCATION_Path" Target="LOG_LOCATION" Default="/vm/logs" Mode="" Description="Path to store the logs (both server and client)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/vm/logs</Config>
+  <Config Name="Download Interval" Target="download_interval" Default="86400" Mode="" Description="Seconds between downloads. Valid values: 21600, 43200, 86400, etc." Type="Variable" Display="advanced" Required="false" Mask="false">86400</Config>
+  <Config Name="Download Delay" Target="download_delay" Default="0" Mode="" Description="Delay first download in minutes (0–60)." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
   <Config Name="Folder Structure" Target="folder_structure" Default="{:%Y/%m/%d}" Mode="" Description="Folder structure for downloaded files." Type="Variable" Display="advanced" Required="false" Mask="false">{:%Y/%m/%d}</Config>
   <Config Name="Albums With Dates" Target="albums_with_dates" Default="false" Mode="" Description="Organize albums into subfolders by date." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Libraries With Dates" Target="libraries_with_dates" Default="false" Mode="" Description="Organize libraries into subfolders by date." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Authentication Type" Target="authentication_type" Default="MFA" Mode="" Description="Use 'MFA' or 'Web'." Type="Variable" Display="advanced" Required="false" Mask="false">MFA</Config>
   <Config Name="Notification Days" Target="notification_days" Default="7" Mode="" Description="Notify n days before MFA cookie expires." Type="Variable" Display="advanced" Required="false" Mask="false">7</Config>
   <Config Name="Convert HEIC to JPEG" Target="convert_heic_to_jpeg" Default="false" Mode="" Description="Convert HEIC images to JPEG." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="JPEG Quality" Target="jpeg_quality" Default="90" Mode="" Description="JPEG conversion quality (0-100)." Type="Variable" Display="advanced" Required="false" Mask="false">90</Config>
+  <Config Name="JPEG Quality" Target="jpeg_quality" Default="90" Mode="" Description="JPEG conversion quality (0–100)." Type="Variable" Display="advanced" Required="false" Mask="false">90</Config>
   <Config Name="JPEG Path" Target="jpeg_path" Default="" Mode="" Description="Custom path for JPEGs. Defaults to download path." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Skip Check" Target="skip_check" Default="false" Mode="" Description="Skip file existence check for large libraries." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Delete Accompanying Files" Target="delete_accompanying" Default="false" Mode="" Description="Delete generated JPG and MOV files that accompany HEICs." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
@@ -65,7 +65,7 @@
   <Config Name="Skip Videos" Target="skip_videos" Default="false" Mode="" Description="Skip downloading videos." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Recent Only" Target="recent_only" Default="" Mode="" Description="Only download this number of recent photos." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Until Found" Target="until_found" Default="" Mode="" Description="Download recent photos until n previously found." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Photo Album" Target="photo_album" Default="" Mode="" Description="Download only from specific album(s). Comma separated." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Photo Album" Target="photo_album" Default="" Mode="" Description="Download only from specific album(s). Comma-separated." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Photo Library" Target="photo_library" Default="" Mode="" Description="Download only from specific library/libraries." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Nextcloud Upload" Target="nextcloud_upload" Default="false" Mode="" Description="Enable upload to Nextcloud." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Nextcloud URL" Target="nextcloud_url" Default="" Mode="" Description="Nextcloud server URL." Type="Variable" Display="advanced" Required="false" Mask="false"/>
@@ -73,7 +73,7 @@
   <Config Name="Nextcloud Password" Target="nextcloud_password" Default="" Mode="" Description="Password for Nextcloud." Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Nextcloud Target Dir" Target="nextcloud_target_dir" Default="" Mode="" Description="Target root folder in Nextcloud." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Nextcloud Delete" Target="nextcloud_delete" Default="false" Mode="" Description="Delete file from Nextcloud if removed locally." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="Send Notify" Target="notify" Default="false" Mode="" Description="Enable notifications after operations (MFA expiry, download, etc)." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Send Notify" Target="notify" Default="false" Mode="" Description="Enable notifications after operations (MFA expiry, download, etc.)." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="SMTP Host" Target="smtp_hostname" Default="" Mode="" Description="SMTP server hostname." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="SMTP Port" Target="smtp_port" Default="587" Mode="" Description="SMTP server port." Type="Variable" Display="advanced" Required="false" Mask="false">587</Config>
   <Config Name="SMTP Username" Target="smtp_username" Default="" Mode="" Description="SMTP login username." Type="Variable" Display="advanced" Required="false" Mask="false"/>
@@ -83,7 +83,7 @@
   <Config Name="SMTP Subject" Target="smtp_subject" Default="iCloudPD Notification" Mode="" Description="Email subject line." Type="Variable" Display="advanced" Required="false" Mask="false">iCloudPD Notification</Config>
   <Config Name="Gotify URL" Target="gotify_url" Default="" Mode="" Description="Base URL for Gotify server." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Gotify Token" Target="gotify_token" Default="" Mode="" Description="Application token for Gotify." Type="Variable" Display="advanced" Required="false" Mask="true"/>
-  <Config Name="Gotify Priority" Target="gotify_priority" Default="0" Mode="" Description="Message priority (0-10)." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="Gotify Priority" Target="gotify_priority" Default="0" Mode="" Description="Message priority (0–10)." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
   <Config Name="Signal CLI Number" Target="signal_cli_number" Default="" Mode="" Description="Your registered Signal number." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Signal Recipients" Target="signal_cli_recipients" Default="" Mode="" Description="Comma-separated list of Signal recipient numbers." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Bark URL" Target="bark_url" Default="" Mode="" Description="Full Bark push URL." Type="Variable" Display="advanced" Required="false" Mask="false"/>
@@ -106,7 +106,7 @@
   <Config Name="Sideways Copy All Videos" Target="sideways_copy_all_videos" Default="false" Mode="" Description="Copy/move all videos based on settings." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="List Albums" Target="list_albums" Default="false" Mode="" Description="List all albums in the iCloud account." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="List Libraries" Target="list_libraries" Default="false" Mode="" Description="List all shared libraries in the account." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="User" Target="user" Default="user" Mode="" Description="Container user name (e.g. 'nobody')" Type="Variable" Display="advanced-hide" Required="false" Mask="false">user</Config>
+  <Config Name="User" Target="user" Default="user" Mode="" Description="Container user name (e.g. 'nobody')." Type="Variable" Display="advanced-hide" Required="false" Mask="false">user</Config>
   <Config Name="User ID (PUID)" Target="user_id" Default="1000" Mode="" Description="User ID to match permissions on host." Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
   <Config Name="Group" Target="group" Default="group" Mode="" Description="Group name for file permissions." Type="Variable" Display="advanced-hide" Required="false" Mask="false">group</Config>
   <Config Name="Group ID (PGID)" Target="group_id" Default="1000" Mode="" Description="Group ID to match host group." Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
