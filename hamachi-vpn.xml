@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hamachi</Name>
+  <Repository>jbcom/hamachi-vpn</Repository>
+  <Registry>https://hub.docker.com/r/jbcom/hamachi-vpn</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <ReadMe>https://hub.docker.com/r/jbcom/hamachi-vpn</ReadMe>
+  <Overview>VPN LogMeIn Hamachi: https://secure.logmein.com/products/hamachi/&#13;
+&#13;
+This is a docker container to LogMeNn Hamachi.&#13;
+&#13;
+https://vpn.net/&#13;
+https://support.goto.com/hamachi&#13;
+https://hub.docker.com/r/gfjardim/hamachi</Overview>
+  <Category>Network:VPN Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://p7.hiclipart.com/preview/89/685/123/hamachi-logmein-inc-icq-internet-computer-program-7-11-logo.jpg</Icon>
+  <ExtraParams>-v "/etc/localtime":"/etc/localtime":ro</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1767908579</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Requires an account with logemein https://vpn.net/</Requires>
+  <Config Name="ACCOUNT" Target="ACCOUNT" Default="" Mode="" Description="logemein account email" Type="Variable" Display="always" Required="true" Mask="false">your@email.com</Config>
+  <Config Name="appdatra" Target="/config" Default="/mnt/users/appdata/hamachi" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/users/appdata/hamachi</Config>
+  <TailscaleStateDir/>
+</Container>
