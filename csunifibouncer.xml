@@ -20,14 +20,14 @@ Start bouncer with docker-compose up bouncer in the example directory&#13;
 It will directly communicate with your Unifi appliance and configure Rules and IP Group&#13;
 &#13;
 adational Docker varables: https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration</Overview>
-  <Category/>
+  <Category>Security:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1767922202</DateInstalled>
+  <DateInstalled>1767923169</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>You should have a Unifi appliance and a CrowdSec instance running.&#13;
@@ -38,8 +38,8 @@ Generate a bouncer API key following CrowdSec documentation</Requires>
   <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="http://crowdsec:8080/" Mode="" Description="Host and port of CrowdSec agent" Type="Variable" Display="always" Required="true" Mask="false">http://crowdsec:8080/</Config>
   <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="" Mode="" Description="Unifi appliance address" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.x</Config>
   <Config Name="UNIFI_API_KEY" Target="UNIFI_API_KEY" Default="" Mode="" Description="Unifi appliance API key" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="UNIFI_USER" Target="UNIFI_USER" Default="unifi" Mode="" Description="Unifi appliance username" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="UNIFI_PASS" Target="UNIFI_PASS" Default="unifi" Mode="" Description="Unifi appliance password" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="UNIFI_USER" Target="UNIFI_USER" Default="unifi" Mode="" Description="Unifi appliance username" Type="Variable" Display="always" Required="true" Mask="false">unifi</Config>
+  <Config Name="UNIFI_PASS" Target="UNIFI_PASS" Default="unifi" Mode="" Description="Unifi appliance password" Type="Variable" Display="always" Required="true" Mask="false">unifi</Config>
   <Config Name="UNIFI_IPV6" Target="UNIFI_IPV6" Default="" Mode="" Description="T/F - Enable / Disable IPv6 support" Type="Variable" Display="always" Required="false" Mask="false">fasle</Config>
   <TailscaleStateDir/>
 </Container>
