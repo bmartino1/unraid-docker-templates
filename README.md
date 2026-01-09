@@ -305,10 +305,17 @@ Docker image providing Netprobe functionality in a single Python-based container
 
 ---
 
-# DockerRequests
-
+# UnraidCADocker
 https://forums.unraid.net/topic/32276-docker-requests  
 To add to CA only...
 
 retroassembly: https://retroassembly.com/ https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
-icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web
+cs-unifi-bouncer: https://github.com/Teifun2/cs-unifi-bouncer https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration
+
+---
+
+# Deprecated
+
+icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamptles test can't get to work right for stability use Docker Compose.
+Hamachi-VPN: Couldn't get CA to accept xml
+ckpool: Couldn't get CA to accept xml
