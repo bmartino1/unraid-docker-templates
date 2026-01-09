@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cs-unifi-bouncer</Name>
+  <Repository>ghcr.io/teifun2/cs-unifi-bouncer</Repository>
+  <Registry>https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/Teifun2/cs-unifi-bouncer</Project>
+  <ReadMe/>
+  <Overview>This repository aim to implement a CrowdSec bouncer for the routers of Unifi to block malicious IP to access your services. For this it leverages Unifi API to populate a dynamic Firewall Address List. Specically the Go Library go-unifi is used.&#13;
+&#13;
+Procedure&#13;
+Get a bouncer API key from your CrowdSec with command cscli bouncers add unifi-bouncer&#13;
+Copy the API key printed. You WON'T be able the get it again.&#13;
+Paste this API key as the value for bouncer environment variable CROWDSEC_BOUNCER_API_KEY, instead of "MyApiKey"&#13;
+Start bouncer with docker-compose up bouncer in the example directory&#13;
+It will directly communicate with your Unifi appliance and configure Rules and IP Group&#13;
+&#13;
+adational Docker varables: https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1767922202</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>You should have a Unifi appliance and a CrowdSec instance running.&#13;
+The container is available as docker image ghcr.io/teifun2/cs-unifi-bouncer. It must have access to CrowdSec and to Unifi.&#13;
+&#13;
+Generate a bouncer API key following CrowdSec documentation</Requires>
+  <Config Name="CROWDSEC_BOUNCER_API_KEY" Target="CROWDSEC_BOUNCER_API_KEY" Default="" Mode="" Description="CrowdSec bouncer API key required to be authorized to request local API" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="http://crowdsec:8080/" Mode="" Description="Host and port of CrowdSec agent" Type="Variable" Display="always" Required="true" Mask="false">http://crowdsec:8080/</Config>
+  <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="" Mode="" Description="Unifi appliance address" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.x</Config>
+  <Config Name="UNIFI_API_KEY" Target="UNIFI_API_KEY" Default="" Mode="" Description="Unifi appliance API key" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="UNIFI_USER" Target="UNIFI_USER" Default="unifi" Mode="" Description="Unifi appliance username" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="UNIFI_PASS" Target="UNIFI_PASS" Default="unifi" Mode="" Description="Unifi appliance password" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="UNIFI_IPV6" Target="UNIFI_IPV6" Default="" Mode="" Description="T/F - Enable / Disable IPv6 support" Type="Variable" Display="always" Required="false" Mask="false">fasle</Config>
+  <TailscaleStateDir/>
+</Container>
