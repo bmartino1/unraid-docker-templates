@@ -3,13 +3,16 @@
 All major changes to this project will be documented here.
 
 ## 2026.08.01
-- Moved porjects to Depriacted projects as they never loaded into CA
+- Moved projects to Depriacted projects as they never loaded into CA
+  - icloudpd-web
+  - hamachi-vpn(created today didn't laod into CA after 4 hours...)
+  - ckpool(still can't get to load into CA...)
 - **cs-unfi-bouncer**
   - added new CA template per Docker request
 
 ## 2026.07.01
 - **ALL templates were sent through grammar and spellcheck**
-- Deleted old Depriacted projects.
+- Deleted old Depriacted Projects for new Year.
 - **Rocket.Chat**
   - Added a new required variable for Rocket.Chat SMTP email...
 
@@ -20,6 +23,8 @@ All major changes to this project will be documented here.
 ## 2025.18.12
 - **Docker Requests**
   - Add Docker Request Templates data to template for new users, one-click setup and done. Only to add to CA.
+   - icloudpd-web
+   - retro asembly
 
 ## 2025.08.12
 - **Sftp2**
