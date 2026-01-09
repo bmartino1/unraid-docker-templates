@@ -291,6 +291,8 @@ To add to CA only... data per forum post...
 **Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
 **Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
 
+**[`^back to top^`](#unraid-templates)**
+
 ---
 
 # Deprecated
@@ -326,6 +328,8 @@ Please review the following projects for configuration examples and background i
 - Requires access to a Bitcoin Core node via RPC.
 - A valid Bitcoin address is required for block rewards.
 - Intended for **solo mining**, not pooled payouts.
+
+**[`^back to top^`](#unraid-templates)**
 
 **[`^back to top^`](#unraid-templates)**
 
