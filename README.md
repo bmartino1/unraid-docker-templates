@@ -278,19 +278,21 @@ https://forums.unraid.net/topic/32276-docker-requests
 To add to CA only... data per forum post...
 
 retroassembly: https://retroassembly.com/ https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
+
 cs-unifi-bouncer: https://github.com/Teifun2/cs-unifi-bouncer https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
 
 ---
 
 # Deprecated
 
-icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamptles test can't get to work right for stability use Docker Compose.   
+icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamplates test can't get to work right for stability use Docker Compose.   
+
 Hamachi-VPN: Couldn't get CA to accept xml   
-ckpool: Couldn't get CA to accept xml  
----
+
 
 # CKPool
-
+* ckpool: Couldn't get CA to accept xml
+  
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/ckpool.png" width="64" height="64">
 
 **CKPool Solo Mining Pool**
