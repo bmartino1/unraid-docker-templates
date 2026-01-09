@@ -277,12 +277,19 @@ Docker image providing Netprobe functionality in a single Python-based container
 https://forums.unraid.net/topic/32276-docker-requests  
 To add to CA only... data per forum post...
 
-retroassembly: 
-<img src="[https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true](https://github.com/arianrhodsandlot/retroassembly/raw/main/public/assets/logo/logo-512x512.png)" width="64" height="64">
+# retroassembly  
+
+<img src="https://github.com/arianrhodsandlot/retroassembly/raw/main/public/assets/logo/logo-512x512.png" width="64" height="64">  
+
 **Application Site:** https://retroassembly.com/    
 **Images Repository:** https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
 
-cs-unifi-bouncer: https://github.com/Teifun2/cs-unifi-bouncer https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
+# cs-unifi-bouncer   
+
+<img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
+
+**Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer 
+** Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
 
 ---
 
