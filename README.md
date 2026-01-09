@@ -16,9 +16,9 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
-- [CKPool](#CKPool)
 - [Netprobe](#Netprobe)   
-- [DockerRequests](#DockerRequests)
+- [Docker_Requests](#Docker_Requests)
+- [Deprecated](#Deprecated)
 
 ---
 
@@ -253,6 +253,40 @@ Helpful for self-hosting a Bitcoin wallet and running a node for solo mining on 
 
 **[`^back to top^`](#unraid-templates)**
 
+
+# Netprobe
+
+<img src="https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true" width="64" height="64">
+
+**Netprobe**
+
+Docker image providing Netprobe functionality in a single Python-based container.
+
+**Application Name:** Netprobe  
+**Application Site:** https://github.com/plaintextpackets/netprobe_lite
+
+**Images Repository:** https://github.com/bmartino1/NetProbe_Python  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/netprobe  
+**Unraid Support Forum:** https://forums.unraid.net/topic/195469-support-netprobe  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# DockerRequests
+https://forums.unraid.net/topic/32276-docker-requests  
+To add to CA only... data per forum post...
+
+retroassembly: https://retroassembly.com/ https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
+cs-unifi-bouncer: https://github.com/Teifun2/cs-unifi-bouncer https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
+
+---
+
+# Deprecated
+
+icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamptles test can't get to work right for stability use Docker Compose.   
+Hamachi-VPN: Couldn't get CA to accept xml   
+ckpool: Couldn't get CA to accept xml  
 ---
 
 # CKPool
@@ -284,38 +318,3 @@ Please review the following projects for configuration examples and background i
 **[`^back to top^`](#unraid-templates)**
 
 ---
-
-
-# Netprobe
-
-<img src="https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true" width="64" height="64">
-
-**Netprobe**
-
-Docker image providing Netprobe functionality in a single Python-based container.
-
-**Application Name:** Netprobe  
-**Application Site:** https://github.com/plaintextpackets/netprobe_lite
-
-**Images Repository:** https://github.com/bmartino1/NetProbe_Python  
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/netprobe  
-**Unraid Support Forum:** https://forums.unraid.net/topic/195469-support-netprobe  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# UnraidCADocker
-https://forums.unraid.net/topic/32276-docker-requests  
-To add to CA only...
-
-retroassembly: https://retroassembly.com/ https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
-cs-unifi-bouncer: https://github.com/Teifun2/cs-unifi-bouncer https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration
-
----
-
-# Deprecated
-
-icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamptles test can't get to work right for stability use Docker Compose.
-Hamachi-VPN: Couldn't get CA to accept xml
-ckpool: Couldn't get CA to accept xml
