@@ -2,10 +2,14 @@
 
 All major changes to this project will be documented here.
 
+## 2026.08.01
+- Moved porjects to Depriacted projects as they never loaded into CA
+- **cs-unfi-bouncer**
+  - added new CA template per Docker request
+
 ## 2026.07.01
 - **ALL templates were sent through grammar and spellcheck**
 - Deleted old Depriacted projects.
-- **CKPool added**
 - **Rocket.Chat**
   - Added a new required variable for Rocket.Chat SMTP email...
 
