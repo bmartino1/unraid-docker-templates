@@ -29,6 +29,6 @@ https://hub.docker.com/r/gfjardim/hamachi</Overview>
   <DonateLink/>
   <Requires>Requires an account with logemein https://vpn.net/</Requires>
   <Config Name="ACCOUNT" Target="ACCOUNT" Default="" Mode="" Description="logemein account email" Type="Variable" Display="always" Required="true" Mask="false">your@email.com</Config>
-  <Config Name="appdatra" Target="/config" Default="/mnt/users/appdata/hamachi" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/users/appdata/hamachi</Config>
+  <Config Name="appdatra" Target="/config" Default="/mnt/user/appdata/hamachi" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hamachi</Config>
   <TailscaleStateDir/>
 </Container>
