@@ -29,7 +29,7 @@ console in the docker and run top to confirm its running!&#13;
   <DonateText/>
   <DonateLink/>
   <Requires>YOUR ARE ULTIMATELY RESPONISLBE FOR YOUR DATA! PLEX MUST BE OFF!!! You must mount the DB folder!</Requires>
-  <Config Name="Plex Database Folder" Target="/plexdb" Default="/path/to/plex/Library/Application Support/Plex Media Server/Plug-in Support/Databases" Mode="rw" Description="Path to the nested database folder that holds the db file to repair!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Dockers/Plex/database/Library/Application Support/Plex Media Server/Plug-in Support/Databases/</Config>
+  <Config Name="Plex Database Folder" Target="/plexdb" Default="/path/to/plex/Library/Application Support/Plex Media Server/Plug-in Support/Databases" Mode="rw" Description="Path to the nested database folder that holds the db file to repair!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Plex/database/Library/Application Support/Plex Media Server/Plug-in Support/Databases/</Config>
   <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/plexrepair/logs" Mode="rw" Description="log folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/plexrepair/logs</Config>
   <Config Name="HEARTBEAT_INTERVAL" Target="HEARTBEAT_INTERVAL" Default="60" Mode="" Description="HEARTBEAT_INTERVAL to show the script is runnign int he log." Type="Variable" Display="always" Required="true" Mask="false">120</Config>
   <Config Name="PLEX_DB_FILE" Target="PLEX_DB_FILE" Default="com.plexapp.plugins.library.db" Mode="" Description="DB file name" Type="Variable" Display="advanced-hide" Required="false" Mask="false">com.plexapp.plugins.library.db</Config>
