@@ -16,7 +16,8 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
-- [Netprobe](#Netprobe)   
+- [Netprobe](#Netprobe)
+- [PlexDBRepair](#PlexDBRepair)
 - [Docker_Requests](#Docker_Requests)
 - [Deprecated](#Deprecated)
 
@@ -273,6 +274,19 @@ Docker image providing Netprobe functionality in a single Python-based container
 
 ---
 
+**PlexDBRepair**
+
+Docker image providing Chucks Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
+
+**Application Name:** DB-Plex-Repair 
+**Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/plex-dbrepair     
+**Unraid Support Forum:** WIP   
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
 # Docker_Requests
 https://forums.unraid.net/topic/32276-docker-requests  
 To add to CA only... data per forum post...
@@ -284,13 +298,6 @@ To add to CA only... data per forum post...
 **Application Site:** https://retroassembly.com/    
 **Images Repository:** https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
 
-# cs-unifi-bouncer   
-
-<img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
-
-**Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
-**Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
-
 **[`^back to top^`](#unraid-templates)**
 
 ---
@@ -300,6 +307,13 @@ To add to CA only... data per forum post...
 icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamplates test can't get to work right for stability use Docker Compose.   
 
 Hamachi-VPN: Couldn't get CA to accept xml   
+
+# cs-unifi-bouncer   
+* cs-unifi-bouncer : Couldn't get CA to accept xml
+<img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
+
+**Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
+**Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
 
 
 # CKPool
