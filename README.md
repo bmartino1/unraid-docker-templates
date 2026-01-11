@@ -349,6 +349,4 @@ Please review the following projects for configuration examples and background i
 
 **[`^back to top^`](#unraid-templates)**
 
-**[`^back to top^`](#unraid-templates)**
-
 ---
