@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>plex-dbrepair</Name>
-  <Repository>plex-dbrepair</Repository>
+  <Repository>bmmbmm01/plex-dbrepair</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/plex-dbrepair</Registry>
   <Network>host</Network>
   <MyIP/>
