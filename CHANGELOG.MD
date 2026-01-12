@@ -4,7 +4,7 @@ All major changes to this project will be documented here.
 
 ## 2026.08.01
 - **Plexrepair**
-  - Added a new plec dbrepair template
+  - Added a new plex dbrepair template
 
 ## 2026.08.01
 - Moved projects to Depriacted projects as they never loaded into CA
