@@ -4,6 +4,10 @@ All major changes to this project will be documented here.
 
 ## 2026.12.01
 - **Plexrepair**
+  - Tempalte Varables added docker images fixed.
+
+## 2026.12.01
+- **Plexrepair**
   - Complete docker rewrite
 
 ## 2026.11.01
