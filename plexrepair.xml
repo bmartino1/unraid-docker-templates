@@ -3,7 +3,7 @@
   <Name>dbrepair</Name>
   <Repository>bmmbmm01/plex-dbrepair</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/plex-dbrepair</Registry>
- <Network>bridge</Network>
+  <Network>none</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -18,43 +18,26 @@ The script runs once automagaicaly and reapirs the Pex Database and then Exits/S
 No Plex docker or process is running while repair is happening!&#13;
 &#13;
 Check the logs, or manual excute option and console in the docker and run top to confirm its running!</Overview>
-  <Category>Tools: MediaApp:Other</Category>
+  <Category>Tools:Utilities MediaApp:Other</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/main/plexrepair.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png</Icon>
-  <ExtraParams>--hostname  dbrepair </ExtraParams>
+  <ExtraParams>--hostname  dbrepair</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1768267381</DateInstalled>
+  <DateInstalled>1768336563</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>YOUR ARE ULTIMATELY RESPONSILBE FOR YOUR DATA! PLEX MUST BE OFF!!! You must mount the  Plex Media Server folder!</Requires>
-  <Config Name="Plex Database Folder" Target="/plexmediaserver" Default="/path/to/plex showing/Library/" Mode="rw" Description="Path to the nested Plex Media Server folder that holds the Plex Structure... YOUR APPDATA FOLDER!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex/</Config>
-  <Config Name="DBREPAIR_MODE" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="DBREPAIR_MODE per script:&#13;&#10;automatic &#x2013; Full one-shot flow (backup &#x2192; check &#x2192; repair(vacuum) &#x2192; reindex)&#13;&#10;check &#x2013; SQLite integrity check only&#13;&#10;vacuum &#x2013; VACUUM databases (frees space, no reindex)&#13;&#10;repair &#x2013; Alias for VACUUM (SQLite-level repair)&#13;&#10;reindex &#x2013; Rebuild database indexes&#13;&#10;deflate &#x2013; VACUUM INTO (rewrites DB to minimum size)&#13;&#10;prune &#x2013; Remove old PhotoTranscoder cache files only&#13;&#10;manual &#x2013; Drop into an interactive shell (no automatic actions)" Type="Variable" Display="always" Required="true" Mask="false">automatic</Config>
-  <Config Name="ALLOW_PLEX_KILL" Target="ALLOW_PLEX_KILL" Default="true" Mode="" Description="If enabled, the container will stop running Plex containers before database operations begin.&#13;&#10;Requires /var/run/docker.sock to be mounted." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Plex Database Folder" Target="/config" Default="/path/to/plex showing/Library/" Mode="rw" Description="where is your plex " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Dockers/Plex/database/</Config>
+  <Config Name="DBREPAIR_MODE" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="automatic (Check - Vacuum - Reindex) &#xB7; check (integrity check only) &#xB7; vacuum (vacuum database files) &#xB7; repair (alias for vacuum / optimize) &#xB7; reindex (rebuild indexes) &#xB7; deflate (VACUUM INTO, rewrite database) &#xB7; prune (clear PhotoTranscoder cache)" Type="Variable" Display="always" Required="true" Mask="false">manual</Config>
+  <Config Name="ALLOW_PLEX_KILL" Target="ALLOW_PLEX_KILL" Default="true" Mode="" Description="T/F If enabled, the container will stop running Plex containers before database operations begin.&#13;&#10;Requires /var/run/docker.sock to be mounted." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="PLEX_CONTAINER_MATCH" Target="PLEX_CONTAINER_MATCH" Default="plex" Mode="" Description="Pattern used to identify Plex containers to stop by name or image when stopping/starting containers. Matches against both container name and image!" Type="Variable" Display="always" Required="true" Mask="false">plex</Config>
-  <Config Name="RESTART_PLEX" Target="RESTART_PLEX" Default="true" Mode="" Description="T/F start plex docker after repair" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="PRUNE_DAYS" Target="PRUNE_DAYS" Default="30" Mode="" Description="Files older than this number of days will be removed from the PhotoTranscoder cache when using DBREPAIR_MODE=prune." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
-  
-  <Config Name="EXCLUDE_IMAGE_REGEX"
-          Target="EXCLUDE_IMAGE_REGEX"
-          Default="plex-dbrepair"
-          Mode=""
-          Description="Image regex to avoid killing self"
-          Type="Variable"
-          Display="advanced-hide"
-          Required="true"
-          Mask="false">plex-dbrepair</Config>
-
-  <Config Name="Docker Run Socket"
-          Target="/var/run/docker.sock"
-          Default="/var/run/docker.sock"
-          Mode="rw"
-          Description="Required to manage Plex containers from Unraid"
-          Type="Path"
-          Display="advanced-hide"
-          Required="true"
-          Mask="false">/var/run/docker.sock</Config>
-
-  <TailscaleStateDir/>
+  <Config Name="RESTART_PLEX" Target="RESTART_PLEX" Default="true" Mode="" Description="T/F start plex docker after repairs are run" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="PRUNE_DAYS" Target="PRUNE_DAYS" Default="30" Mode="" Description="Files older than this number of days will be removed from the PhotoTranscoder cache when using DBREPAIR_MODE=prune." Type="Variable" Display="always" Required="false" Mask="false">15</Config>
+  <Config Name="ENABLE_BACKUPS" Target="ENABLE_BACKUPS" Default="true" Mode="" Description="T/F Create timestamped DB backups before any changes" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="RESTORE_LAST_BACKUP" Target="RESTORE_LAST_BACKUP" Default="false" Mode="" Description="T/F Restore most recent backup and exit" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EXCLUDE_CONTAINER_NAMES" Target="EXCLUDE_CONTAINER_NAMES" Default="dbrepair,plex-dbrepair" Mode="" Description="CSV - Containers never stopped" Type="Variable" Display="always-hide" Required="false" Mask="false">dbrepair,plex-dbrepair</Config>
+  <Config Name="EXCLUDE_IMAGE_REGEX" Target="EXCLUDE_IMAGE_REGEX" Default="plex-dbrepair" Mode="" Description="Image regex to avoid killing self" Type="Variable" Display="advanced-hide" Required="true" Mask="false">plex-dbrepair</Config>
+  <Config Name="Docker Run Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Required to manage Plex containers from Unraid" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
 </Container>
