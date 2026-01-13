@@ -3,140 +3,39 @@
   <Name>dbrepair</Name>
   <Repository>bmmbmm01/plex-dbrepair</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/plex-dbrepair</Registry>
-  <Network>bridge</Network>
+  <Network>none</Network>
   <MyIP/>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196453-support-plex-db-repair-docker/</Support>
   <Project>https://github.com/bmartino1/plex-dbrepair-docker</Project>
   <ReadMe>https://github.com/ChuckPa/DBRepair/blob/master/README.md</ReadMe>
-  <Overview>You will mount the Plex database directory into this container&#13;
+  <Overview>You will mount the Plex Media Server directory into this container&#13;
+(usually something like /path/to/plex/Library/Application Support/Plex Media Server)&#13;
 &#13;
-(usually something like /mnt/user/appdata/plex/Library/Application Support/Plex Media Server/Plug-in Support/Databases)&#13;
+The script runs once automagaicaly and reapirs the Pex Database and then Exits/Stops the Docker&#13;
 &#13;
-The script runs once automatically and repairs the Plex database, then exits / stops the container.&#13;
+No Plex docker or process is running while repair is happening!&#13;
 &#13;
-No Plex docker or process should be running while repair is happening!&#13;
-Open the console and run `top` to confirm activity.&#13;
-</Overview>
+Check the logs, or manual excute option and console in the docker and run top to confirm its running!</Overview>
   <Category>Tools: MediaApp:Other</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png</Icon>
-  <ExtraParams>--hostname dbrepair</ExtraParams>
+  <ExtraParams>--hostname  dbrepair </ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1768192874</DateInstalled>
+  <DateInstalled>1768267381</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA! PLEX MUST BE OFF! You must mount the Plex DB folder.</Requires>
-
-  <Config Name="Plex Database Folder"
-          Target="/plexdb"
-          Default="/mnt/user/appdata/plex/Library/Application Support/Plex Media Server/Plug-in Support/Databases"
-          Mode="rw"
-          Description="Path to the Plex database directory containing com.plexapp.plugins.library.db"
-          Type="Path"
-          Display="always"
-          Required="true"
-          Mask="false">/mnt/user/appdata/plex/Library/Application Support/Plex Media Server/Plug-in Support/Databases</Config>
-
-  <Config Name="Logs Path"
-          Target="/logs"
-          Default="/mnt/user/appdata/plexrepair/logs"
-          Mode="rw"
-          Description="DBRepair log output directory"
-          Type="Path"
-          Display="always"
-          Required="false"
-          Mask="false">/mnt/user/appdata/plexrepair/logs</Config>
-
-  <Config Name="HEARTBEAT_INTERVAL"
-          Target="HEARTBEAT_INTERVAL"
-          Default="300"
-          Mode=""
-          Description="Seconds between heartbeat messages while DBRepair is running"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">180</Config>
-
-  <Config Name="DBREPAIR_MODE"
-          Target="DBREPAIR_MODE"
-          Default="automatic"
-          Mode=""
-          Description="Default: automatic&#13;&#10;
-Value&#9;Menu #&#9;Action&#13;&#10;
-automatic&#9;2&#9;Check + Repair/Optimize + Reindex&#13;&#10;
-check&#9;3&#9;Integrity check only&#13;&#10;
-vacuum&#9;4&#9;Vacuum database&#13;&#10;
-repair&#9;5&#9;Repair / Optimize&#13;&#10;
-reindex&#9;6&#9;Rebuild indexes"
-          Type="Variable"
-          Display="always"
-          Required="false"
-          Mask="false">automatic</Config>
-
-  <Config Name="SHOW_LOG"
-          Target="SHOW_LOG"
-          Default="true"
-          Mode=""
-          Description="Show DBRepair script output in Docker logs"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">true</Config>
-
-  <Config Name="DBREPAIR_UPDATE"
-          Target="DBREPAIR_UPDATE"
-          Default="true"
-          Mode=""
-          Description="Check for DBRepair script updates on start"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">false</Config>
-
-  <Config Name="PLEX_MATCH_REGEX"
-          Target="PLEX_MATCH_REGEX"
-          Default="Plex Media Server"
-          Mode=""
-          Description="Regex used to identify Plex containers/processes"
-          Type="Variable"
-          Display="advanced-hide"
-          Required="true"
-          Mask="false">Plex Media Server</Config>
-
-  <Config Name="EXCLUDE_CONTAINER_NAMES"
-          Target="EXCLUDE_CONTAINER_NAMES"
-          Default="dbrepair,plex-dbrepair"
-          Mode=""
-          Description="Container names to exclude from shutdown"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">dbrepair,plex-dbrepair</Config>
-
-  <Config Name="ALLOW_PLEX_KILL"
-          Target="ALLOW_PLEX_KILL"
-          Default="true"
-          Mode=""
-          Description="Allow DBRepair to stop Plex containers"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">true</Config>
-
-  <Config Name="KILL_STRAY_PLEX_PROCESSES"
-          Target="KILL_STRAY_PLEX_PROCESSES"
-          Default="true"
-          Mode=""
-          Description="Kill stray Plex processes outside Docker"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">false</Config>
-
+  <Requires>YOUR ARE ULTIMATELY RESPONSILBE FOR YOUR DATA! PLEX MUST BE OFF!!! You must mount the  Plex Media Server folder!</Requires>
+  <Config Name="Plex Database Folder" Target="/plexmediaserver" Default="/path/to/plex showing/Library/" Mode="rw" Description="Path to the nested Plex Media Server folder that holds the Plex Structure... YOUR APPDATA FOLDER!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex/</Config>
+  <Config Name="DBREPAIR_MODE" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="DBREPAIR_MODE per script:&#13;&#10;automatic &#x2013; Full one-shot flow (backup &#x2192; check &#x2192; repair(vacuum) &#x2192; reindex)&#13;&#10;check &#x2013; SQLite integrity check only&#13;&#10;vacuum &#x2013; VACUUM databases (frees space, no reindex)&#13;&#10;repair &#x2013; Alias for VACUUM (SQLite-level repair)&#13;&#10;reindex &#x2013; Rebuild database indexes&#13;&#10;deflate &#x2013; VACUUM INTO (rewrites DB to minimum size)&#13;&#10;prune &#x2013; Remove old PhotoTranscoder cache files only&#13;&#10;manual &#x2013; Drop into an interactive shell (no automatic actions)" Type="Variable" Display="always" Required="true" Mask="false">automatic</Config>
+  <Config Name="ALLOW_PLEX_KILL" Target="ALLOW_PLEX_KILL" Default="true" Mode="" Description="If enabled, the container will stop running Plex containers before database operations begin.&#13;&#10;Requires /var/run/docker.sock to be mounted." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="PLEX_CONTAINER_MATCH" Target="PLEX_CONTAINER_MATCH" Default="plex" Mode="" Description="Pattern used to identify Plex containers to stop by name or image when stopping/starting containers. Matches against both container name and image!" Type="Variable" Display="always" Required="true" Mask="false">plex</Config>
+  <Config Name="RESTART_PLEX" Target="RESTART_PLEX" Default="true" Mode="" Description="T/F start plex docker after repair" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="PRUNE_DAYS" Target="PRUNE_DAYS" Default="30" Mode="" Description="Files older than this number of days will be removed from the PhotoTranscoder cache when using DBREPAIR_MODE=prune." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
+  
   <Config Name="EXCLUDE_IMAGE_REGEX"
           Target="EXCLUDE_IMAGE_REGEX"
           Default="plex-dbrepair"
