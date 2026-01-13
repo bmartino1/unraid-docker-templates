@@ -3,7 +3,7 @@
   <Name>dbrepair</Name>
   <Repository>bmmbmm01/plex-dbrepair</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/plex-dbrepair</Registry>
-  <Network>none</Network>
+ <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
