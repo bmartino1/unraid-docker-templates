@@ -10,7 +10,6 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
-- [RocketChatAIO](#RocketChatAIO)
 - [Postgress](#Postgress_Immich)
 - [Old Redis](#Redis_Immich)
 - [Valkey Redis Immich](#Redis_Valkey)
@@ -20,6 +19,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [PlexDBRepair](#PlexDBRepair)
 - [Docker_Requests](#Docker_Requests)
 - [Deprecated](#Deprecated)
+   - [RocketChatAIO](#RocketChatAIO)
 
 ---
 
@@ -126,27 +126,6 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 **Images Repository:** https://github.com/bmartino1/sftp2  
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/sftp2  
 **Unraid Support Forum:** https://forums.unraid.net/topic/189050-support-sftp-fail2ban  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# RocketChatAIO
-
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
-
-**RocketChatAIO**
-
-Docker image for Rocket.Chat AIO, including MongoDB and the Rocket.Chat application, for simplified deployment.  
-Based on the Rocket.Chat maintainer documentation:  
-https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
-
-**Application Name:** Rocket.Chat  
-**Application Site:** https://www.rocket.chat/pricing  
-
-**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO  
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio  
-**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
 
@@ -346,6 +325,29 @@ Please review the following projects for configuration examples and background i
 - Requires access to a Bitcoin Core node via RPC.
 - A valid Bitcoin address is required for block rewards.
 - Intended for **solo mining**, not pooled payouts.
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# RocketChatAIO
+
+* Removed Due to rocket.chat support...
+  
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
+
+**RocketChatAIO**
+
+Docker image for Rocket.Chat AIO, including MongoDB and the Rocket.Chat application, for simplified deployment.  
+Based on the Rocket.Chat maintainer documentation:  
+https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
+
+**Application Name:** Rocket.Chat  
+**Application Site:** https://www.rocket.chat/pricing  
+
+**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio  
+**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 **[`^back to top^`](#unraid-templates)**
 
