@@ -11,7 +11,6 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
 - [Postgress](#Postgress_Immich)
-- [Old Redis](#Redis_Immich)
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
@@ -20,7 +19,7 @@ These templates help add containers to Unraid in a more GUI-friendly way, making
 - [Docker_Requests](#Docker_Requests)
 - [Deprecated](#Deprecated)
    - [RocketChatAIO](#RocketChatAIO)
-
+   - [Old Bitnami Redis](#Redis_Immich)
 ---
 
 # RejettoHFS3
@@ -145,27 +144,6 @@ Immich is migrating from the deprecated `tensorchord/pgvecto-rs` to a maintained
 
 **Images Repository:** https://github.com/immich-app/base-images/pkgs/container/postgres  
 **Docker Repository:** https://github.com/immich-app/immich/releases/tag/v1.133.0  
-**Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# Redis_Immich
-
-<img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
-
-**Redis_Immich**
-
-Docker image for Immich running Bitnami Redis. Includes additional Docker variables for an easier one-click install.
-
-Broadcom changed Bitnami licensing — use `bitnamilegacy` for transition. Valkey is recommended going forward.
-
-**Application Name:** Redis  
-**Application Site:** https://redis.io/
-
-**Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
-**Docker Repository:** https://hub.docker.com/r/bitnami/redis  
 **Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
 
 **[`^back to top^`](#unraid-templates)**
@@ -348,6 +326,29 @@ https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
 **Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO  
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio  
 **Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# Redis_Immich
+
+* Removed Due to binami legacy and change over and broekn support... Use valkey alternative...
+  
+<img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
+
+**Redis_Immich**
+
+Docker image for Immich running Bitnami Redis. Includes additional Docker variables for an easier one-click install.
+
+Broadcom changed Bitnami licensing — use `bitnamilegacy` for transition. Valkey is recommended going forward.
+
+**Application Name:** Redis  
+**Application Site:** https://redis.io/
+
+**Images Repository:** https://github.com/bitnami/charts/tree/main/bitnami/redis  
+**Docker Repository:** https://hub.docker.com/r/bitnami/redis  
+**Unraid Support Forum:** https://forums.unraid.net/topic/146106-immich-docker-self-hosted-google-photos-setup  
 
 **[`^back to top^`](#unraid-templates)**
 
