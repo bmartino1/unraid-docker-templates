@@ -242,7 +242,7 @@ Docker image providing Chucks Plex DBRepair script to Unraid. https://github.com
 **Application Name:**  DB-Plex-Repair   
 **Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/plex-dbrepair     
-**Unraid Support Forum:** WIP   
+**Unraid Support Forum:** https://forums.unraid.net/topic/196453-support-plex-db-repair-docker   
 
 **[`^back to top^`](#unraid-templates)**
 
