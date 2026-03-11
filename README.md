@@ -241,7 +241,7 @@ Docker image providing Netprobe functionality in a single Python-based container
 
 **PlexDBRepair**
 
-Docker image providing [ChuckPa](https://github.com/ChuckPa/DBRepair) Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
+Docker image providing [ChuckPa](https://github.com/ChuckPa) Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
 
 **Application Name:**  DB-Plex-Repair   
 **Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
