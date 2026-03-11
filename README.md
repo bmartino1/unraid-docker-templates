@@ -2,7 +2,11 @@
 
 Templates for Docker containers to use with Unraid.
 
-These templates help add containers to Unraid in a more GUI-friendly way, making updates easier in the future. The Docker containers referenced in this repository point to containers maintained by other individuals.
+These templates allow Docker containers to be added to Unraid through the Community Applications (CA) interface in a more GUI-friendly way, making deployment, management, and updates easier.
+
+The templates in this repository reference Docker images and applications maintained by various upstream developers. While some containers and templates are original work, many reference open-source projects (often MIT-licensed or similarly licensed) created and maintained by others.
+
+These templates primarily provide the configuration needed to integrate those containers into the Unraid Community Applications ecosystem. This repository therefore, represents a combination of original templates and integrations for existing open-source Docker projects, intended to simplify the deployment of these applications within Unraid.
 
 # Unraid Templates
 
@@ -84,7 +88,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Debian Linux to make the
 
 - **Simple Defaults:** View the configuration via logs and modify settings through Docker variables.
 - **Single Log Location:** Easily view errors and mDNS status in the Docker log.
-- **Diagnostic Tools Built In:** Open the console and run `mdns-scan` to check configuration and discover available services.
+- **Diagnostic Tools Built In:** Open the console and run `mdns-scan` to check the configuration and discover available services.
 
 **Application Name:** Avahi  
 **Application Site:** https://avahi.org/
@@ -237,7 +241,7 @@ Docker image providing Netprobe functionality in a single Python-based container
 
 **PlexDBRepair**
 
-Docker image providing Chucks Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
+Docker image providing [ChuckPa](https://github.com/ChuckPa/DBRepair) Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
 
 **Application Name:**  DB-Plex-Repair   
 **Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
@@ -270,7 +274,7 @@ icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamplates tes
 Hamachi-VPN: Couldn't get CA to accept xml   
 
 # cs-unifi-bouncer   
-* cs-unifi-bouncer : Couldn't get CA to accept xml
+* cs-unifi-bouncer: Couldn't get CA to accept xml
 <img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
 
 **Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
@@ -310,7 +314,7 @@ Please review the following projects for configuration examples and background i
 
 # RocketChatAIO
 
-* Removed Due to rocket.chat support...
+* Removed due to rocket.chat support...
   
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
 
@@ -333,7 +337,7 @@ https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
 
 # Redis_Immich
 
-* Removed Due to binami legacy and change over and broekn support... Use valkey alternative...
+* Removed due to binami legacy and change over, and broken support... Use valkey alternative...
   
 <img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
 
