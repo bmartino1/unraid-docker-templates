@@ -11,7 +11,7 @@ These templates primarily provide the configuration needed to integrate those co
 # Unraid Templates
 
 - [RejettoHFS3](#rejettohfs3)
-- [Unifi-OS-Server](Unifi_OS)
+- [Unifi-OS-Server](#Unifi_OS)
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
