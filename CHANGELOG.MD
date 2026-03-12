@@ -3,6 +3,15 @@
 All major changes to this project will be documented here.
 
 ## 2026.13.01
+- **Unifi Server OS**
+  - Add new template
+
+## 2026.10.03
+- **Guides**
+  - Tempalte added for Turnkey Guide for weebly site.
+    - https://bmartino1.weebly.com/guides.html   
+
+## 2026.13.01
 - **Plexrepair**
   - Tempalte Varables added docker images fixed.
 
