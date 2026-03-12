@@ -11,7 +11,7 @@ These templates primarily provide the configuration needed to integrate those co
 # Unraid Templates
 
 - [RejettoHFS3](#rejettohfs3)
-- [Unifi-os-server]#unifi-os-server
+- [Unifi-OS-Server](Unifi_OS)
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
@@ -57,31 +57,21 @@ Access your files directly from your disk via the web. You become the server! Sh
 
 ---
 
-# unifi-os-server
-WIP
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png" width="64" height="64">
+# Unifi_OS
 
-**HFS ~ HTTP File Server by Rejetto**
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png" width="64" height="64">
 
-Access your files directly from your disk via the web. You become the server! Share files directly from your disk, with unlimited space and bandwidth.
+**Unifi Os Server**
 
-- **Fast!** Try zipping 100GB; downloads start immediately!
-- **Virtual File System:** Share even a single file, with a different name if needed, without altering the real file.
-- **Customizable:** Present things the way you want!
-- **Real-time Monitoring:** Watch all activities in real time.
-- **Bandwidth Control:** Decide how much bandwidth to allocate.
-- **Direct Sharing:** Share large files with friends without uploading them to a server.
-- **Intelligent Problem Detection:** HFS tries to detect problems and suggest solutions.
-- **Expandable:** Find the right plugin, or create your own.
+Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
-**Application Name:** HFS  
-**Application Site:** https://www.rejetto.com/hfs/
+**Application Name:** Unifi OS   
+**Application Site:** https://blog.ui.com/article/introducing-unifi-os-server   
 
-**Application Repository:** https://github.com/rejetto/hfs  
-**Images Repository:** https://github.com/damienzonly/hfs-docker and https://github.com/bmartino1/hfs-docker  
-**Docker Repository:** https://hub.docker.com/r/rejetto/hfs  
-**Additional Support:** https://github.com/rejetto/hfs/discussions  
-**Unraid Support Forum:** https://forums.unraid.net/topic/180463-support-rejetto-hfs-3/
+**Application Repository:** https://ui.com/download       
+**Images Repository:** https://github.com/lemker/unifi-os-server        
+**Docker Repository:** https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server/versions    
+**Unraid Support Forum:** https://forums.unraid.net/topic/197702-support-unifi-os-server/    
 
 **[`^back to top^`](#unraid-templates)**
 
