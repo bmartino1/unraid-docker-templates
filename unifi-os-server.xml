@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/197702-support-unifi-os-server/</Support>
   <Project>https://github.com/lemker/unifi-os-server</Project>
   <ReadMe/>
   <Overview>The UniFi OS Server is the new standard for self-hosting UniFi, replacing the legacy UniFi Network Server. While the Network Server provided basic hosting functionality, it lacked support for key UniFi OS features like Organizations, IdP Integration, or Site Magic SD-WAN. With a fully unified operating system, UniFi OS Server now delivers the same management experience as UniFi-native&#x2013;including CloudKeys, Cloud Gateways, and Official UniFi Hosting&#x2013;and is fully compatible with Site Manager for centralized, multi-site control.&#13;
@@ -53,8 +53,8 @@ set-inform http://$UOS_SYSTEM_IP:8080/inform&#13;
   <Config Name="TCPDokerNatP8881" Target="8881" Default="8881" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8881</Config>
   <Config Name="TCPDokerNatP8882" Target="8882" Default="8882" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8882</Config>
   <Config Name="UOS_SYSTEM_IP" Target="UOS_SYSTEM_IP" Default="unifi.example.com" Mode="" Description="Hostname or IP for UniFi OS Server unifi.example.com" Type="Variable" Display="always" Required="true" Mask="false">unifi</Config>
-  <Config Name=" Unifi OS persistent data" Target="/persistent" Default="/mnt/user/appdata/unifi-os-server/persistent" Mode="rw" Description="/path/to/unifi-os-server/persistent" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/persistent</Config>
-  <Config Name=" Unifi OS Log Path" Target="/var/log" Default="/mnt/user/appdata/unifi-os-server/var-log" Mode="rw" Description="/path/to/unifi-os-server/var-log" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/var-log</Config>
+  <Config Name="Unifi OS persistent data" Target="/persistent" Default="/mnt/user/appdata/unifi-os-server/persistent" Mode="rw" Description="/path/to/unifi-os-server/persistent" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/persistent</Config>
+  <Config Name="Unifi OS Log Path" Target="/var/log" Default="/mnt/user/appdata/unifi-os-server/var-log" Mode="rw" Description="/path/to/unifi-os-server/var-log" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/var-log</Config>
   <Config Name="Unifi OS data" Target="/data" Default="/mnt/user/appdata/unifi-os-server/data" Mode="rw" Description="/path/to/unifi-os-server/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/data</Config>
   <Config Name="Unifi OS Service Data" Target="/srv" Default="/mnt/user/appdata/unifi-os-server/srv" Mode="rw" Description="/path/to/unifi-os-server/srv" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/srv</Config>
   <Config Name="Unifi OS Variable Unifi Data" Target="/var/lib/unifi" Default="/mnt/user/appdata/unifi-os-server/var-lib-unifi" Mode="rw" Description="/path/to/unifi-os-server/var-lib-unifi" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/var-lib-unifi</Config>
