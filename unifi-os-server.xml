@@ -23,7 +23,7 @@ The underlying structure of UniFi OS Server runs every component as systemd serv
   <Category>HomeAutomation: Other: Network:Web Network:DNS Network:Proxy Network:Management Network:VPN Network:Privacy Network:Other</Category>
   <WebUI>https://[IP]:[PORT:11443]</WebUI>
   <TemplateURL/>
-  <Icon>https://cdn.iconscout.com/icon/free/png-256/free-ubiquiti-logo-icon-svg-download-png-2284861.png</Icon>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png</Icon>
   <ExtraParams>--name unifi-os-server --hostname unifi --restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
