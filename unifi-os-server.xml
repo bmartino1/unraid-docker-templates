@@ -19,7 +19,7 @@ What is the difference between images?&#13;
 The uosserver image is provided by UniFi, extracted from the installation binary. The unifi-os-server image provides better compatibility for Docker and Kubernetes with directory fixes and configuration through environment variables.&#13;
 &#13;
 Why does the container need privileged access?&#13;
-The underlying structure of UniFi OS Server runs every component as systemd services which requires access to the host cgroup.</Overview>
+The underlying structure of UniFi OS Server runs every component as systemd services, which requires access to the host cgroup.</Overview>
   <Category>HomeAutomation: Other: Network:Web Network:DNS Network:Proxy Network:Management Network:VPN Network:Privacy Network:Other</Category>
   <WebUI>https://[IP]:[PORT:11443]</WebUI>
   <TemplateURL/>
@@ -37,21 +37,21 @@ SSH into device with username/password: ubnt/ubnt&#13;
 Set inform address:&#13;
 set-inform http://$UOS_SYSTEM_IP:8080/inform&#13;
 </Requires>
-  <Config Name="TCPDokerNatP443" Target="443" Default="11443" Mode="tcp" Description="Ingress Used for UniFi OS Server GUI/API&#13;&#10;Docker nat webui port 11443 maped to contaner port 443" Type="Port" Display="always" Required="true" Mask="false">11443</Config>
-  <Config Name="TCPDokerNatP5005" Target="5005" Default="5005" Mode="tcp" Description="Ingress Used for RTP (Real-time Transport Protocol) control protocol" Type="Port" Display="always-hide" Required="true" Mask="false">5005</Config>
-  <Config Name="TCPDokerNatP9543" Target="9543" Default="9543" Mode="tcp" Description="Ingress Used for UniFi Identity Hub" Type="Port" Display="always-hide" Required="true" Mask="false">9543</Config>
-  <Config Name="TCPDokerNatP6789" Target="6789" Default="6789" Mode="tcp" Description="Ingress Used for UniFi mobile speed test" Type="Port" Display="always-hide" Required="true" Mask="false">6789</Config>
-  <Config Name="TCPDokerNatP8080" Target="8080" Default="8080" Mode="tcp" Description="Ingress Used for Device and application communication" Type="Port" Display="always-hide" Required="true" Mask="false">8080</Config>
-  <Config Name="TCPDokerNatP8443" Target="8443" Default="8443" Mode="tcp" Description="Ingress Used for UniFi Network Application GUI/API" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
-  <Config Name="TCPDokerNatP8444" Target="8444" Default="8444" Mode="tcp" Description="Ingress Used for Secure Portal for Hotspot" Type="Port" Display="always-hide" Required="true" Mask="false">8444</Config>
-  <Config Name="UDPDokerNatP3478" Target="3478" Default="3478" Mode="udp" Description="Both(bidrectional) used for STUN for device adoption and communication (also required for Remote Management)" Type="Port" Display="always-hide" Required="true" Mask="false">3478</Config>
-  <Config Name="UDPDokerNatP5514" Target="5514" Default="5514" Mode="udp" Description="Ingress USed for Remote syslog capture" Type="Port" Display="always-hide" Required="true" Mask="false">5514</Config>
-  <Config Name="UDPDokerNatP10003" Target="10003" Default="10003" Mode="udp" Description="Ingress Used for Device discovery during adoption" Type="Port" Display="always-hide" Required="true" Mask="false">10003</Config>
-  <Config Name="TCPDokerNatP11084" Target="11084" Default="11084" Mode="tcp" Description="Ingress Used for UniFi Site Supervisor" Type="Port" Display="always-hide" Required="true" Mask="false">11084</Config>
-  <Config Name="TCPDokerNatP5671" Target="5671" Default="5671" Mode="tcp" Description="Ingress Used for AQMPS" Type="Port" Display="always-hide" Required="true" Mask="false">5671</Config>
-  <Config Name="TCPDokerNatP8880" Target="8880" Default="8880" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8880</Config>
-  <Config Name="TCPDokerNatP8881" Target="8881" Default="8881" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8881</Config>
-  <Config Name="TCPDokerNatP8882" Target="8882" Default="8882" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8882</Config>
+  <Config Name="TCPDockerNatP443" Target="443" Default="11443" Mode="tcp" Description="Ingress Used for UniFi OS Server GUI/API&#13;&#10;Docker nat webui port 11443 maped to contaner port 443" Type="Port" Display="always" Required="true" Mask="false">11443</Config>
+  <Config Name="TCPDockerNatP5005" Target="5005" Default="5005" Mode="tcp" Description="Ingress Used for RTP (Real-time Transport Protocol) control protocol" Type="Port" Display="always-hide" Required="true" Mask="false">5005</Config>
+  <Config Name="TCPDockerNatP9543" Target="9543" Default="9543" Mode="tcp" Description="Ingress Used for UniFi Identity Hub" Type="Port" Display="always-hide" Required="true" Mask="false">9543</Config>
+  <Config Name="TCPDockerNatP6789" Target="6789" Default="6789" Mode="tcp" Description="Ingress Used for UniFi mobile speed test" Type="Port" Display="always-hide" Required="true" Mask="false">6789</Config>
+  <Config Name="TCPDockerNatP8080" Target="8080" Default="8080" Mode="tcp" Description="Ingress Used for Device and application communication" Type="Port" Display="always-hide" Required="true" Mask="false">8080</Config>
+  <Config Name="TCPDockerNatP8443" Target="8443" Default="8443" Mode="tcp" Description="Ingress Used for UniFi Network Application GUI/API" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="TCPDockerNatP8444" Target="8444" Default="8444" Mode="tcp" Description="Ingress Used for Secure Portal for Hotspot" Type="Port" Display="always-hide" Required="true" Mask="false">8444</Config>
+  <Config Name="UDPDockerNatP3478" Target="3478" Default="3478" Mode="udp" Description="Both(bidrectional) used for STUN for device adoption and communication (also required for Remote Management)" Type="Port" Display="always-hide" Required="true" Mask="false">3478</Config>
+  <Config Name="UDPDockerNatP5514" Target="5514" Default="5514" Mode="udp" Description="Ingress USed for Remote syslog capture" Type="Port" Display="always-hide" Required="true" Mask="false">5514</Config>
+  <Config Name="UDPDockerNatP10003" Target="10003" Default="10003" Mode="udp" Description="Ingress Used for Device discovery during adoption" Type="Port" Display="always-hide" Required="true" Mask="false">10003</Config>
+  <Config Name="TCPDockerNatP11084" Target="11084" Default="11084" Mode="tcp" Description="Ingress Used for UniFi Site Supervisor" Type="Port" Display="always-hide" Required="true" Mask="false">11084</Config>
+  <Config Name="TCPDockerNatP5671" Target="5671" Default="5671" Mode="tcp" Description="Ingress Used for AQMPS" Type="Port" Display="always-hide" Required="true" Mask="false">5671</Config>
+  <Config Name="TCPDockerNatP8880" Target="8880" Default="8880" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8880</Config>
+  <Config Name="TCPDockerNatP8881" Target="8881" Default="8881" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8881</Config>
+  <Config Name="TCPDockerNatP8882" Target="8882" Default="8882" Mode="tcp" Description="Ingress Used for Hotspot portal redirection (HTTP)" Type="Port" Display="always-hide" Required="true" Mask="false">8882</Config>
   <Config Name="UOS_SYSTEM_IP" Target="UOS_SYSTEM_IP" Default="unifi.example.com" Mode="" Description="Hostname or IP for UniFi OS Server unifi.example.com" Type="Variable" Display="always" Required="true" Mask="false">unifi</Config>
   <Config Name="Unifi OS persistent data" Target="/persistent" Default="/mnt/user/appdata/unifi-os-server/persistent" Mode="rw" Description="/path/to/unifi-os-server/persistent" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/persistent</Config>
   <Config Name="Unifi OS Log Path" Target="/var/log" Default="/mnt/user/appdata/unifi-os-server/var-log" Mode="rw" Description="/path/to/unifi-os-server/var-log" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unifi-os-server/var-log</Config>
