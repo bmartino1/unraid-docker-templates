@@ -11,6 +11,7 @@ These templates primarily provide the configuration needed to integrate those co
 # Unraid Templates
 
 - [RejettoHFS3](#rejettohfs3)
+- [Unifi-os-server]#unifi-os-server
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
@@ -56,6 +57,35 @@ Access your files directly from your disk via the web. You become the server! Sh
 
 ---
 
+# unifi-os-server
+WIP
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png" width="64" height="64">
+
+**HFS ~ HTTP File Server by Rejetto**
+
+Access your files directly from your disk via the web. You become the server! Share files directly from your disk, with unlimited space and bandwidth.
+
+- **Fast!** Try zipping 100GB; downloads start immediately!
+- **Virtual File System:** Share even a single file, with a different name if needed, without altering the real file.
+- **Customizable:** Present things the way you want!
+- **Real-time Monitoring:** Watch all activities in real time.
+- **Bandwidth Control:** Decide how much bandwidth to allocate.
+- **Direct Sharing:** Share large files with friends without uploading them to a server.
+- **Intelligent Problem Detection:** HFS tries to detect problems and suggest solutions.
+- **Expandable:** Find the right plugin, or create your own.
+
+**Application Name:** HFS  
+**Application Site:** https://www.rejetto.com/hfs/
+
+**Application Repository:** https://github.com/rejetto/hfs  
+**Images Repository:** https://github.com/damienzonly/hfs-docker and https://github.com/bmartino1/hfs-docker  
+**Docker Repository:** https://hub.docker.com/r/rejetto/hfs  
+**Additional Support:** https://github.com/rejetto/hfs/discussions  
+**Unraid Support Forum:** https://forums.unraid.net/topic/180463-support-rejetto-hfs-3/
+
+**[`^back to top^`](#unraid-templates)**
+
+---
 # ClamAV-clamdscan
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/clamav.png" width="64" height="64">
