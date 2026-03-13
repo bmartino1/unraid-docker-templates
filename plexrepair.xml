@@ -47,7 +47,7 @@ Check container logs to monitor progress. You may also open the console and run 
 
   <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA. PLEX MUST BE STOPPED BEFORE RUNNING THIS TOOL. Mount your Plex appdata folder into this container.</Requires>
 
-  <Config Name="Plex Appdata Folder" Target="/config" Default="/mnt/user/appdata/plex" Mode="rw" Description="Path to your Plex container appdata folder (the folder that CONTAINS the 'Library' directory). Example: /mnt/user/appdata/plex. Inside this folder you should see 'Library/Application Support/Plex Media Server'. Do NOT mount the Library folder itself." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex</Config>
+  <Config Name="Plex Appdata Folder" Target="/config" Default="/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here" Mode="rw" Description="THE OTHER CONTAINERS APPDATA FOLDER!!! The Path to your Plex container appdata folder (the folder that CONTAINS the 'Other Plex Containers Library' directory). Example: /mnt/user/appdata/plex. Inside this folder, you should see 'Library'. Do NOT mount the Library folder itself!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here</Config>
 
   <Config Name="DBREPAIR_MODE" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="automatic (check, vacuum, reindex) · check (integrity check only) · vacuum (optimize database) · repair (alias for vacuum) · reindex (rebuild indexes) · deflate (VACUUM INTO rewrite) · prune (clear PhotoTranscoder cache)" Type="Variable" Display="always" Required="true" Mask="false">automatic</Config>
 
