@@ -10,30 +10,27 @@
 
   <Support>https://github.com/teifun2/cs-unifi-bouncer/issues</Support>
   <Project>https://github.com/teifun2/cs-unifi-bouncer</Project>
+  <ReadMe>https://github.com/teifun2/cs-unifi-bouncer</ReadMe>
 
-  <ReadMe/>
-
-  <Overview>This repository implements a CrowdSec bouncer for UniFi routers to block malicious IP addresses using the UniFi API.&#13;
+  <Overview>This container implements a CrowdSec bouncer for UniFi routers. It blocks malicious IP addresses by dynamically updating UniFi firewall address groups through the UniFi API.&#13;
 &#13;
-The bouncer communicates with your UniFi controller and dynamically updates firewall address groups based on CrowdSec decisions.&#13;
+Procedure:&#13;
+1. Generate a CrowdSec bouncer API key:&#13;
+   cscli bouncers add unifi-bouncer&#13;
 &#13;
-Procedure&#13;
-Get a bouncer API key from CrowdSec:&#13;
-cscli bouncers add unifi-bouncer&#13;
+2. Copy the generated key (it will only be shown once).&#13;
 &#13;
-Copy the API key printed. You WON'T be able to retrieve it again.&#13;
+3. Set the key as the environment variable CROWDSEC_BOUNCER_API_KEY.&#13;
 &#13;
-Paste the API key as the environment variable CROWDSEC_BOUNCER_API_KEY.&#13;
+4. Start the container. It will automatically communicate with your UniFi controller and apply firewall rules.&#13;
 &#13;
-Start the container and it will automatically configure firewall rules and address groups in UniFi.&#13;
-&#13;
-Additional Docker variables:&#13;
+Additional configuration variables can be found here:&#13;
 https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration
 </Overview>
 
-  <Category>Security:Network</Category>
+  <Category>Security Network</Category>
 
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI/>
 
   <TemplateURL/>
 
@@ -48,94 +45,15 @@ https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#conf
   <DonateText/>
   <DonateLink/>
 
-  <Requires>You must have a UniFi appliance and a CrowdSec instance running.&#13;
-&#13;
-The container must have network access to both CrowdSec and the UniFi controller.&#13;
-&#13;
-Generate a CrowdSec bouncer API key using:&#13;
-cscli bouncers add unifi-bouncer</Requires>
+  <Requires>You must have both a UniFi controller and a CrowdSec instance running. The container must have network access to both services.</Requires>
 
-  <!-- Port required for CA statistics validation -->
-  <Config Name="WebUI Port"
-          Target="8080"
-          Default="8080"
-          Mode="tcp"
-          Description="Optional HTTP interface"
-          Type="Port"
-          Display="advanced-hide"
-          Required="false"
-          Mask="false">8080</Config>
-
-  <Config Name="CROWDSEC_BOUNCER_API_KEY"
-          Target="CROWDSEC_BOUNCER_API_KEY"
-          Default=""
-          Mode=""
-          Description="CrowdSec bouncer API key"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="true"/>
-
-  <Config Name="CROWDSEC_URL"
-          Target="CROWDSEC_URL"
-          Default="http://crowdsec:8080/"
-          Mode=""
-          Description="Host and port of CrowdSec agent"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">http://crowdsec:8080/</Config>
-
-  <Config Name="UNIFI_HOST"
-          Target="UNIFI_HOST"
-          Default=""
-          Mode=""
-          Description="UniFi appliance address"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">192.168.1.x</Config>
-
-  <Config Name="UNIFI_API_KEY"
-          Target="UNIFI_API_KEY"
-          Default=""
-          Mode=""
-          Description="UniFi appliance API key"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="true"/>
-
-  <Config Name="UNIFI_USER"
-          Target="UNIFI_USER"
-          Default="unifi"
-          Mode=""
-          Description="UniFi appliance username"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="false">unifi</Config>
-
-  <Config Name="UNIFI_PASS"
-          Target="UNIFI_PASS"
-          Default="unifi"
-          Mode=""
-          Description="UniFi appliance password"
-          Type="Variable"
-          Display="always"
-          Required="true"
-          Mask="true"/>
-
-  <Config Name="UNIFI_IPV6"
-          Target="UNIFI_IPV6"
-          Default="false"
-          Mode=""
-          Description="Enable IPv6 support"
-          Type="Variable"
-          Display="always"
-          Required="false"
-          Mask="false">false</Config>
+  <Config Name="CROWDSEC_BOUNCER_API_KEY" Target="CROWDSEC_BOUNCER_API_KEY" Default="" Mode="" Description="CrowdSec bouncer API key used to authenticate with the CrowdSec local API." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="http://crowdsec:8080/" Mode="" Description="URL of the CrowdSec local API." Type="Variable" Display="always" Required="true" Mask="false">http://crowdsec:8080/</Config>
+  <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="" Mode="" Description="Hostname or IP address of the UniFi controller." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="UNIFI_API_KEY" Target="UNIFI_API_KEY" Default="" Mode="" Description="UniFi API key used for controller authentication." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="UNIFI_USER" Target="UNIFI_USER" Default="unifi" Mode="" Description="UniFi controller username." Type="Variable" Display="always" Required="true" Mask="false">unifi</Config>
+  <Config Name="UNIFI_PASS" Target="UNIFI_PASS" Default="unifi" Mode="" Description="UniFi controller password." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="UNIFI_IPV6" Target="UNIFI_IPV6" Default="false" Mode="" Description="Enable IPv6 support." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 
   <TailscaleStateDir/>
-
 </Container>
