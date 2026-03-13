@@ -12,6 +12,8 @@ These templates primarily provide the configuration needed to integrate those co
 
 - [RejettoHFS3](#rejettohfs3)
 - [Unifi-OS-Server](#Unifi_OS)
+- [Netprobe](#Netprobe)
+- [PlexDBRepair](#PlexDBRepair)
 - [ClamAV-clamdscan](#clamav-clamdscan)
 - [Avahi ZeroConf mDNS](#Avahi)
 - [SFTP-Fail2ban](#SFTP)
@@ -19,12 +21,17 @@ These templates primarily provide the configuration needed to integrate those co
 - [Valkey Redis Immich](#Redis_Valkey)
 - [Bitcoin Core](#BitcoinCoreGUI)
 - [Bitcoin Knots](#BitcoinKnotsGUI)
-- [Netprobe](#Netprobe)
-- [PlexDBRepair](#PlexDBRepair)
+- [CKPool Solo Mine](#CKPool)
+
 - [Docker_Requests](#Docker_Requests)
+   - [Logmein Hamachi VPN](#Hamachi-VPN)
+   - [RetroAsembly Legal self-hosted Emulation](#retroassembly)
+   - [Crowdstrike Security Bouncer for unifi](#cs-unifi-bouncer)
+      
 - [Deprecated](#Deprecated)
    - [RocketChatAIO](#RocketChatAIO)
    - [Old Bitnami Redis](#Redis_Immich)
+
 ---
 
 # RejettoHFS3
@@ -32,6 +39,7 @@ These templates primarily provide the configuration needed to integrate those co
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rejettohfs.png" width="64" height="64">
 
 **HFS ~ HTTP File Server by Rejetto**
+* Beta Template
 
 Access your files directly from your disk via the web. You become the server! Share files directly from your disk, with unlimited space and bandwidth.
 
@@ -76,6 +84,43 @@ Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 **[`^back to top^`](#unraid-templates)**
 
 ---
+
+# Netprobe
+
+<img src="https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true" width="64" height="64">
+
+**Netprobe**
+
+Docker image providing Netprobe functionality in a single Python-based container.
+
+**Application Name:** Netprobe  
+**Application Site:** https://github.com/plaintextpackets/netprobe_lite
+
+**Images Repository:** https://github.com/bmartino1/NetProbe_Python  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/netprobe  
+**Unraid Support Forum:** https://forums.unraid.net/topic/195469-support-netprobe  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# PlexDBRepair
+
+<img src="https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png" width="64" height="64">
+
+**PlexDBRepair**
+
+Docker image providing [ChuckPa](https://github.com/ChuckPa) Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
+
+**Application Name:**  DB-Plex-Repair   
+**Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/plex-dbrepair     
+**Unraid Support Forum:** https://forums.unraid.net/topic/196453-support-plex-db-repair-docker   
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
 # ClamAV-clamdscan
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/clamav.png" width="64" height="64">
@@ -156,6 +201,8 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 
 # Postgress_Immich
 
+* see immich guides https://bmartino1.weebly.com/guides.html
+  
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png" width="64" height="64">
 
 **Postgress_Immich**
@@ -179,6 +226,8 @@ Immich is migrating from the deprecated `tensorchord/pgvecto-rs` to a maintained
 <img src="https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/redis.png" width="64" height="64">
 
 **Valkey_Immich**
+
+* see immich guides https://bmartino1.weebly.com/guides.html
 
 Docker image for Immich running Valkey, a Redis-compatible alternative. Includes additional Docker variables for an easier one-click install.
 
@@ -235,74 +284,7 @@ Helpful for self-hosting a Bitcoin wallet and running a node for solo mining on 
 
 **[`^back to top^`](#unraid-templates)**
 
-
-# Netprobe
-
-<img src="https://github.com/bmartino1/unraid-docker-templates/blob/main/images/netprobe.png?raw=true" width="64" height="64">
-
-**Netprobe**
-
-Docker image providing Netprobe functionality in a single Python-based container.
-
-**Application Name:** Netprobe  
-**Application Site:** https://github.com/plaintextpackets/netprobe_lite
-
-**Images Repository:** https://github.com/bmartino1/NetProbe_Python  
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/netprobe  
-**Unraid Support Forum:** https://forums.unraid.net/topic/195469-support-netprobe  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# PlexDBRepair
-
-<img src="https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png" width="64" height="64">
-
-**PlexDBRepair**
-
-Docker image providing [ChuckPa](https://github.com/ChuckPa) Plex DBRepair script to Unraid. https://github.com/ChuckPa/DBRepair
-
-**Application Name:**  DB-Plex-Repair   
-**Images Repository:** https://github.com/bmartino1/plex-dbrepair-docker     
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/plex-dbrepair     
-**Unraid Support Forum:** https://forums.unraid.net/topic/196453-support-plex-db-repair-docker   
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# Docker_Requests
-https://forums.unraid.net/topic/32276-docker-requests  
-To add to CA only... data per forum post...
-
-# retroassembly  
-
-<img src="https://github.com/arianrhodsandlot/retroassembly/raw/main/public/assets/logo/logo-512x512.png" width="64" height="64">  
-
-**Application Site:** https://retroassembly.com/    
-**Images Repository:** https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
-
-**[`^back to top^`](#unraid-templates)**
-
----
-
-# Deprecated
-
-icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web - Beta teamplates test can't get to work right for stability use Docker Compose.   
-
-Hamachi-VPN: Couldn't get CA to accept xml   
-
-# cs-unifi-bouncer   
-* cs-unifi-bouncer: Couldn't get CA to accept xml
-<img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
-
-**Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
-**Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
-
-
 # CKPool
-* ckpool: Couldn't get CA to accept xml
   
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/ckpool.png" width="64" height="64">
 
@@ -332,9 +314,47 @@ Please review the following projects for configuration examples and background i
 
 ---
 
+# Docker_Requests
+https://forums.unraid.net/topic/32276-docker-requests  
+To add to CA only... data per forum post...
+
+# Hamachi-VPN: 
+* Beta Template
+WIP...
+
+---
+
+# retroassembly  
+
+<img src="https://github.com/arianrhodsandlot/retroassembly/raw/main/public/assets/logo/logo-512x512.png" width="64" height="64">  
+
+**Application Site:** https://retroassembly.com/    
+**Images Repository:** https://github.com/arianrhodsandlot/retroassembly#option-2-self-host-with-docker  
+
+**[`^back to top^`](#unraid-templates)**
+
+---
+
+# cs-unifi-bouncer   
+* cs-unifi-bouncer: Couldn't get CA to accept xml
+<img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
+
+**Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
+**Github Docker Repository:** https://github.com/teifun2/cs-unifi-bouncer/pkgs/container/cs-unifi-bouncer#configuration  
+
+---
+---
+
+# Deprecated
+
+icloudpd-web: https://github.com/AirswitchAsa/icloudpd-web
+* Beta teamplates test can't get to work right for stability use Docker Compose.   
+
+---
+
 # RocketChatAIO
 
-* Removed due to rocket.chat support...
+* Removed due to rocket.chat support atempted a AIO... see https://github.com/bmartino1/unraid-rocket.chat for proper implementation...
   
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
 
