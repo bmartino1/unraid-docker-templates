@@ -200,10 +200,10 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 ---
 
 # Postgress_Immich
+ 
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png" width="64" height="64">
 
 * see immich guides https://bmartino1.weebly.com/guides.html
-  
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/postgresql-immich-logo.png" width="64" height="64">
 
 **Postgress_Immich**
 
