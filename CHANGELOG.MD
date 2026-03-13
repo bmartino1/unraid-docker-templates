@@ -2,7 +2,11 @@
 
 All major changes to this project will be documented here.
 
-## 2026.13.01
+## 2026.12.01
+- **Atempt to readd deprecated due to ID10t xml maintainer errors**
+  - Add new templates
+
+## 2026.11.01
 - **Unifi Server OS**
   - Add new template
 
