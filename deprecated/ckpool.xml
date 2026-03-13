@@ -7,8 +7,8 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
+  <Support>https://github.com/golden-guy/ckpool-solo</Support>
+  <Project>https://hub.docker.com/r/pinkyswear/ckpool-solo</Project>
   <Overview>
 Run your own SOLO Bitcoin mining pool.&#xD;
 &#xD;
