@@ -3,32 +3,69 @@
   <Name>hamachi</Name>
   <Repository>jbcom/hamachi-vpn</Repository>
   <Registry>https://hub.docker.com/r/jbcom/hamachi-vpn</Registry>
+
   <Network>host</Network>
+
   <MyIP/>
   <Shell>sh</Shell>
+
   <Privileged>true</Privileged>
-  <Support/>
-  <Project/>
+
+  <Support>https://support.goto.com/hamachi</Support>
+  <Project>https://vpn.net/</Project>
+
   <ReadMe>https://hub.docker.com/r/jbcom/hamachi-vpn</ReadMe>
-  <Overview>VPN LogMeIn Hamachi: https://secure.logmein.com/products/hamachi/&#13;
+
+  <Overview>VPN LogMeIn Hamachi: https://vpn.net/&#13;
 &#13;
-This is a docker container to LogMeNn Hamachi.&#13;
+This container runs LogMeIn Hamachi inside Docker to create a private virtual LAN over the internet.&#13;
 &#13;
-https://vpn.net/&#13;
-https://support.goto.com/hamachi&#13;
-https://hub.docker.com/r/gfjardim/hamachi</Overview>
+Official website: https://vpn.net/&#13;
+Support documentation: https://support.goto.com/hamachi&#13;
+Docker image source: https://hub.docker.com/r/jbcom/hamachi-vpn
+  </Overview>
+
   <Category>Network:VPN Status:Beta</Category>
+
   <WebUI/>
+
   <TemplateURL/>
+
   <Icon>https://p7.hiclipart.com/preview/89/685/123/hamachi-logmein-inc-icq-internet-computer-program-7-11-logo.jpg</Icon>
+
   <ExtraParams>-v "/etc/localtime":"/etc/localtime":ro</ExtraParams>
+
   <PostArgs/>
   <CPUset/>
+
   <DateInstalled>1767908579</DateInstalled>
+
   <DonateText/>
   <DonateLink/>
-  <Requires>Requires an account with logemein https://vpn.net/</Requires>
-  <Config Name="ACCOUNT" Target="ACCOUNT" Default="" Mode="" Description="logemein account email" Type="Variable" Display="always" Required="true" Mask="false">your@email.com</Config>
-  <Config Name="appdatra" Target="/config" Default="/mnt/user/appdata/hamachi" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hamachi</Config>
+
+  <Requires>Requires a LogMeIn Hamachi account.&#13;
+Sign up at https://vpn.net/</Requires>
+
+  <Config Name="ACCOUNT"
+          Target="ACCOUNT"
+          Default=""
+          Mode=""
+          Description="LogMeIn account email"
+          Type="Variable"
+          Display="always"
+          Required="true"
+          Mask="false">your@email.com</Config>
+
+  <Config Name="Appdata"
+          Target="/config"
+          Default="/mnt/user/appdata/hamachi"
+          Mode="rw"
+          Description="Persistent configuration directory"
+          Type="Path"
+          Display="always"
+          Required="true"
+          Mask="false">/mnt/user/appdata/hamachi</Config>
+
   <TailscaleStateDir/>
+
 </Container>
