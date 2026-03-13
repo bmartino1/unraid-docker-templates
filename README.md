@@ -336,7 +336,7 @@ WIP...
 ---
 
 # cs-unifi-bouncer   
-* cs-unifi-bouncer: Couldn't get CA to accept xml
+
 <img src="https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png" width="64" height="64">  
 
 **Application Project Site:** https://github.com/Teifun2/cs-unifi-bouncer    
