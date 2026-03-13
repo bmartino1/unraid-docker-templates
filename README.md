@@ -322,6 +322,17 @@ To add to CA only... data per forum post...
 * Beta Template
 WIP...
 
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/hamachi-logmein-inc.jpg" width="64" height="64">
+
+**Application Name:** Logmein Hamachi  
+**Application Site:** wip  
+
+**Images Repository:** wip  
+**Docker Repository:** wip  
+
+**Notes:**
+WIP
+
 **[`^back to top^`](#unraid-templates)**
 
 ---
