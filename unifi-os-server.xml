@@ -59,6 +59,7 @@ extra parm&#13;
   <Config Name="TCPDokerNatP8444" Target="8444" Default="8444" Mode="tcp" Description="Ingress Used for Secure Portal for Hotspot" Type="Port" Display="always-hide" Required="true" Mask="false">8444</Config>
   <Config Name="UDPDokerNatP3478" Target="3478" Default="3478" Mode="udp" Description="Both(bidrectional) used for STUN for device adoption and communication (also required for Remote Management)" Type="Port" Display="always-hide" Required="true" Mask="false">3478</Config>
   <Config Name="UDPDokerNatP5514" Target="5514" Default="5514" Mode="udp" Description="Ingress USed for Remote syslog capture" Type="Port" Display="always-hide" Required="true" Mask="false">5514</Config>
+  <Config Name="UDPDokerNatP10001" Target="10001" Default="10001" Mode="udp" Description="Ingress Used for Device discovery during adoption" Type="Port" Display="always-hide" Required="true" Mask="false">10001</Config>
   <Config Name="UDPDokerNatP10003" Target="10003" Default="10003" Mode="udp" Description="Ingress Used for Device discovery during adoption" Type="Port" Display="always-hide" Required="true" Mask="false">10003</Config>
   <Config Name="TCPDokerNatP11084" Target="11084" Default="11084" Mode="tcp" Description="Ingress Used for UniFi Site Supervisor" Type="Port" Display="always-hide" Required="true" Mask="false">11084</Config>
   <Config Name="TCPDokerNatP5671" Target="5671" Default="5671" Mode="tcp" Description="Ingress Used for AQMPS" Type="Port" Display="always-hide" Required="true" Mask="false">5671</Config>
