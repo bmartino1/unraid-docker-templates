@@ -34,7 +34,7 @@ extra parm&#13;
   <Category>HomeAutomation: Other: Network:Web Network:DNS Network:Proxy Network:Management Network:VPN Network:Privacy Network:Other</Category>
   <WebUI>https://[IP]:[PORT:11443]</WebUI>
   <TemplateURL/>
-  <Icon>https://cdn.iconscout.com/icon/free/png-256/free-ubiquiti-logo-icon-svg-download-png-2284861.png</Icon>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png</Icon>
   <ExtraParams>--cgroupns host --cap-add NET_RAW --cap-add NET_ADMIN --tmpfs /run --tmpfs /run/lock --tmpfs /tmp:exec --tmpfs /var/lib/journal --tmpfs /var/opt/unifi/tmp:size=64m -v /sys/fs/cgroup:/sys/fs/cgroup:rw --name unifi-os-server --hostname unifi --restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
