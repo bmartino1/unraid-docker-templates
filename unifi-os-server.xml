@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>unifi-os-server</Name>
-  <Repository>ghcr.io/lemker/unifi-os-server:v1.0.0</Repository>
+  <Repository>ghcr.io/lemker/unifi-os-server:latest</Repository>
   <Registry>https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
-  <Privileged>false</Privileged>
-  <Support/>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/197702-support-unifi-os-server/</Support>
   <Project>https://github.com/lemker/unifi-os-server</Project>
   <ReadMe/>
   <Overview>The UniFi OS Server is the new standard for self-hosting UniFi, replacing the legacy UniFi Network Server. While the Network Server provided basic hosting functionality, it lacked support for key UniFi OS features like Organizations, IdP Integration, or Site Magic SD-WAN. With a fully unified operating system, UniFi OS Server now delivers the same management experience as UniFi-native&#x2013;including CloudKeys, Cloud Gateways, and Official UniFi Hosting&#x2013;and is fully compatible with Site Manager for centralized, multi-site control.&#13;
