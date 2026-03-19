@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197702-support-unifi-os-server/</Support>
   <Project>https://github.com/lemker/unifi-os-server</Project>
   <ReadMe/>
