@@ -3,6 +3,11 @@
 All major changes to this project will be documented here.
 
 ## 2026.12.01
+- **Attempt to re-add and fix the unifi temaptle with non privileged per testing**
+  - Add new templates to decompose old for code prosperity
+  - https://github.com/lemker/unifi-os-server/issues/59#issuecomment-4087959272   
+
+## 2026.12.01
 - **Atempt to readd deprecated due to ID10t xml maintainer errors**
   - Add new templates
 
@@ -12,16 +17,16 @@ All major changes to this project will be documented here.
 
 ## 2026.10.03
 - **Guides**
-  - Tempalte added for Turnkey Guide for weebly site.
+  - Template added for Turnkey Guide for Weebly site.
     - https://bmartino1.weebly.com/guides.html   
 
 ## 2026.13.01
 - **Plexrepair**
-  - Tempalte Varables added docker images fixed.
+  - Template Variables added docker images fixed.
 
 ## 2026.12.01
 - **Plexrepair**
-  - Complete docker rewrite
+  - Complete Docker rewrite
 
 ## 2026.11.01
 - **Plexrepair**
