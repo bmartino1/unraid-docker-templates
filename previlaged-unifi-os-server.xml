@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>unifi-os-server</Name>
-  <Repository>ghcr.io/lemker/unifi-os-server:latest</Repository>
-  <Registry>https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server</Registry>
+  <Name>Previlaged-unifi-os-server</Name>
+  <Repository>bmmbmm01/oldprivileged-unifiosserver</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/oldprivileged-unifiosserver</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -20,7 +20,7 @@ The uosserver image is provided by UniFi, extracted from the installation binary
 &#13;
 Why does the container need privileged access?&#13;
 The underlying structure of UniFi OS Server runs every component as systemd services, which requires access to the host cgroup.</Overview>
-  <Category>HomeAutomation: Other: Network:Web Network:DNS Network:Proxy Network:Management Network:VPN Network:Privacy Network:Other</Category>
+  <Category>Status:Beta HomeAutomation: Other: Network:Web Network:DNS Network:Proxy Network:Management Network:VPN Network:Privacy Network:Other</Category>
   <WebUI>https://[IP]:[PORT:11443]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png</Icon>
@@ -30,7 +30,7 @@ The underlying structure of UniFi OS Server runs every component as systemd serv
   <DateInstalled>1773278486</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires>Set UniFi OS Server hostname via extra Parm(recommended) and/or set MACVLAN custom br0 IP address for inform...&#13;
+  <Requires>5.0.6 rebuild Beta Set UniFi OS Server hostname via extra Parm(recommended) and/or set MACVLAN custom br0 IP address for inform...&#13;
 &#13;
 SSH into device with username/password: ubnt/ubnt&#13;
 &#13;
