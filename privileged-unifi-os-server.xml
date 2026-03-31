@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Previlaged-unifi-os-server</Name>
+  <Name>Privileged-unifi-os-server</Name>
   <Repository>bmmbmm01/oldprivileged-unifiosserver:latest</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/oldprivileged-unifiosserver</Registry>
   <Network>bridge</Network>
