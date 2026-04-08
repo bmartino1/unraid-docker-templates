@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>NetProbe</Name>
-  <Repository>bmmbmm01/netprobe:postgres16</Repository>
+  <Repository>bmmbmm01/netprobe:latest</Repository>
   <Registry>https://hub.docker.com/r/bmmbmm01/netprobe</Registry>
   <Network>bridge</Network>
   <MyIP/>
