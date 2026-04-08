@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2026.04.07
+- **Netprobe**
+  - GitHub issues fixed and feature requests added
+
 ## 2026.12.01
 - **Attempt to re-add and fix the unifi temaptle with non privileged per testing**
   - Add new templates to decompose old for code prosperity
