@@ -5,10 +5,10 @@ All major changes to this project will be documented here.
 ## 2026-05-04 — Lifecycle Transition
 
 ### Changed
-- Repository moved to reduced Active Repository support model
+- Repository moved to a reduced Active Repository support model
 - Templates recategorized as:
   - Actively Supported (root of repo)
-  - Frozen Kiling-Support folder (no support) xmls removed form REPO
+  - Frozen Kiling-Support folder (no support) XMLs removed from REPO
   - Deprecated (end-of-life)
 
 ### Removed CA templates
