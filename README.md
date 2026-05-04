@@ -284,7 +284,7 @@ Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 **Application Name:** CKPool
 
-**Application Site:** https://bitcointalk.org/index.php?topic=164896.0
+**Application Site:** https://github.com/Casraw/bitcoin-ckpool 
 
 
 
