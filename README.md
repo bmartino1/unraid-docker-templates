@@ -326,11 +326,22 @@ Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 # RocketChatAIO
 
+* Removed due to rocket.chat support attempted a AIO... see https://github.com/bmartino1/unraid-rocket.chat for proper implementation...
+  
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
 
-**Application Name:** Rocket.Chat
+**RocketChatAIO**
 
-**Application Site:** https://www.rocket.chat/pricing
+Docker image for Rocket.Chat AIO, including MongoDB and the Rocket.Chat application, for simplified deployment.  
+Based on the Rocket.Chat maintainer documentation:  
+https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
+
+**Application Name:** Rocket.Chat  
+**Application Site:** https://www.rocket.chat/pricing  
+
+**Images Repository:** https://github.com/bmartino1/rocket.chat/tree/main/unraidAIO  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/rocketchat-aio  
+**Unraid Support Forum:** https://forums.unraid.net/topic/61337-support-rocketchat  
 
 
 
