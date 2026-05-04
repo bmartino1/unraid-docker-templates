@@ -2,6 +2,23 @@
 
 All major changes to this project will be documented here.
 
+## 2026-05-04 — Lifecycle Transition
+
+### Changed
+- Repository moved to reduced Active Repository support model
+- Templates recategorized as:
+  - Actively Supported (root of repo)
+  - Frozen Kiling-Support folder (no support) xmls removed form REPO
+  - Deprecated (end-of-life)
+
+### Removed CA templates
+- Immich template support
+- Maintenance of abandoned upstream projects
+
+### Notes
+- Templates are intentionally removed from CA
+- Existing users may continue using them at their own risk...
+
 ## 2026.04.07
 - **Netprobe**
   - GitHub issues fixed and feature requests added
