@@ -233,13 +233,20 @@ To add to CA only... data per forum post...
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png" width="64" height="64">
 
-**Application Name:** Unifi OS
+**Unifi Os Server**
 
-**Application Site:** https://blog.ui.com/article/introducing-unifi-os-server
+Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
+**Application Name:** Unifi OS   
+**Application Site:** https://blog.ui.com/article/introducing-unifi-os-server   
 
+**Application Repository:** https://ui.com/download       
+**Images Repository:** https://github.com/lemker/unifi-os-server        
+**Docker Repository:** https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server/versions    
+**Unraid Support Forum:** https://forums.unraid.net/topic/197702-support-unifi-os-server/    
 
 **[`^back to top^`](#unraid-templates)**
+
 
 ---
 
