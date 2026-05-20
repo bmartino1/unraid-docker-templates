@@ -13,7 +13,7 @@ These templates primarily provide the configuration needed to integrate those co
 ## ✅ Active Maintained
 - [Netprobe](#Netprobe)
 - [SFTP-Fail2ban](#SFTP)
-- [Unraid Samba Passwords](#SMB)
+- [Unraid Samba Passwords](#smb-user-web-portal)
 
 ---
 
