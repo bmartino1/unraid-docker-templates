@@ -13,10 +13,11 @@ These templates primarily provide the configuration needed to integrate those co
 ## ✅ Active Maintained
 - [Netprobe](#Netprobe)
 - [SFTP-Fail2ban](#SFTP)
+- [Unraid Samba Passwords](#SMB)
 
 ---
 
-## ⚠️ Keep in CA (But will No Longer Provide Support)
+## ⚠️ Keep in CA (Limited Support)
 - [Postgress](#Postgress_Immich)
 - [Valkey Redis Immich](#Redis_Valkey)
 - [PlexDBRepair](#PlexDBRepair)
@@ -96,11 +97,18 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 
 **[`^back to top^`](#unraid-templates)**
 
+# SFTP
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png" width="64" height="64">
+**Images Repository:** https://github.com/bmartino1/sftp2  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/sftp2  
+**Unraid Support Forum:** WIP
+
 
 ---
 ---
 
-## ⚠️ Keep in CA (But will No Longer Provide Support)
+## ⚠️ Keep in CA (Limitied Support)
 
 ---
 
@@ -195,7 +203,7 @@ To add to CA only... data per forum post...
 
 **Application Name:** Logmein Hamachi
 
-**Application Site:** wip
+**Application Site:** https://vpn.net
 
 
 
@@ -235,6 +243,7 @@ To add to CA only... data per forum post...
 
 **Unifi Os Server**
 
+** Per Unifi Use a VM **
 Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 **Application Name:** Unifi OS   
@@ -242,8 +251,7 @@ Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 **Application Repository:** https://ui.com/download       
 **Images Repository:** https://github.com/lemker/unifi-os-server        
-**Docker Repository:** https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server/versions    
-**Unraid Support Forum:** https://forums.unraid.net/topic/197702-support-unifi-os-server/    
+**Docker Repository:** https://github.com/lemker/unifi-os-server/pkgs/container/unifi-os-server/versions      
 
 **[`^back to top^`](#unraid-templates)**
 
@@ -365,6 +373,7 @@ https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
 
 # Previlaged Unifi-OS-Server
 
+** Per Unifi Use a VM **
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png" width="64" height="64">
 
 **Application Name:** Unifi OS  
