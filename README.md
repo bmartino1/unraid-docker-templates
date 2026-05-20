@@ -99,11 +99,14 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 
 # SMB
 
-<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png" width="64" height="64">
-**Images Repository:** https://github.com/bmartino1/smb-password-portal    
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal    
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png" width="64" height="64">  
+
+**Images Repository:** https://github.com/bmartino1/smb-password-portal  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal  
 **Unraid Support Forum:** WIP  
 *Feature request* for non-admin web access to change Samba password on Unraid.  
+
+**[`^back to top^`](#unraid-templates)**
 
 ---
 ---
