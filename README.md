@@ -97,7 +97,7 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 
 **[`^back to top^`](#unraid-templates)**
 
-# SMB
+# SMB User Web Portal
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png" width="64" height="64">  
 
@@ -376,8 +376,8 @@ https://docs.rocket.chat/docs/deploy-with-docker-docker-compose
 
 # Previlaged Unifi-OS-Server
 
-** Per Unifi Use a VM **
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/unifi.png" width="64" height="64">
+** Per Unifi Use a VM **  
 
 **Application Name:** Unifi OS  
 **Application Site:** https://blog.ui.com/article/introducing-unifi-os-server
