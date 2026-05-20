@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2026-05-19
+- SMB DOCker made a template work for distribution for non-admin password change.
+- Template and support page added later
+
 ## 2026-05-04 — Lifecycle Transition
 
 ### Changed
