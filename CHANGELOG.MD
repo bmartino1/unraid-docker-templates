@@ -4,7 +4,8 @@ All major changes to this project will be documented here.
 
 ## 2026-05-19
 - SMB Docker made a template work for distribution for non-admin password change.
-- Template and support page added later
+  - Template add support page added
+  - samba web portal per feature request for non-admins to change Samba password.
 
 ## 2026-05-04 — Lifecycle Transition
 
