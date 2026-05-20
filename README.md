@@ -103,7 +103,7 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 
 **Images Repository:** https://github.com/bmartino1/smb-password-portal  
 **Docker Repository:** https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal  
-**Unraid Support Forum:** WIP  
+**Unraid Support Forum:** https://forums.unraid.net/topic/198949-support-samba-web-portal/    
 *Feature request* for non-admin web access to change Samba password on Unraid.  
 
 **[`^back to top^`](#unraid-templates)**
