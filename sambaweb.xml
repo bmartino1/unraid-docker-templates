@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>unraid-smb-password-portal</Name>
+  <Repository>bmmbmm01/unraid-smb-password-portal:latest</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/bmartino1/smb-password-portal</Project>
+  <ReadMe/>
+  <Overview>Non-admin website for admins to direct end-users for there account password change. An end user can then non-admin change of there share network passwords...&#13;
+&#13;
+Simple web UI for changing an SMB password&#13;
+Users enter:&#13;
+SMB username&#13;
+current SMB password&#13;
+new SMB password&#13;
+confirmation password&#13;
+Uses Samba's smbpasswd client command&#13;
+Talks to the Unraid host Samba service&#13;
+Reads Unraid SMB users from /boot/config/smbpasswd&#13;
+Excludes root from the client portal by default&#13;
+Does not expose plaintext passwords&#13;
+Does not require Docker socket access&#13;
+Does not need Unraid root credentials&#13;
+Auto-generates a persistent Flask secret key on first start&#13;
+Optional debug endpoint for testing user detection&#13;
+Intended for LAN, VPN, Tailscale, WireGuard, or reverse-proxy-protected use</Overview>
+  <Category>Other: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8099]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1779247386</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>run as unraid network host, connect to samba via localhost for security</Requires>
+  <Config Name="SAMBA_SERVER" Target="SAMBA_SERVER" Default="127.0.0.1" Mode="" Description="The Samba IP of the Unraid Machine to list and change users" Type="Variable" Display="always" Required="true" Mask="false">127.0.0.1</Config>
+  <Config Name="MIN_PASSWORD_LENGTH" Target="MIN_PASSWORD_LENGTH" Default="12" Mode="" Description="Min new password length" Type="Variable" Display="always" Required="true" Mask="false">8</Config>
+  <Config Name="SHOW_USER_DROPDOWN" Target="SHOW_USER_DROPDOWN" Default="1" Mode="" Description="0 users enter password 1 drop down shows samba all users" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="ENABLE_DEBUG_USERS" Target="ENABLE_DEBUG_USERS" Default="1" Mode="" Description="Curl debug check samba list users curl http://127.0.0.1:8099/debug/users" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/smb-password-portal/config" Mode="rw" Description="appdata website SECRET_KEY file for python flask" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/smb-password-portal/config</Config>
+  <Config Name="Unraid SMB Stuff" Target="/unraid-config" Default="/boot/config" Mode="ro" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/boot/config</Config>
+  <TailscaleStateDir/>
+</Container>
