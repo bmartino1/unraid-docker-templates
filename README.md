@@ -76,11 +76,11 @@ Docker image providing Netprobe functionality in a single Python-based container
 Note — Known as **sftp2**, an update to the Docker fork to move away from the base image and apply required fixes.  
 Setting the Docker variable `debug_testing=true` will create debug folders in the `/config` volume for crossover testing.
 
-This template adds additional Docker variables and capabilities. It is a full overhaul of SFTP, rebuilt on **Debian-slim** due to Ubuntu and OpenSSH issues in the original SFTP Fail2ban Docker image. Alpine was considered, but is not compatible with other required applications.
+This template adds additional Docker variables and capabilities. It is a full overhaul of SFTP, rebuilt on **Debian-slim** due to Ubuntu and OpenSSH issues in the original SFTP Fail2ban Docker image. Alpine was considered, but it is not compatible with other required applications.
 
 Docker image for SFTP running OpenSSH server and hardened against attacks with Fail2ban.
 
-- **Simple by Default:** One-click install and SFTP is running. View the config folder for advanced configuration.
+- **Simple by Default:** One-click install, and SFTP is running. View the config folder for advanced configuration.
 - **Easy Log Location:** Easily see errors and check status in the Docker log or the appdata log folder.
 
 **Application Name:** SFTP (OpenSSH)  
@@ -100,15 +100,15 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 # SMB
 
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/samba.png" width="64" height="64">
-**Images Repository:** https://github.com/bmartino1/smb-password-portal  
-**Docker Repository:** https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal  
-**Unraid Support Forum:** WIP
-*Feature request* for non admin web access to change Samba password on unraid.
+**Images Repository:** https://github.com/bmartino1/smb-password-portal    
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/unraid-smb-password-portal    
+**Unraid Support Forum:** WIP  
+*Feature request* for non-admin web access to change Samba password on Unraid.  
 
 ---
 ---
 
-## ⚠️ Keep in CA (Limitied Support)
+## ⚠️ Keep in CA (Limited Support)
 
 ---
 
@@ -140,7 +140,7 @@ Immich is migrating from the deprecated `tensorchord/pgvecto-rs` to a maintained
 
 **Valkey_Immich**
 
-* see immich guides https://bmartino1.weebly.com/guides.html
+* see Immich guides https://bmartino1.weebly.com/guides.html
 
 Docker image for Immich running Valkey, a Redis-compatible alternative. Includes additional Docker variables for an easier one-click install.
 
@@ -244,7 +244,7 @@ To add to CA only... data per forum post...
 **Unifi Os Server**
 
 ** Per Unifi Use a VM **
-Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
+Ubiquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 **Application Name:** Unifi OS   
 **Application Site:** https://blog.ui.com/article/introducing-unifi-os-server   
@@ -334,7 +334,7 @@ Ubquity/Unifi Server OS system to run Unifi Protect, and network self-hosted...
 
 # RocketChatAIO
 
-* Removed due to rocket.chat support attempted a AIO... see https://github.com/bmartino1/unraid-rocket.chat for proper implementation...
+* Removed due to rocket.chat support attempted an AIO... see https://github.com/bmartino1/unraid-rocket.chat for proper implementation...
   
 <img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/rocketchataio.png" width="64" height="64">
 
