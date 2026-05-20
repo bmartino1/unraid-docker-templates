@@ -8,7 +8,7 @@
   <MyMAC/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/198949-support-samba-web-portal/</Support>
   <Project>https://github.com/bmartino1/smb-password-portal</Project>
   <ReadMe/>
   <Overview>Non-admin website for admins to direct end-users for there account password change. An end user can then non-admin change of there share network passwords...&#13;
