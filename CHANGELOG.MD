@@ -9,6 +9,7 @@ All major changes to this project will be documented here.
 
 Per Unraid, suggested repository layout
 
+```
 my-ca-repo/
   README.md
   LICENSE
@@ -17,7 +18,7 @@ my-ca-repo/
   ca_profile.xml
   templates/example-app.xml
   plugins/example-plugin.xml
-
+```
 
 ## 2026-05-19
 - SMB Docker made a template work for distribution for non-admin password change.
