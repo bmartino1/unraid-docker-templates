@@ -2,6 +2,11 @@
 
 All major changes to this project will be documented here.
 
+## 2026-06-30
+- https://ca.unraid.net/submit/help/builders
+   - added repo claim and other files for CA profile
+
+
 ## 2026-05-19
 - SMB Docker made a template work for distribution for non-admin password change.
   - Template add support page added
