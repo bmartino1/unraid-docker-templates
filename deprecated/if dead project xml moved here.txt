@@ -1,3 +1,0 @@
-icloudpd-web
-immich-redis
-rocketchataio
