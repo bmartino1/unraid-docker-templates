@@ -5,6 +5,18 @@ All major changes to this project will be documented here.
 ## 2026-06-30
 - https://ca.unraid.net/submit/help/builders
    - added repo claim and other files for CA profile
+   - Updated to follow the starter recommended builder layout for future projects, plugins and dockers.
+
+Per Unraid, suggested repository layout
+
+my-ca-repo/
+  README.md
+  LICENSE
+  .gitignore
+  icon.svg
+  ca_profile.xml
+  templates/example-app.xml
+  plugins/example-plugin.xml
 
 
 ## 2026-05-19
