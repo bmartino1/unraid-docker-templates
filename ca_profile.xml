@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityApplications>
+  <Profile>
+These templates allow Docker containers to be added to Unraid through the Community Applications (CA) interface in a more GUI-friendly way, making deployment, management, and updates easier.
+The templates in this repository reference Docker images and applications maintained by various upstream developers. While some containers and templates are original work, many reference open-source projects created and maintained by others.
+These templates primarily provide the configuration needed to integrate those containers into the Unraid Community Applications ecosystem. This repository, therefore, represents a combination of original templates and integrations for existing open-source Docker projects, intended to simplify the deployment of these applications within Unraid.
+  </Profile>
+
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/main/icon.svg</Icon>
+  <WebPage>https://github.com/bmartino1/unraid-docker-templates</WebPage>
+  <Forum>https://forums.unraid.net/profile/118010-bmartino1/</Forum>
+  <Discord></Discord>
+  <DonateLink>https://www.paypal.com/donate/?business=PA3ZHF52483KW</DonateLink>
+  <DonateText>Support this project</DonateText>
+  <Photo></Photo>
+  <Video></Video>
+</CommunityApplications>
