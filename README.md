@@ -18,7 +18,8 @@ These templates primarily provide the configuration needed to integrate those co
 ---
 
 ## ⚠️ Keep in CA (Limited Support)
-- [Postgress](#Postgress_Immich)
+- [ClamAV-clamdscan](#clamav-clamdscan)
+- [Postgress](#Postgress_Immich) 
 - [Valkey Redis Immich](#Redis_Valkey)
 - [PlexDBRepair](#PlexDBRepair)
 - [RetroAssembly](#retroassembly)
@@ -92,6 +93,28 @@ Docker image for SFTP running OpenSSH server and hardened against attacks with F
 ---
 
 ## ⚠️ Keep in CA (Limited Support)
+
+---
+
+# ClamAV-clamdscan
+
+<img src="https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/refs/heads/main/images/clamav.png" width="64" height="64">
+
+**ClamAV using Clamd**
+
+Scan and access your files directly from your disk. Use Clamdscan over Clamscan to enable multi-core support.  
+**This reduced a 48-hour scan of 6 TB or more to a 6-hour scan.**
+
+**Application Name:** ClamAV  
+**Application Site:** https://www.clamav.net/
+
+**Application Repository:** https://github.com/Cisco-Talos/clamav  
+**Images Repository:** https://github.com/bmartino1/clamav-alpine  
+**Docker Repository:** https://hub.docker.com/r/bmmbmm01/clamav-alpine  
+**Additional Support Documentation:** https://docs.clamav.net/  
+**Unraid Support Forum:** https://forums.unraid.net/topic/80868-support-clamav/
+
+**[`^back to top^`](#unraid-templates)**
 
 ---
 
