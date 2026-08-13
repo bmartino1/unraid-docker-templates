@@ -29,11 +29,76 @@ Project: https://github.com/bmartino1/clamav-alpine</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires>Extra Parm are a must for Docker logs and uses. at apply, the scan will start. Wait until Docker stops and use the Unraid web UI to view log on stopped Docker or view logs made in log folder.</Requires>
-  <Config Name="Folder to Scan" Target="/scan" Default="/mnt/user" Mode="ro" Description="Host folder to scan. This folder is mounted read-only inside the container at /scan." Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
-  <Config Name="ClamAV Signature Database" Target="/var/lib/clamav" Default="/mnt/user/appdata/CAVclamdscan/db" Mode="rw" Description="Persistent storage for ClamAV virus signature databases downloaded by freshclam." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/db</Config>
-  <Config Name="ClamAV Log Storage" Target="/var/log/clamav" Default="/mnt/user/appdata/CAVclamdscan/log" Mode="rw" Description="Persistent storage for clamd.log, clamdscan results, detected-file summaries, and previous scan history." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/log</Config>
-  <Config Name="Scan Folders" Target="SCAN_FOLDERS" Default="/scan" Mode="" Description="Container path or paths to scan. Default is /scan. Multiple mounted container paths may be separated by spaces, for example: /scan /scan2" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/scan</Config>
-  <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="ID of the user the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
-  <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="ID of the group the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
+
+  <Config Name="Folder to Scan"
+          Target="/scan"
+          Default="/mnt/user"
+          Mode="ro"
+          Description="Host folder to scan. This folder is mounted read-only inside the container at /scan."
+          Type="Path"
+          Display="always"
+          Required="true"
+          Mask="false">/mnt/user</Config>
+
+  <Config Name="ClamAV Signature Database"
+          Target="/var/lib/clamav"
+          Default="/mnt/user/appdata/CAVclamdscan/db"
+          Mode="rw"
+          Description="Persistent storage for ClamAV virus signature databases downloaded by freshclam."
+          Type="Path"
+          Display="always"
+          Required="true"
+          Mask="false">/mnt/user/appdata/CAVclamdscan/db</Config>
+
+  <Config Name="ClamAV Log Storage"
+          Target="/var/log/clamav"
+          Default="/mnt/user/appdata/CAVclamdscan/log"
+          Mode="rw"
+          Description="Persistent storage for clamd.log, clamdscan results, detected-file summaries, and previous scan history."
+          Type="Path"
+          Display="always"
+          Required="true"
+          Mask="false">/mnt/user/appdata/CAVclamdscan/log</Config>
+
+  <Config Name="ClamAV Configuration"
+          Target="/etc/clamav"
+          Default="/mnt/user/appdata/CAVclamdscan/etc"
+          Mode="rw"
+          Description="Persistent editable ClamAV configuration. On first run, missing clamd.conf and freshclam.conf are copied from the maintainer defaults stored inside the image. Existing configuration files are preserved on later runs so custom settings such as ExcludePath remain intact."
+          Type="Path"
+          Display="always"
+          Required="true"
+          Mask="false">/mnt/user/appdata/CAVclamdscan/etc</Config>
+
+  <Config Name="Scan Folders"
+          Target="SCAN_FOLDERS"
+          Default="/scan"
+          Mode=""
+          Description="Container path or paths to scan. Default is /scan. Multiple mounted container paths may be separated by spaces, for example: /scan /scan2"
+          Type="Variable"
+          Display="advanced-hide"
+          Required="true"
+          Mask="false">/scan</Config>
+
+  <Config Name="User ID"
+          Target="PUID"
+          Default="99"
+          Mode=""
+          Description="ID of the user the application runs as root."
+          Type="Variable"
+          Display="advanced-hide"
+          Required="true"
+          Mask="false">0</Config>
+
+  <Config Name="Group ID"
+          Target="PGID"
+          Default="100"
+          Mode=""
+          Description="ID of the group the application runs as root."
+          Type="Variable"
+          Display="advanced-hide"
+          Required="true"
+          Mask="false">0</Config>
+
   <TailscaleStateDir/>
 </Container>
