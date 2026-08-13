@@ -2,6 +2,9 @@
 
 All major changes to this project will be documented here.
 
+## 2026-08-13
+- Re-added and fix ClamAV using clamdscan
+
 ## 2026-06-30
 - https://ca.unraid.net/submit/help/builders
    - added repo claim and other files for CA profile
