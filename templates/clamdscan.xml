@@ -36,5 +36,7 @@ Project: https://github.com/bmartino1/clamav-alpine</Overview>
   <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="ID of the user the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
   <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="ID of the group the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
   <Config Name="Scan Folders" Target="SCAN_FOLDERS" Default="/scan" Mode="" Description="Container path or paths to scan. Default is /scan. Multiple mounted container paths may be separated by spaces, for example: /scan /scan2" Type="Variable" Display="advanced" Required="true" Mask="false">/scan</Config>
+  <Config Name="Exclude Paths" Target="EXCLUDE_PATHS" Default="/scan/appdata/CAVclamdscan" Mode="" Description="Container path or paths to exclude from scanning. Multiple paths may be separated by spaces. Default excludes this container's own persistent appdata when /mnt/user is mounted at /scan." Type="Variable" Display="advanced" Required="false" Mask="false">/scan/appdata/CAVclamdscan</Config>
+  <Config Name="Log History Limit" Target="LOG_HISTORY_LIMIT" Default="3" Mode="" Description="Number of previous scan log archives to keep. Default is 3. Set to 0 to disable archived scan history and remove managed history archives." Type="Variable" Display="always-hide" Required="false" Mask="false">3</Config>
   <TailscaleStateDir/>
 </Container>
