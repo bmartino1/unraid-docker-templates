@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>clamdscan</Name>
+  <Repository>bmmbmm01/clamav-alpine:latest</Repository>
+  <Registry>https://hub.docker.com/r/bmmbmm01/clamav-alpine</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/198948-support-bmartino1-ca-docker-repository/</Support>
+  <Project>https://github.com/bmartino1/clamav-alpine</Project>
+  <ReadMe/>
+  <Overview>ClamAV - clamdscan is a one-shot filesystem malware scanner for Unraid using ClamAV and clamdscan.&#13;
+&#13;
+When the container starts, it updates the ClamAV virus signatures, starts clamd, scans the configured folder or folders, writes persistent scan logs, and then exits when the scan is complete.&#13;
+&#13;
+The folder mounted at /scan is read-only by default. View the Docker log for live scan activity and the persistent ClamAV log folder for saved scan results and previous-run history.&#13;
+&#13;
+Project: https://github.com/bmartino1/clamav-alpine</Overview>
+  <Category>Tools:Utilities Security:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/main/templates/clamdscan.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bmartino1/unraid-docker-templates/main/images/clamav.png</Icon>
+  <ExtraParams>--restart=no --log-driver=local --log-opt=max-size=50m --log-opt=max-file=3</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1786679870</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Scan starts once you click Apply. Log windows will close automatically when the scan finishes, and Docker will stop. Wait until Docker stops and use the Unraid web UI to view log on stopped Docker or view logs in the log folder.</Requires>
+  <Config Name="Folder to Scan" Target="/scan" Default="/mnt/user" Mode="ro" Description="Host folder to scan. This folder is mounted read-only inside the container at /scan." Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="ClamAV Signature Database" Target="/var/lib/clamav" Default="/mnt/user/appdata/CAVclamdscan/db" Mode="rw" Description="Persistent storage for ClamAV virus signature databases downloaded by freshclam." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/db</Config>
+  <Config Name="ClamAV Configuration" Target="/etc/clamav" Default="/mnt/user/appdata/CAVclamdscan/etc" Mode="rw" Description="Persistent editable ClamAV configuration. On first run, missing clamd.conf and freshclam.conf are copied from the maintainer defaults stored inside the image. Existing configuration files are preserved on later runs so custom settings such as ExcludePath remain intact." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/etc</Config>
+  <Config Name="ClamAV Log Storage" Target="/var/log/clamav" Default="/mnt/user/appdata/CAVclamdscan/log" Mode="rw" Description="Persistent storage for clamd.log, clamdscan results, detected-file summaries, and previous scan history." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/CAVclamdscan/log</Config>
+  <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="ID of the user the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
+  <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="ID of the group the application runs as root." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
+  <Config Name="Scan Folders" Target="SCAN_FOLDERS" Default="/scan" Mode="" Description="Container path or paths to scan. Default is /scan. Multiple mounted container paths may be separated by spaces, for example: /scan /scan2" Type="Variable" Display="advanced" Required="true" Mask="false">/scan</Config>
+  <TailscaleStateDir/>
+</Container>
