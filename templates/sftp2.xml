@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>sftp-fail2ban</Name>
   <Repository>bmmbmm01/sftp2:latest</Repository>
-  <Registry>https://hub.docker.com/r/bmmbmm01/sftp</Registry>
+  <Registry>https://hub.docker.com/r/bmmbmm01/sftp2</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
