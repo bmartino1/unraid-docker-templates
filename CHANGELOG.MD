@@ -2,6 +2,9 @@
 
 All major changes to this project will be documented here.
 
+## 2026-08-17
+- Fix SFTP Project and docker registry broken in CA
+
 ## 2026-08-13
 - Re-added and fix ClamAV using clamdscan
 
