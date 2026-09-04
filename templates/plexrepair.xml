@@ -12,7 +12,7 @@
   <Project>https://github.com/bmartino1/plex-dbrepair-docker</Project>
   <ReadMe>https://github.com/ChuckPa/DBRepair/blob/master/README.md</ReadMe>
 
-  <Overview>You must mount your Plex container's appdata folder into this container.&#13;
+  <Overview>Warning: DO NOT run this on Plex 1.43.0 and up due to plex SQL chagnes on FTS... You must mount your Plex container's appdata folder into this container.&#13;
 &#13;
 Example: /mnt/user/appdata/plex&#13;
 &#13;
@@ -45,7 +45,7 @@ Check container logs to monitor progress. You may also open the console and run 
   <DonateText/>
   <DonateLink/>
 
-  <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA. PLEX MUST BE STOPPED BEFORE RUNNING THIS TOOL. Mount your Plex appdata folder into this container.</Requires>
+  <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA. PLEX MUST BE STOPPED BEFORE RUNNING THIS TOOL. Mount your Plex appdata folder into this container. Warning: DO NOT run this on Plex 1.43.0 and up due to plex SQL chagnes on FTS...</Requires>
 
   <Config Name="Plex Appdata Folder" Target="/config" Default="/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here" Mode="rw" Description="THE OTHER CONTAINERS APPDATA FOLDER!!! The Path to your Plex container appdata folder (the folder that CONTAINS the 'Other Plex Containers Library' directory). Example: /mnt/user/appdata/plex. Inside this folder, you should see 'Library'. Do NOT mount the Library folder itself!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here</Config>
 
