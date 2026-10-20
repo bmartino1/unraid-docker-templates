@@ -12,20 +12,7 @@
   <Project>https://github.com/bmartino1/plex-dbrepair-docker</Project>
   <ReadMe>https://github.com/ChuckPa/DBRepair/blob/master/README.md</ReadMe>
 
-  <Overview>Warning: You must mount your Plex container's appdata folder into this container.&#13;
-&#13;
-Example: /mnt/user/appdata/plex&#13;
-&#13;
-Inside this folder you should see the directory structure:&#13;
-Library/Application Support/Plex Media Server&#13;
-&#13;
-Do NOT mount the Library folder itself. Mount the parent Plex appdata directory.&#13;
-&#13;
-The script runs once automatically and repairs the Plex database, then the container exits.&#13;
-&#13;
-No Plex container or Plex process should be running during repair.&#13;
-&#13;
-Check container logs to monitor progress. You may also open the console and run "top" to verify activity.</Overview>
+  <Overview>Plex DBRepair is a one-shot Plex database maintenance using ChuckPa DBRepair v26.10.00.&#13;&#13;Automatically discovers a running Plex Docker container through the host Docker socket, copies the DBRepair executable into it, stops the Plex Media Server process (while keeping the Docker container running where supported), performs the selected operation, then restarts the Plex container after success. No Plex appdata mount is needed in this repair container.&#13;&#13;Choose DBREPAIR_MODE (automatic, check, vacuum, repair, reindex, deflate, prune). If more than one Plex container is eligible, set PLEX_CONTAINER_NAME to the exact container name. Persistent logs are stored under /logs. Database backups are enabled by default for all modes except prune.&#13;&#13;CAUTION: This tool modifies Plex databases. Keep independently verified backups. Tested with LinuxServer Plex on a disposable installation; Binhex and Hotio compatibility is not yet verified. If the Plex process respawns, its container exits, or repair fails, the tool may stop without restarting Plex. Set this repair container's restart policy to No to avoid repeated repairs.</Overview>
 
   <Category>Tools MediaApp:Other</Category>
 
