@@ -12,8 +12,38 @@
   <Project>https://github.com/bmartino1/plex-dbrepair-docker</Project>
   <ReadMe>https://github.com/ChuckPa/DBRepair/blob/master/README.md</ReadMe>
 
-  <Overview>Plex DBRepair is a one-shot Plex database maintenance using ChuckPa DBRepair v26.10.00.&#13;&#13;Automatically discovers a running Plex Docker container through the host Docker socket, copies the DBRepair executable into it, stops the Plex Media Server process (while keeping the Docker container running where supported), performs the selected operation, then restarts the Plex container after success. No Plex appdata mount is needed in this repair container.&#13;&#13;Choose DBREPAIR_MODE (automatic, check, vacuum, repair, reindex, deflate, prune). If more than one Plex container is eligible, set PLEX_CONTAINER_NAME to the exact container name. Persistent logs are stored under /logs. Database backups are enabled by default for all modes except prune.&#13;&#13;CAUTION: This tool modifies Plex databases. Keep independently verified backups. Tested with LinuxServer Plex on a disposable installation; Binhex and Hotio compatibility is not yet verified. If the Plex process respawns, its container exits, or repair fails, the tool may stop without restarting Plex. Set this repair container's restart policy to No to avoid repeated repairs.</Overview>
+<Overview>
+Plex DBRepair is a one shot Plex database maintenance tool using ChuckPa DBRepair version 26 10 00
 
+Automatically discovers a running Plex Docker container through the host Docker socket and copies the DBRepair executable into it
+
+Stops the Plex Media Server process while keeping the Docker container running where supported
+
+Performs the selected database maintenance operation and restarts the Plex container after success
+
+No Plex appdata mount is required in the repair container
+
+Supported modes are automatic check vacuum repair reindex deflate and prune
+
+If more than one Plex container is detected set PLEX_CONTAINER_NAME to the exact container name
+
+Persistent logs are stored in the logs directory
+
+Database backups are enabled by default for all modes except prune
+
+CAUTION
+
+This tool modifies Plex databases and users are responsible for maintaining verified backups
+
+Tested successfully with LinuxServer Plex on a disposable installation
+
+Binhex and Hotio compatibility has not yet been verified
+
+If the Plex process restarts unexpectedly or the Plex container exits during maintenance the repair operation may stop without restarting Plex
+
+Set the repair container restart policy to No to prevent repeated maintenance operations
+</Overview>
+  
   <Category>Tools MediaApp:Other</Category>
 
   <WebUI/>
