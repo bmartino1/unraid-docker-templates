@@ -12,7 +12,7 @@
   <Project>https://github.com/bmartino1/plex-dbrepair-docker</Project>
   <ReadMe>https://github.com/ChuckPa/DBRepair/blob/master/README.md</ReadMe>
 
-  <Overview>Warning: DO NOT run this on Plex 1.43.0 and up due to plex SQL chagnes on FTS... You must mount your Plex container's appdata folder into this container.&#13;
+  <Overview>Warning: You must mount your Plex container's appdata folder into this container.&#13;
 &#13;
 Example: /mnt/user/appdata/plex&#13;
 &#13;
@@ -45,28 +45,21 @@ Check container logs to monitor progress. You may also open the console and run 
   <DonateText/>
   <DonateLink/>
 
-  <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA. PLEX MUST BE STOPPED BEFORE RUNNING THIS TOOL. Mount your Plex appdata folder into this container. Warning: DO NOT run this on Plex 1.43.0 and up due to plex SQL chagnes on FTS...</Requires>
+  <Requires>YOU ARE ULTIMATELY RESPONSIBLE FOR YOUR DATA. Requires access to /var/run/docker.sock and one supported RUNNING Plex container. The Docker socket grants host-level administrative privileges. Verify backups before changing databases. No Plex appdata bind mount is required. Install as a one-shot container with restart policy No. Binhex and Hotio have not yet been tested and validated, but should still work</Requires>
 
-  <Config Name="Plex Appdata Folder" Target="/config" Default="/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here" Mode="rw" Description="THE OTHER CONTAINERS APPDATA FOLDER!!! The Path to your Plex container appdata folder (the folder that CONTAINS the 'Other Plex Containers Library' directory). Example: /mnt/user/appdata/plex. Inside this folder, you should see 'Library'. Do NOT mount the Library folder itself!" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex_Supply_the_Plex_appdata_folder_here</Config>
+  <Config Name="Maintenance Mode" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="automatic=upstream auto; check=integrity checks; vacuum=compact; repair=rebuild including FTS; reindex=rebuild indexes; deflate=compact only if needed; prune=PhotoTranscoder cleanup. Select one mode." Type="Variable" Display="always" Required="true" Mask="false">automatic</Config>
+  <Config Name="Plex Container Name" Target="PLEX_CONTAINER_NAME" Default="auto" Mode="" Description="auto detects one eligible Plex container. If you have multiple Plex containers, enter the exact Docker container name shown by docker ps (example: plex). Do not enter a Docker image name here." Type="Variable" Display="always" Required="true" Mask="false">auto</Config>
+  <Config Name="Enable Database Backups" Target="ENABLE_BACKUPS" Default="true" Mode="" Description="Create timestamped cold database archives inside the TARGET Plex container at Plex Media Server/DBRepair-Backups; skipped for prune. Backups take disk space and are not automatically deleted." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Restart Plex After Success" Target="RESTART_PLEX" Default="true" Mode="" Description="Restart the target Plex Docker container after successful maintenance. On database errors the script intentionally does not auto-restart Plex." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Prune Days" Target="PRUNE_DAYS" Default="30" Mode="" Description="For prune mode only: remove eligible PhotoTranscoder cached files older than this number of days." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
+  <Config Name="Plex Container Match" Target="PLEX_CONTAINER_MATCH" Default="plex" Mode="" Description="Case-insensitive name substring used when Plex Container Name=auto. Image names containing plex are also considered. Candidates must contain the Plex database at the configured path." Type="Variable" Display="advanced-hide" Required="false" Mask="false">plex</Config>
+  <Config Name="Plex Internal Config Mount" Target="PLEX_MOUNT" Default="/config" Mode="" Description="Path INSIDE the target Plex container to its config mount, usually /config. This is NOT a host volume to mount to DBRepair." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/config</Config>
+  <Config Name="Plex Internal Relative Path" Target="PLEX_REL" Default="Library/Application Support/Plex Media Server" Mode="" Description="Relative path inside the target Plex container's config directory. Leave at default unless that Plex installation differs." Type="Variable" Display="advanced-hide" Required="false" Mask="false">Library/Application Support/Plex Media Server</Config>
+  <Config Name="Allow Process Shutdown Fallback" Target="ALLOW_PLEX_KILL" Default="true" Mode="" Description="If upstream DBRepair stop cannot shut down Plex, allow SIGTERM to the Plex Media Server process. No forced Docker stop/offline repair fallback is implemented." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Maintenance Timeout Seconds" Target="DBREPAIR_TIMEOUT" Default="7200" Mode="" Description="Maximum DBRepair operation duration in seconds. A failure or timeout requires reviewing the database before restarting Plex." Type="Variable" Display="advanced-hide" Required="false" Mask="false">7200</Config>
+  <Config Name="Plex Shutdown Timeout Seconds" Target="STOP_TIMEOUT" Default="90" Mode="" Description="Maximum seconds to wait for the Plex process to stop before aborting." Type="Variable" Display="advanced-hide" Required="false" Mask="false">90</Config>
+  <Config Name="Persistent Repair Logs" Target="/logs" Default="/mnt/user/appdata/plex-dbrepair-logs" Mode="rw" Description="Host folder for timestamped DBRepair execution logs. Docker logs also show output." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex-dbrepair-logs</Config>
+  <Config Name="Host Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="REQUIRED: Docker host socket for discovering Plex and running docker inspect/exec/cp/restart. Grants this tool host-level Docker control." Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
 
-  <Config Name="DBREPAIR_MODE" Target="DBREPAIR_MODE" Default="automatic" Mode="" Description="automatic (check, vacuum, reindex) · check (integrity check only) · vacuum (optimize database) · repair (alias for vacuum) · reindex (rebuild indexes) · deflate (VACUUM INTO rewrite) · prune (clear PhotoTranscoder cache)" Type="Variable" Display="always" Required="true" Mask="false">automatic</Config>
-
-  <Config Name="ALLOW_PLEX_KILL" Target="ALLOW_PLEX_KILL" Default="true" Mode="" Description="T/F If enabled, the container will stop running Plex containers before database operations begin. Requires /var/run/docker.sock." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-
-  <Config Name="PLEX_CONTAINER_MATCH" Target="PLEX_CONTAINER_MATCH" Default="plex" Mode="" Description="Pattern used to identify Plex containers to stop by name or image." Type="Variable" Display="always" Required="true" Mask="false">plex</Config>
-
-  <Config Name="RESTART_PLEX" Target="RESTART_PLEX" Default="true" Mode="" Description="T/F Restart Plex containers after repairs complete." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-
-  <Config Name="PRUNE_DAYS" Target="PRUNE_DAYS" Default="30" Mode="" Description="Files older than this number of days will be removed from the PhotoTranscoder cache when using DBREPAIR_MODE=prune." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
-
-  <Config Name="ENABLE_BACKUPS" Target="ENABLE_BACKUPS" Default="true" Mode="" Description="T/F Create timestamped database backups before any changes." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-
-  <Config Name="RESTORE_LAST_BACKUP" Target="RESTORE_LAST_BACKUP" Default="false" Mode="" Description="T/F Restore most recent backup and exit." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-
-  <Config Name="EXCLUDE_CONTAINER_NAMES" Target="EXCLUDE_CONTAINER_NAMES" Default="dbrepair,plex-dbrepair" Mode="" Description="CSV list of containers that should never be stopped." Type="Variable" Display="always-hide" Required="false" Mask="false">dbrepair,plex-dbrepair</Config>
-
-  <Config Name="EXCLUDE_IMAGE_REGEX" Target="EXCLUDE_IMAGE_REGEX" Default="plex-dbrepair" Mode="" Description="Image regex used to avoid stopping the dbrepair container itself." Type="Variable" Display="advanced-hide" Required="true" Mask="false">plex-dbrepair</Config>
-
-  <Config Name="Docker Run Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Required to manage Plex containers from Unraid." Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
 
 </Container>
