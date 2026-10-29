@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <Container version="2">
   <Name>NetProbe-test</Name>
   <Repository>bmmbmm01/netprobe:latest</Repository>
@@ -33,6 +33,7 @@ Documentation: https://github.com/bmartino1/NetProbe_Python</Overview>
   <ExtraParams>--cap-add=NET_RAW</ExtraParams>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1793259526</DateInstalled>
   <DonateText>Support this project</DonateText>
   <DonateLink>https://www.paypal.com/donate/?business=PA3ZHF52483KW</DonateLink>
   <Requires>Bridge mode: host 8443 maps to container HTTPS 8443; optional host 8080 maps to container HTTP 80. Unraid host ports 80 and 443 remain untouched.&#13;
@@ -43,21 +44,18 @@ The official Ookla CLI is NOT bundled. Users must review and acknowledge Ookla's
 &#13;
 PostgreSQL is optional and requires an independently deployed, reachable server. Database selection and credentials can be saved under Settings; switching does not migrate existing SQLite history.</Requires>
   <Config Name="DockerNatPort" Target="8443" Default="8443" Mode="tcp" Description="NetProbe HTTPS WebUI. Maps Unraid host port 8443 to container port 8443; does not use Unraid host port 443." Type="Port" Display="always" Required="true" Mask="false">8443</Config>
-  <Config Name="HTTP Redirect" Target="80" Default="8080" Mode="tcp" Description="Optional HTTP redirect. Unraid host port 8080 maps to container port 80, without binding Unraid host port 80." Type="Port" Display="advanced-hide" Required="false" Mask="false">8080</Config>
   <Config Name="NetProbe Configuration and Database" Target="/config" Default="/mnt/user/appdata/netprobe" Mode="rw" Description="Persistent monitoring settings, SQLite data, administrator credentials, HTTPS certificates and optional Ookla acknowledgement. Back up before changing mappings." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netprobe</Config>
   <Config Name="APP_TIMEZONE" Target="APP_TIMEZONE" Default="UTC" Mode="" Description="Initial application timezone, such as America/Chicago. Saved WebUI configuration takes precedence afterward." Type="Variable" Display="always" Required="false" Mask="false">UTC</Config>
-  <Config Name="DB_ENGINE" Target="DB_ENGINE" Default="sqlite" Mode="" Description="Initial database engine: sqlite or postgres. An existing saved database profile may take precedence." Type="Variable" Display="advanced-hide" Required="false" Mask="false">sqlite</Config>
-  <Config Name="DB_PATH" Target="DB_PATH" Default="/config/data/netprobe.sqlite" Mode="" Description="SQLite database path inside the persistent /config mount. Normally do not change." Type="Variable" Display="advanced-hide" Required="false" Mask="false">/config/data/netprobe.sqlite</Config>
   <Config Name="Speedtest Backend" Target="SPEEDTEST_BACKEND" Default="ookla" Mode="" Description="First-boot backend preference: ookla or python. Ookla must be installed through administrator Settings after acknowledging its terms." Type="Variable" Display="always" Required="false" Mask="false">ookla</Config>
-  <Config Name="Ookla Terms Acknowledgement" Target="SPEEDTEST_OOKLA_ACCEPT_LICENSE" Default="" Mode="" Description="Optional: enter I_ACCEPT only AFTER personally reviewing and agreeing to Ookla's EULA, Terms and Privacy Policy. Leaving this blank requires acknowledgement in the WebUI. Does not install Ookla." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SPEEDTEST_ENABLED" Target="SPEEDTEST_ENABLED" Default="true" Mode="" Description="Initial setting for scheduled bandwidth testing. The Ookla binary must be installed before Ookla tests can run." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
-  <Config Name="SPEEDTEST_INTERVAL" Target="SPEEDTEST_INTERVAL" Default="14400" Mode="" Description="Initial automatic Speedtest interval in seconds. 14400 equals four hours." Type="Variable" Display="advanced-hide" Required="false" Mask="false">14400</Config>
+  <Config Name="Ookla Terms Acknowledgement" Target="SPEEDTEST_OOKLA_ACCEPT_LICENSE" Default="" Mode="" Description="Optional: enter I_ACCEPT only AFTER personally reviewing and agreeing to Ookla's EULA, Terms and Privacy Policy. Leaving this blank requires acknowledgement in the WebUI. Does not install Ookla." Type="Variable" Display="always" Required="false" Mask="false">I_ACCEPT</Config>
+  <Config Name="SPEEDTEST_ENABLED" Target="SPEEDTEST_ENABLED" Default="true" Mode="" Description="Initial setting for scheduled bandwidth testing. The Ookla binary must be installed before Ookla tests can run." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="HTTP Redirect" Target="80" Default="8080" Mode="tcp" Description="Optional HTTP redirect. Unraid host port 8080 maps to container port 80, without binding Unraid host port 80." Type="Port" Display="advanced-hide" Required="false" Mask="false">8080</Config>
   <Config Name="Minimum Administrator Password Length" Target="NETPROBE_MIN_PASSWORD_LENGTH" Default="8" Mode="" Description="Initial administrator password minimum. Default 8; minimum 6. Later editable through the WebUI." Type="Variable" Display="advanced-hide" Required="false" Mask="false">8</Config>
-  <Config Name="Unattended Monitoring Startup" Target="NETPROBE_AUTOSTART_CONFIGURED" Default="false" Mode="" Description="Leave false for first-run monitoring wizard. True bypasses the pause only for intentionally preconfigured unattended deployments." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
-  <Config Name="POSTGRES_HOST" Target="POSTGRES_HOST" Default="" Mode="" Description="Optional external PostgreSQL host or reachable IP. Do not set for SQLite-only installations." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
-  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="5432" Mode="" Description="External PostgreSQL server TCP port." Type="Variable" Display="advanced-hide" Required="false" Mask="false">5432</Config>
-  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="netprobe" Mode="" Description="External PostgreSQL database name." Type="Variable" Display="advanced-hide" Required="false" Mask="false">netprobe</Config>
-  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="netprobe" Mode="" Description="External PostgreSQL database user." Type="Variable" Display="advanced-hide" Required="false" Mask="false">netprobe</Config>
-  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="External PostgreSQL password. Do not use a shared or public default." Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="DB_ENGINE" Target="DB_ENGINE" Default="sqlite" Mode="" Description="Initial database engine: sqlite or postgres. An existing saved database profile may take precedence." Type="Variable" Display="advanced" Required="false" Mask="false">sqlite</Config>
+  <Config Name="POSTGRES_HOST" Target="POSTGRES_HOST" Default="" Mode="" Description="Optional external PostgreSQL host or reachable IP. Do not set for SQLite-only installations." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="5432" Mode="" Description="External PostgreSQL server TCP port." Type="Variable" Display="advanced" Required="false" Mask="false">5432</Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="netprobe" Mode="" Description="External PostgreSQL database name." Type="Variable" Display="advanced" Required="false" Mask="false">netprobe</Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="netprobe" Mode="" Description="External PostgreSQL database user." Type="Variable" Display="advanced" Required="false" Mask="false">netprobe</Config>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="External PostgreSQL password. Do not use a shared or public default." Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <TailscaleStateDir/>
 </Container>
