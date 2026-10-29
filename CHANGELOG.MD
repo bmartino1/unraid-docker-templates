@@ -2,6 +2,10 @@
 
 All major changes to this project will be documented here.
 
+## 2026-10-28
+- Fix Netprobe Project and docker env due to overhaul changes.
+
+
 ## 2026-08-17
 - Fix SFTP Project and docker registry broken in CA
 
