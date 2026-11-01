@@ -2,8 +2,8 @@
 
 All major changes to this project will be documented here.
 
-## 2026-10-28
-- Minor Updates to repo all around
+## 2026-11-01
+- Minor Updates to repo all around... no xml edits were made added compose files...
 
 ## 2026-10-28
 - Fix Netprobe Project and docker env due to overhaul changes.
