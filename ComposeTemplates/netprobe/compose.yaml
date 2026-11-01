@@ -1,0 +1,29 @@
+# NetProbe — Unraid-oriented Docker Compose reference
+# Derived from templates/netprobe.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# HTTPS interface on host 8443 (self-signed certificate on first run). The Ookla binary is not bundled; acceptance requires end-user action. Current saved WebUI config takes precedence over env seeds.
+name: unraid-netprobe
+services:
+  app:
+    image: "bmmbmm01/netprobe:latest"
+    restart: "unless-stopped"
+    cap_add:
+      - NET_RAW
+    init: true
+    ports:
+      - "8443:8443"
+      - "8080:80"
+    volumes:
+      - "/mnt/user/appdata/netprobe:/config:rw"
+    environment:
+      APP_TIMEZONE: "America/Chicago"
+      SPEEDTEST_BACKEND: "python"
+      SPEEDTEST_OOKLA_ACCEPT_LICENSE: ""
+      SPEEDTEST_ENABLED: "true"
+      NETPROBE_MIN_PASSWORD_LENGTH: "8"
+      DB_ENGINE: "sqlite"
+      POSTGRES_HOST: ""
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: "netprobe"
+      POSTGRES_USER: "netprobe"
+      POSTGRES_PASSWORD: ""

@@ -1,0 +1,28 @@
+# ClamAV-clamdscan — Unraid-oriented Docker Compose reference
+# Derived from templates/clamdscan.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# One-shot scan exits normally. /scan is READ ONLY; scan logs and signatures persist. Host /mnt/user can be very large.
+name: unraid-clamdscan
+services:
+  app:
+    image: "bmmbmm01/clamav-alpine:latest"
+    restart: "no"
+    pids_limit: 2048
+    logging:
+      driver: local
+      options:
+        max-size: '50m'
+        max-file: '3'
+    volumes:
+      - "/mnt/user:/scan:ro"
+      - "/mnt/user/appdata/CAVclamdscan/db:/var/lib/clamav:rw"
+      - "/mnt/user/appdata/CAVclamdscan/etc:/etc/clamav:rw"
+      - "/mnt/user/appdata/CAVclamdscan/log:/var/log/clamav:rw"
+    environment:
+      TZ: "America/Chicago"
+      PUID: "0"
+      PGID: "0"
+      SCAN_FOLDERS: "/scan"
+      EXCLUDE_PATHS: "/scan/appdata/CAVclamdscan"
+      LOG_HISTORY_LIMIT: "3"
+      SKIP_FRESHCLAM: "false"

@@ -1,0 +1,24 @@
+# Immich Valkey — Unraid-oriented Docker Compose reference
+# Derived from templates/immich-valkey.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# Valkey image and writable /data; require your own password. Ensure Immich uses the same password, address and port. Host port 6379 should remain firewalled / not exposed to untrusted networks.
+name: unraid-immich-valkey
+services:
+  app:
+    image: "valkey/valkey:8.0.6-trixie"
+    restart: "unless-stopped"
+    command:
+      - /bin/sh
+      - -ec
+      - 'test -n "$$VALKEY_PASSWORD" || { echo "Set VALKEY_PASSWORD before launching" >&2; exit 1; }; exec valkey-server --appendonly yes --requirepass "$$VALKEY_PASSWORD"'
+    healthcheck:
+      test: ["CMD-SHELL", "valkey-cli -a \"$$VALKEY_PASSWORD\" ping | grep -q PONG"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "6379:6379"
+    volumes:
+      - "/mnt/user/appdata/Immich/database/valkey:/data:rw"
+    environment:
+      VALKEY_PASSWORD: ""

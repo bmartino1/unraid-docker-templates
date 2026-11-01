@@ -1,0 +1,13 @@
+# RetroAssembly — Unraid-oriented Docker Compose reference
+# Derived from templates/retroassembly.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# Upstream third-party application. /app/data persists ROMs and saves.
+name: unraid-retroassembly
+services:
+  app:
+    image: "arianrhodsandlot/retroassembly:latest"
+    restart: "unless-stopped"
+    ports:
+      - "8000:8000"
+    volumes:
+      - "/mnt/user/appdata/retroassembly:/app/data:rw"

@@ -1,0 +1,18 @@
+# SMB User Web Portal — Unraid-oriented Docker Compose reference
+# Derived from templates/sambaweb.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# Unraid-specific portal requires the real /boot/config path. Host network is deliberate. It can change SMB credentials: review the source and protect access.
+name: unraid-sambaweb
+services:
+  app:
+    image: "bmmbmm01/unraid-smb-password-portal:latest"
+    restart: "unless-stopped"
+    network_mode: host
+    volumes:
+      - "/mnt/user/appdata/smb-password-portal/config:/config:rw"
+      - "/boot/config:/unraid-config:ro"
+    environment:
+      SAMBA_SERVER: "127.0.0.1"
+      MIN_PASSWORD_LENGTH: "12"
+      SHOW_USER_DROPDOWN: "0"
+      ENABLE_DEBUG_USERS: "0"

@@ -1,0 +1,32 @@
+# SFTP-Fail2ban — Unraid-oriented Docker Compose reference
+# Derived from templates/sftp2.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# Set ADMIN_PASS to a strong secret or provision users.conf before launch. Verify the mounted shared host path and corresponding /home/admin/sftp target, UID/GID and host SSH port availability.
+name: unraid-sftp2
+services:
+  app:
+    image: "bmmbmm01/sftp2:latest"
+    restart: "unless-stopped"
+    hostname: sftp
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    ports:
+      - "2222:22"
+    volumes:
+      - "/mnt/user/appdata/sftp-fail2ban:/config:rw"
+      - "/mnt/user/Shared:/home/admin/sftp:rw"
+    environment:
+      TZ: "America/Chicago"
+      AUTO_UPDATE: "suite"
+      AUTO_UPDATE_INTERVAL_HOURS: "0"
+      F2B_CONFIG_MODE: "symlink"
+      LOG_STREAMS: "auth,fail2ban"
+      CLEAR_LOGS: "false"
+      TAIL_LOGS: "true"
+      ADMIN_USER: "admin"
+      ADMIN_PASS: ""
+      DEFAULT_ADMIN: "true"
+      PUID: "0"
+      PGID: "0"
+      DEBUG_TESTING: "false"

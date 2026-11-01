@@ -1,0 +1,25 @@
+# PlexDBRepair — Unraid-oriented Docker Compose reference
+# Derived from templates/plexrepair.xml (read-only source). Not a replacement for Community Applications.
+# Review ALL paths, ports and credentials before starting.
+# Docker socket grants full host Docker control. This is a one-shot destructive-capable maintenance app: verify separate restorable Plex backups and target container before running. No Plex appdata bind mount required.
+name: unraid-plexrepair
+services:
+  app:
+    image: "bmmbmm01/plex-dbrepair:latest"
+    restart: "no"
+    hostname: dbrepair
+    volumes:
+      - "/mnt/user/appdata/plex-dbrepair-logs:/logs:rw"
+      - "/var/run/docker.sock:/var/run/docker.sock:rw"
+    environment:
+      DBREPAIR_MODE: "automatic"
+      PLEX_CONTAINER_NAME: "auto"
+      ENABLE_BACKUPS: "true"
+      RESTART_PLEX: "true"
+      PRUNE_DAYS: "30"
+      PLEX_CONTAINER_MATCH: "plex"
+      PLEX_MOUNT: "/config"
+      PLEX_REL: "Library/Application Support/Plex Media Server"
+      ALLOW_PLEX_KILL: "true"
+      DBREPAIR_TIMEOUT: "7200"
+      STOP_TIMEOUT: "90"

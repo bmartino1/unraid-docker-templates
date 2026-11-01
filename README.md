@@ -1,5 +1,7 @@
 <h1 align="center" id="heading">bmartino1 Unraid Repository</h1>
 
+[![Platform: Unraid](https://img.shields.io/badge/Platform-Unraid-F15A2C?logo=unraid&logoColor=white)](https://unraid.net/) [![Docker Hub Repository](https://img.shields.io/badge/Docker%20Hub-bmmbmm01-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/u/bmmbmm01)
+
 Templates for Docker containers to use with Unraid.
 
 These templates allow Docker containers to be added to Unraid through the Community Applications (CA) interface in a more GUI-friendly way, making deployment, management, and updates easier.
@@ -8,7 +10,24 @@ The templates in this repository reference Docker images and applications mainta
 
 These templates primarily provide the configuration needed to integrate those containers into the Unraid Community Applications ecosystem. This repository, therefore, represents a combination of original templates and integrations for existing open-source Docker projects, intended to simplify the deployment of these applications within Unraid.
 
-Docker Hub Repository: https://hub.docker.com/u/bmmbmm01 
+[Docker Hub Repository — bmmbmm01](https://hub.docker.com/u/bmmbmm01)
+
+## Docker Compose examples (separate from CA XML)
+
+The [ComposeTemplates directory](ComposeTemplates) includes **standalone Unraid-oriented Compose references** derived from the existing Community Applications XML definitions. These examples use Unraid `/mnt/user` and `/boot/config` host paths where relevant, and keep environment values **inside each Compose file**; no separate `.env` is required. They are not generated Docker Manager `docker create` commands, and do not include Unraid's automatic runtime labels or host metadata.
+
+| Application | Standalone Compose |
+| --- | --- |
+| NetProbe | [compose.yaml](ComposeTemplates/netprobe/compose.yaml) |
+| SFTP-Fail2ban | [compose.yaml](ComposeTemplates/sftp2/compose.yaml) |
+| ClamAV-clamdscan | [compose.yaml](ComposeTemplates/clamdscan/compose.yaml) |
+| PlexDBRepair | [compose.yaml](ComposeTemplates/plexrepair/compose.yaml) |
+| RetroAssembly | [compose.yaml](ComposeTemplates/retroassembly/compose.yaml) |
+| SMB User Web Portal | [compose.yaml](ComposeTemplates/sambaweb/compose.yaml) |
+| Immich PostgreSQL 18 | [compose.yaml](ComposeTemplates/immich-postgress/compose.yaml) |
+| Immich Valkey | [compose.yaml](ComposeTemplates/immich-valkey/compose.yaml) |
+
+**Safety:** the original `templates/*.xml` files remain unchanged (read-only reference). Compose examples intentionally leave password fields empty where required; supply your own secrets before launching. The PostgreSQL example mirrors the XML's host network and current PostgreSQL 18 image and requires careful compatibility/migration checks. One-shot ClamAV/PlexDBRepair containers intentionally use `restart: 'no'`; PlexDBRepair's Docker socket is highly privileged. Refer to each upstream project for full operational requirements.
 
 # Unraid Templates
 
